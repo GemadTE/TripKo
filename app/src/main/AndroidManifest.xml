@@ -3,26 +3,23 @@
     package="com.example.gdte.tripko">
 
     <application
+        android:name=".app.AppMediator"
         android:allowBackup="true"
         android:icon="@mipmap/logo"
         android:label="@string/app_name"
-        android:name=".app.AppMediator"
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
-        >
-        <activity android:name=".pantalladecarga.Pantalla_De_CargaActivity">
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <activity android:name=".splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".menuprincipal.Menu_PrincipalActivity"></activity>
-
-        <activity android:name=".sobrecorea.Sobre_CoreaActivity"></activity>
-
+        <activity android:name=".elegiridioma.Pantalla_De_CargaActivity" />
+        <activity android:name=".menuprincipal.Menu_PrincipalActivity" />
+        <activity android:name=".sobrecorea.Sobre_CoreaActivity" />
     </application>
 
 </manifest>

@@ -1,6 +1,5 @@
-package com.example.gdte.tripko.pantalladecarga;
+package com.example.gdte.tripko.elegiridioma;
 
-import android.util.Log;
 import android.content.Intent;
 import android.content.Context;
 

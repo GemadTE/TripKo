@@ -1,6 +1,4 @@
-package com.example.gdte.tripko.pantalladecarga;
-
-import android.util.Log;
+package com.example.gdte.tripko.elegiridioma;
 
 import java.lang.ref.WeakReference;
 

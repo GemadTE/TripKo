@@ -1,10 +1,8 @@
-package com.example.gdte.tripko.pantalladecarga;
+package com.example.gdte.tripko.elegiridioma;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.TextView;
 
 import com.example.gdte.tripko.R;
 
@@ -18,6 +16,7 @@ public class Pantalla_De_CargaActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_pantalla__de__carga);
 
         // do the setup

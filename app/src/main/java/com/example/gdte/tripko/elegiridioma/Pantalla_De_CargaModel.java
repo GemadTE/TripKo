@@ -1,6 +1,4 @@
-package com.example.gdte.tripko.pantalladecarga;
-
-import android.util.Log;
+package com.example.gdte.tripko.elegiridioma;
 
 public class Pantalla_De_CargaModel implements Pantalla_De_CargaContract.Model {
 

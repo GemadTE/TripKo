@@ -1,4 +1,4 @@
-package com.example.gdte.tripko.pantalladecarga;
+package com.example.gdte.tripko.elegiridioma;
 
 import java.lang.ref.WeakReference;
 

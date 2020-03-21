@@ -1,13 +1,13 @@
-package com.example.gdte.tripko.pantalladecarga;
+package com.example.gdte.tripko.splash;
 
 import java.lang.ref.WeakReference;
 
-public interface Pantalla_De_CargaContract {
+public interface SplashContract {
 
     interface View {
         void injectPresenter(Presenter presenter);
 
-        void displayData(Pantalla_De_CargaViewModel viewModel);
+        void displayData(SplashViewModel viewModel);
     }
 
     interface Presenter {
@@ -18,6 +18,8 @@ public interface Pantalla_De_CargaContract {
         void injectRouter(Router router);
 
         void fetchData();
+
+        void goChooseLanguage();
     }
 
     interface Model {
@@ -25,10 +27,10 @@ public interface Pantalla_De_CargaContract {
     }
 
     interface Router {
-        void navigateToNextScreen();
+        void navigateToChooseLanguageScreen();
 
-        void passDataToNextScreen(Pantalla_De_CargaState state);
+        void passDataToNextScreen(SplashState state);
 
-        Pantalla_De_CargaState getDataFromPreviousScreen();
+        SplashState getDataFromPreviousScreen();
     }
 }

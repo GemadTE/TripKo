@@ -1,4 +1,4 @@
-package com.example.gdte.tripko.pantalladecarga;
+package com.example.gdte.tripko.elegiridioma;
 
 public class Pantalla_De_CargaViewModel {
 

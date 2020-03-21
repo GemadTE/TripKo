@@ -3,14 +3,16 @@ package com.example.gdte.tripko.app;
 import android.app.Application;
 
 import com.example.gdte.tripko.menuprincipal.Menu_PrincipalState;
-import com.example.gdte.tripko.pantalladecarga.Pantalla_De_CargaState;
+import com.example.gdte.tripko.elegiridioma.Pantalla_De_CargaState;
 import com.example.gdte.tripko.sobrecorea.Sobre_CoreaState;
+import com.example.gdte.tripko.splash.SplashState;
 
 public class AppMediator extends Application {
 
     private Pantalla_De_CargaState pantalla_de_cargaState;
     private Menu_PrincipalState menu_principalState;
     private Sobre_CoreaState sobreCoreaState;
+    private SplashState splashState;
 
 
     public Pantalla_De_CargaState getPantalla_De_CargaState() { return  pantalla_de_cargaState; }
@@ -23,4 +25,6 @@ public class AppMediator extends Application {
     public void setSobre_CoreaState(Sobre_CoreaState sobreCoreaState) { this.sobreCoreaState=sobreCoreaState; }
 
 
+    public SplashState getSplashState() { return splashState; }
+    public void setSplashState(SplashState splashState) { this.splashState = splashState; }
 }
