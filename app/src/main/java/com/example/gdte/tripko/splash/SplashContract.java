@@ -6,8 +6,6 @@ public interface SplashContract {
 
     interface View {
         void injectPresenter(Presenter presenter);
-
-        void displayData(SplashViewModel viewModel);
     }
 
     interface Presenter {
@@ -17,20 +15,13 @@ public interface SplashContract {
 
         void injectRouter(Router router);
 
-        void fetchData();
-
         void goChooseLanguage();
     }
 
     interface Model {
-        String fetchData();
     }
 
     interface Router {
         void navigateToChooseLanguageScreen();
-
-        void passDataToNextScreen(SplashState state);
-
-        SplashState getDataFromPreviousScreen();
     }
 }

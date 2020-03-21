@@ -23,15 +23,4 @@ public class SplashRouter implements SplashContract.Router {
         Intent intent = new Intent(context, ElegirIdiomaActivity.class);
         context.startActivity(intent);
     }
-
-    @Override
-    public void passDataToNextScreen(SplashState state) {
-        mediator.setSplashState(state);
-    }
-
-    @Override
-    public SplashState getDataFromPreviousScreen() {
-        SplashState state = mediator.getSplashState();
-        return state;
-    }
 }

@@ -41,19 +41,6 @@ public class SplashActivity
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-
-        // load the data
-        presenter.fetchData();
-    }
-
-    @Override
-    public void displayData(SplashViewModel viewModel) {
-        //Log.e(TAG, "displayData()");
-    }
-
-    @Override
     public void injectPresenter(SplashContract.Presenter presenter) {
         this.presenter = presenter;
     }

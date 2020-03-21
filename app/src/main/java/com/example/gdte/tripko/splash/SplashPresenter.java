@@ -16,13 +16,6 @@ public class SplashPresenter implements SplashContract.Presenter {
     }
 
     @Override
-    public void fetchData() {
-        // Log.e(TAG, "fetchData()");
-
-
-    }
-
-    @Override
     public void injectView(WeakReference<SplashContract.View> view) {
         this.view = view;
     }
@@ -39,7 +32,6 @@ public class SplashPresenter implements SplashContract.Presenter {
 
     @Override
     public void goChooseLanguage(){
-
         router.navigateToChooseLanguageScreen();
     }
 }
