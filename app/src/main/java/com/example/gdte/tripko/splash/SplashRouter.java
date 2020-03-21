@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.content.Context;
 
 import com.example.gdte.tripko.app.AppMediator;
-import com.example.gdte.tripko.elegiridioma.Pantalla_De_CargaActivity;
+import com.example.gdte.tripko.elegiridioma.ElegirIdiomaActivity;
 
 public class SplashRouter implements SplashContract.Router {
 
@@ -20,7 +20,7 @@ public class SplashRouter implements SplashContract.Router {
     @Override
     public void navigateToChooseLanguageScreen() {
         Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, Pantalla_De_CargaActivity.class);
+        Intent intent = new Intent(context, ElegirIdiomaActivity.class);
         context.startActivity(intent);
     }
 

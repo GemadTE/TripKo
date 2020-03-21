@@ -10,6 +10,7 @@
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+
         <activity android:name=".splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,9 +18,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".elegiridioma.Pantalla_De_CargaActivity" />
+
+        <activity android:name=".elegiridioma.ElegirIdiomaActivity" />
+
         <activity android:name=".menuprincipal.Menu_PrincipalActivity" />
+
         <activity android:name=".sobrecorea.Sobre_CoreaActivity" />
+
     </application>
 
 </manifest>
