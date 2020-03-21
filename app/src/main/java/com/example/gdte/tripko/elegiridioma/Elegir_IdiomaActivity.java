@@ -3,6 +3,8 @@ package com.example.gdte.tripko.elegiridioma;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.gdte.tripko.R;
@@ -14,29 +16,33 @@ public class Elegir_IdiomaActivity
 
     private Elegir_IdiomaContract.Presenter presenter;
 
+    ImageButton spanishButton,englishButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_elegir_idioma);
 
+        spanishButton = findViewById(R.id.spanishButton);
+        englishButton = findViewById(R.id.englishButton);
+
+
+        spanishButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.goMenuButtonClicked();
+            }
+        });
+
+//        englishButton.setOnClickListener(new View.OnClickListener() {
+////            @Override
+////            public void onClick(View v) {
+////
+////            }
+////        });
+
         // do the setup
         Elegir_IdiomaScreen.configure(this);
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        // load the data
-        presenter.fetchData();
-    }
-
-    @Override
-    public void displayData(Elegir_IdiomaViewModel viewModel) {
-        //Log.e(TAG, "displayData()");
-
-        // deal with the data
-        ((TextView) findViewById(R.id.data)).setText(viewModel.data);
     }
 
     @Override

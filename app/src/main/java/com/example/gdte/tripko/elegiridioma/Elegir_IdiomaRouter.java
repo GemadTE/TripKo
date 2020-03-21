@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.Context;
 
 import com.example.gdte.tripko.app.AppMediator;
+import com.example.gdte.tripko.menuprincipal.Menu_PrincipalActivity;
 
 public class Elegir_IdiomaRouter implements Elegir_IdiomaContract.Router {
 
@@ -16,20 +17,14 @@ public class Elegir_IdiomaRouter implements Elegir_IdiomaContract.Router {
     }
 
     @Override
-    public void navigateToNextScreen() {
+    public void navigateToMenuScreen() {
         Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, Elegir_IdiomaActivity.class);
+        Intent intent = new Intent(context, Menu_PrincipalActivity.class);
         context.startActivity(intent);
     }
 
     @Override
-    public void passDataToNextScreen(Elegir_IdiomaState state) {
+    public void passDataToMenuScreen(Elegir_IdiomaState state) {
         mediator.setElegirIdiomaState(state);
-    }
-
-    @Override
-    public Elegir_IdiomaState getDataFromPreviousScreen() {
-        Elegir_IdiomaState state = mediator.getElegirIdiomaState();
-        return state;
     }
 }

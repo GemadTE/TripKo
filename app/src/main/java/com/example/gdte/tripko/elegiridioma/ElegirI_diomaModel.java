@@ -7,10 +7,4 @@ public class ElegirI_diomaModel implements Elegir_IdiomaContract.Model {
     public ElegirI_diomaModel() {
 
     }
-
-    @Override
-    public String fetchData() {
-        // Log.e(TAG, "fetchData()");
-        return "Hello";
-    }
 }
