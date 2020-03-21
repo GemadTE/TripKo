@@ -18,6 +18,7 @@ public class AppMediator extends Application {
     public SplashState getSplashState() { return splashState; }
     public void setSplashState(SplashState splashState) { this.splashState = splashState; }
 
+
     public ElegirIdiomaState getElegirIdiomaState() { return  elegirIdiomaState; }
     public void setElegirIdiomaState(ElegirIdiomaState elegirIdiomaState) { this.elegirIdiomaState = elegirIdiomaState; }
 
