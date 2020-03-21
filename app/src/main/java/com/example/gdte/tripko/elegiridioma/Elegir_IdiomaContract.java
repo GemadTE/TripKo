@@ -2,12 +2,12 @@ package com.example.gdte.tripko.elegiridioma;
 
 import java.lang.ref.WeakReference;
 
-public interface ElegirIdiomaContract {
+public interface Elegir_IdiomaContract {
 
     interface View {
         void injectPresenter(Presenter presenter);
 
-        void displayData(ElegirIdiomaViewModel viewModel);
+        void displayData(Elegir_IdiomaViewModel viewModel);
     }
 
     interface Presenter {
@@ -27,8 +27,8 @@ public interface ElegirIdiomaContract {
     interface Router {
         void navigateToNextScreen();
 
-        void passDataToNextScreen(ElegirIdiomaState state);
+        void passDataToNextScreen(Elegir_IdiomaState state);
 
-        ElegirIdiomaState getDataFromPreviousScreen();
+        Elegir_IdiomaState getDataFromPreviousScreen();
     }
 }

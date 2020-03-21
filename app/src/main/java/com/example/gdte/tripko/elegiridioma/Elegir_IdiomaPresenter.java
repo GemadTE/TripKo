@@ -1,19 +1,17 @@
 package com.example.gdte.tripko.elegiridioma;
 
-import android.util.Log;
-
 import java.lang.ref.WeakReference;
 
-public class ElegirIdiomaPresenter implements ElegirIdiomaContract.Presenter {
+public class Elegir_IdiomaPresenter implements Elegir_IdiomaContract.Presenter {
 
-    public static String TAG = ElegirIdiomaPresenter.class.getSimpleName();
+    public static String TAG = Elegir_IdiomaPresenter.class.getSimpleName();
 
-    private WeakReference<ElegirIdiomaContract.View> view;
-    private ElegirIdiomaState state;
-    private ElegirIdiomaContract.Model model;
-    private ElegirIdiomaContract.Router router;
+    private WeakReference<Elegir_IdiomaContract.View> view;
+    private Elegir_IdiomaState state;
+    private Elegir_IdiomaContract.Model model;
+    private Elegir_IdiomaContract.Router router;
 
-    public ElegirIdiomaPresenter(ElegirIdiomaState state) {
+    public Elegir_IdiomaPresenter(Elegir_IdiomaState state) {
         this.state = state;
     }
 
@@ -23,11 +21,11 @@ public class ElegirIdiomaPresenter implements ElegirIdiomaContract.Presenter {
 
         // initialize the state if is necessary
         if (state == null) {
-            state = new ElegirIdiomaState();
+            state = new Elegir_IdiomaState();
         }
 
         // use passed state if is necessary
-        ElegirIdiomaState savedState = router.getDataFromPreviousScreen();
+        Elegir_IdiomaState savedState = router.getDataFromPreviousScreen();
         if (savedState != null) {
 
             // update view and model state
@@ -51,17 +49,17 @@ public class ElegirIdiomaPresenter implements ElegirIdiomaContract.Presenter {
     }
 
     @Override
-    public void injectView(WeakReference<ElegirIdiomaContract.View> view) {
+    public void injectView(WeakReference<Elegir_IdiomaContract.View> view) {
         this.view = view;
     }
 
     @Override
-    public void injectModel(ElegirIdiomaContract.Model model) {
+    public void injectModel(Elegir_IdiomaContract.Model model) {
         this.model = model;
     }
 
     @Override
-    public void injectRouter(ElegirIdiomaContract.Router router) {
+    public void injectRouter(Elegir_IdiomaContract.Router router) {
         this.router = router;
     }
 }

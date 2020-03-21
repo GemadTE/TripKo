@@ -1,36 +1,35 @@
 package com.example.gdte.tripko.elegiridioma;
 
-import android.util.Log;
 import android.content.Intent;
 import android.content.Context;
 
 import com.example.gdte.tripko.app.AppMediator;
 
-public class ElegirIdiomaRouter implements ElegirIdiomaContract.Router {
+public class Elegir_IdiomaRouter implements Elegir_IdiomaContract.Router {
 
-    public static String TAG = ElegirIdiomaRouter.class.getSimpleName();
+    public static String TAG = Elegir_IdiomaRouter.class.getSimpleName();
 
     private AppMediator mediator;
 
-    public ElegirIdiomaRouter(AppMediator mediator) {
+    public Elegir_IdiomaRouter(AppMediator mediator) {
         this.mediator = mediator;
     }
 
     @Override
     public void navigateToNextScreen() {
         Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, ElegirIdiomaActivity.class);
+        Intent intent = new Intent(context, Elegir_IdiomaActivity.class);
         context.startActivity(intent);
     }
 
     @Override
-    public void passDataToNextScreen(ElegirIdiomaState state) {
+    public void passDataToNextScreen(Elegir_IdiomaState state) {
         mediator.setElegirIdiomaState(state);
     }
 
     @Override
-    public ElegirIdiomaState getDataFromPreviousScreen() {
-        ElegirIdiomaState state = mediator.getElegirIdiomaState();
+    public Elegir_IdiomaState getDataFromPreviousScreen() {
+        Elegir_IdiomaState state = mediator.getElegirIdiomaState();
         return state;
     }
 }

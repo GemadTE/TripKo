@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".elegiridioma.ElegirIdiomaActivity" />
+        <activity android:name=".elegiridioma.Elegir_IdiomaActivity" />
 
         <activity android:name=".menuprincipal.Menu_PrincipalActivity" />
 

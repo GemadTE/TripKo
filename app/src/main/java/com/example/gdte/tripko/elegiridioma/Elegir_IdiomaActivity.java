@@ -3,17 +3,16 @@ package com.example.gdte.tripko.elegiridioma;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.TextView;
 
 import com.example.gdte.tripko.R;
 
-public class ElegirIdiomaActivity
-        extends AppCompatActivity implements ElegirIdiomaContract.View {
+public class Elegir_IdiomaActivity
+        extends AppCompatActivity implements Elegir_IdiomaContract.View {
 
-    public static String TAG = ElegirIdiomaActivity.class.getSimpleName();
+    public static String TAG = Elegir_IdiomaActivity.class.getSimpleName();
 
-    private ElegirIdiomaContract.Presenter presenter;
+    private Elegir_IdiomaContract.Presenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +20,7 @@ public class ElegirIdiomaActivity
         setContentView(R.layout.activity_elegir_idioma);
 
         // do the setup
-        ElegirIdiomaScreen.configure(this);
+        Elegir_IdiomaScreen.configure(this);
     }
 
     @Override
@@ -33,7 +32,7 @@ public class ElegirIdiomaActivity
     }
 
     @Override
-    public void displayData(ElegirIdiomaViewModel viewModel) {
+    public void displayData(Elegir_IdiomaViewModel viewModel) {
         //Log.e(TAG, "displayData()");
 
         // deal with the data
@@ -41,7 +40,7 @@ public class ElegirIdiomaActivity
     }
 
     @Override
-    public void injectPresenter(ElegirIdiomaContract.Presenter presenter) {
+    public void injectPresenter(Elegir_IdiomaContract.Presenter presenter) {
         this.presenter = presenter;
     }
 }

@@ -6,19 +6,19 @@ import androidx.fragment.app.FragmentActivity;
 
 import com.example.gdte.tripko.app.AppMediator;
 
-public class ElegirIdiomaScreen {
+public class Elegir_IdiomaScreen {
 
-    public static void configure(ElegirIdiomaContract.View view) {
+    public static void configure(Elegir_IdiomaContract.View view) {
 
         WeakReference<FragmentActivity> context =
                 new WeakReference<>((FragmentActivity) view);
 
         AppMediator mediator = (AppMediator) context.get().getApplication();
-        ElegirIdiomaState state = mediator.getElegirIdiomaState();
+        Elegir_IdiomaState state = mediator.getElegirIdiomaState();
 
-        ElegirIdiomaContract.Router router = new ElegirIdiomaRouter(mediator);
-        ElegirIdiomaContract.Presenter presenter = new ElegirIdiomaPresenter(state);
-        ElegirIdiomaContract.Model model = new ElegirIdiomaModel();
+        Elegir_IdiomaContract.Router router = new Elegir_IdiomaRouter(mediator);
+        Elegir_IdiomaContract.Presenter presenter = new Elegir_IdiomaPresenter(state);
+        Elegir_IdiomaContract.Model model = new ElegirI_diomaModel();
         presenter.injectModel(model);
         presenter.injectRouter(router);
         presenter.injectView(new WeakReference<>(view));
