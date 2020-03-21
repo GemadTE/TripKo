@@ -36,8 +36,7 @@ public class Pantalla_De_CargaActivity
     public void displayData(Pantalla_De_CargaViewModel viewModel) {
         //Log.e(TAG, "displayData()");
 
-        // deal with the data
-        ((TextView) findViewById(R.id.data)).setText(viewModel.data);
+
     }
 
     @Override
