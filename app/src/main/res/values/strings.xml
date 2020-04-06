@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">TripKo</string>
+    <string name="sobre_corea_text">La República de Corea es un país soberano de Asia Oriental, cuyo
+        territorio comprende la mitad sur de la península de Corea englobando unas tres mil islas
+        que la rodean. Aproximadamente la mitad de la población del país vive en su capital, Seúl,
+        o en su zona metropolitana, que es una de las áreas metropolitanas más pobladas del mundo.
+        Corea es una de las civilizaciones más antiguas del mundo, su idioma oficial es el coreano y
+        su moneda el won coreano.</string>
+    <string name="sobre_corea_title">Sobre Corea del Sur</string>
     <string name="gangwon_text">Gangwon</string>
     <string name="gyonggi_text">Gyonggi</string>
     <string name="seul_text">Seul</string>
