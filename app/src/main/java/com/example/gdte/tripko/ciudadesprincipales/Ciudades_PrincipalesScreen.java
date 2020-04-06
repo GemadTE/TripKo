@@ -4,6 +4,8 @@ import java.lang.ref.WeakReference;
 
 import androidx.fragment.app.FragmentActivity;
 
+import com.example.gdte.tripko.app.AppMediator;
+
 public class Ciudades_PrincipalesScreen {
 
     public static void configure(Ciudades_PrincipalesContract.View view) {
@@ -12,7 +14,7 @@ public class Ciudades_PrincipalesScreen {
                 new WeakReference<>((FragmentActivity) view);
 
         AppMediator mediator = (AppMediator) context.get().getApplication();
-        Ciudades_PrincipalesState state = mediator.getCiudades_PrincipalesState();
+        Ciudades_PrincipalesState state = mediator.getCiudadesPrincipalesState();
 
         Ciudades_PrincipalesContract.Router router = new Ciudades_PrincipalesRouter(mediator);
         Ciudades_PrincipalesContract.Presenter presenter = new Ciudades_PrincipalesPresenter(state);

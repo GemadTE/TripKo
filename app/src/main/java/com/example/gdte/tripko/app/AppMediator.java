@@ -8,6 +8,7 @@ import com.example.gdte.tripko.cultura.CulturaState;
 import com.example.gdte.tripko.elegiridioma.Elegir_IdiomaState;
 import com.example.gdte.tripko.entretenimiento.EntretenimientoState;
 import com.example.gdte.tripko.menuprincipal.Menu_PrincipalState;
+import com.example.gdte.tripko.regiones.RegionesState;
 import com.example.gdte.tripko.sitiosturisticos.Sitios_TuristicosState;
 import com.example.gdte.tripko.sobrecorea.Sobre_CoreaState;
 import com.example.gdte.tripko.splash.SplashState;
@@ -25,6 +26,7 @@ public class AppMediator extends Application {
     private EntretenimientoState entretenimientoState;
     private Sitios_TuristicosState sitiosTuristicosState;
     private Tipos_De_Sitios_TuristicosState tiposDeSitiosTuristicosState;
+    private RegionesState regionesState;
 
     public SplashState getSplashState() { return splashState; }
     public void setSplashState(SplashState splashState) { this.splashState = splashState; }
@@ -62,4 +64,11 @@ public class AppMediator extends Application {
         this.tiposDeSitiosTuristicosState=tiposDeSitiosTuristicosState;
     }
 
+    public void setRegionesState(RegionesState state) {
+        regionesState = state;
+    }
+
+    public RegionesState getRegionesState() {
+        return  regionesState;
+    }
 }

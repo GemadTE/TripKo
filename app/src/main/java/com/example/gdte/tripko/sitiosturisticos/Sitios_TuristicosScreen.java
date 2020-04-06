@@ -4,6 +4,8 @@ import java.lang.ref.WeakReference;
 
 import androidx.fragment.app.FragmentActivity;
 
+import com.example.gdte.tripko.app.AppMediator;
+
 public class Sitios_TuristicosScreen {
 
     public static void configure(Sitios_TuristicosContract.View view) {
@@ -12,7 +14,7 @@ public class Sitios_TuristicosScreen {
                 new WeakReference<>((FragmentActivity) view);
 
         AppMediator mediator = (AppMediator) context.get().getApplication();
-        Sitios_TuristicosState state = mediator.getSitios_TuristicosState();
+        Sitios_TuristicosState state = mediator.getSitiosTuristicosState();
 
         Sitios_TuristicosContract.Router router = new Sitios_TuristicosRouter(mediator);
         Sitios_TuristicosContract.Presenter presenter = new Sitios_TuristicosPresenter(state);

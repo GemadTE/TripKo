@@ -4,6 +4,8 @@ import android.util.Log;
 import android.content.Intent;
 import android.content.Context;
 
+import com.example.gdte.tripko.app.AppMediator;
+
 public class Ciudades_PrincipalesRouter implements Ciudades_PrincipalesContract.Router {
 
     public static String TAG = Ciudades_PrincipalesRouter.class.getSimpleName();
@@ -23,12 +25,12 @@ public class Ciudades_PrincipalesRouter implements Ciudades_PrincipalesContract.
 
     @Override
     public void passDataToNextScreen(Ciudades_PrincipalesState state) {
-        mediator.setCiudades_PrincipalesState(state);
+        mediator.setCiudadesPrincipalesState(state);
     }
 
     @Override
     public Ciudades_PrincipalesState getDataFromPreviousScreen() {
-        Ciudades_PrincipalesState state = mediator.getCiudades_PrincipalesState();
+        Ciudades_PrincipalesState state = mediator.getCiudadesPrincipalesState();
         return state;
     }
 }

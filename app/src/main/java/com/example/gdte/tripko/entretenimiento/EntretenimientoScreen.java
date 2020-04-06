@@ -4,6 +4,8 @@ import java.lang.ref.WeakReference;
 
 import androidx.fragment.app.FragmentActivity;
 
+import com.example.gdte.tripko.app.AppMediator;
+
 public class EntretenimientoScreen {
 
     public static void configure(EntretenimientoContract.View view) {

@@ -4,6 +4,8 @@ import java.lang.ref.WeakReference;
 
 import androidx.fragment.app.FragmentActivity;
 
+import com.example.gdte.tripko.app.AppMediator;
+
 public class ClimaScreen {
 
     public static void configure(ClimaContract.View view) {

@@ -4,6 +4,8 @@ import android.util.Log;
 import android.content.Intent;
 import android.content.Context;
 
+import com.example.gdte.tripko.app.AppMediator;
+
 public class Sitios_TuristicosRouter implements Sitios_TuristicosContract.Router {
 
     public static String TAG = Sitios_TuristicosRouter.class.getSimpleName();
@@ -23,12 +25,12 @@ public class Sitios_TuristicosRouter implements Sitios_TuristicosContract.Router
 
     @Override
     public void passDataToNextScreen(Sitios_TuristicosState state) {
-        mediator.setSitios_TuristicosState(state);
+        mediator.setSitiosTuristicosState(state);
     }
 
     @Override
     public Sitios_TuristicosState getDataFromPreviousScreen() {
-        Sitios_TuristicosState state = mediator.getSitios_TuristicosState();
+        Sitios_TuristicosState state = mediator.getSitiosTuristicosState();
         return state;
     }
 }

@@ -4,6 +4,8 @@ import android.util.Log;
 import android.content.Intent;
 import android.content.Context;
 
+import com.example.gdte.tripko.app.AppMediator;
+
 public class CulturaRouter implements CulturaContract.Router {
 
     public static String TAG = CulturaRouter.class.getSimpleName();

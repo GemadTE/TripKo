@@ -4,6 +4,8 @@ import android.util.Log;
 import android.content.Intent;
 import android.content.Context;
 
+import com.example.gdte.tripko.app.AppMediator;
+
 public class EntretenimientoRouter implements EntretenimientoContract.Router {
 
     public static String TAG = EntretenimientoRouter.class.getSimpleName();

@@ -1,24 +1,27 @@
-package com.example.gdte.tripko.cultura;
+package com.example.gdte.tripko.regiones;
 
 import java.lang.ref.WeakReference;
 
 import androidx.fragment.app.FragmentActivity;
 
+import com.example.gdte.tripko.R;
 import com.example.gdte.tripko.app.AppMediator;
 
-public class CulturaScreen {
+public class RegionesScreen {
 
-    public static void configure(CulturaContract.View view) {
+    public static void configure(RegionesContract.View view) {
 
         WeakReference<FragmentActivity> context =
                 new WeakReference<>((FragmentActivity) view);
 
-        AppMediator mediator = (AppMediator) context.get().getApplication();
-        CulturaState state = mediator.getCulturaState();
+        String data = context.get().getString(R.string.app_name);
 
-        CulturaContract.Router router = new CulturaRouter(mediator);
-        CulturaContract.Presenter presenter = new CulturaPresenter(state);
-        CulturaContract.Model model = new CulturaModel();
+        AppMediator mediator = (AppMediator) context.get().getApplication();
+        RegionesState state = mediator.getRegionesState();
+
+        RegionesContract.Router router = new RegionesRouter(mediator);
+        RegionesContract.Presenter presenter = new RegionesPresenter(state);
+        RegionesContract.Model model = new RegionesModel(data);
         presenter.injectModel(model);
         presenter.injectRouter(router);
         presenter.injectView(new WeakReference<>(view));
