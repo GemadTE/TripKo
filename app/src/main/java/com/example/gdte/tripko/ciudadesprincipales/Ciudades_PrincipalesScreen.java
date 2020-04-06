@@ -4,19 +4,19 @@ import java.lang.ref.WeakReference;
 
 import androidx.fragment.app.FragmentActivity;
 
-public class CiudadesPrincipalesScreen {
+public class Ciudades_PrincipalesScreen {
 
-    public static void configure(CiudadesPrincipalesContract.View view) {
+    public static void configure(Ciudades_PrincipalesContract.View view) {
 
         WeakReference<FragmentActivity> context =
                 new WeakReference<>((FragmentActivity) view);
 
         AppMediator mediator = (AppMediator) context.get().getApplication();
-        CiudadesPrincipalesState state = mediator.getCiudadesPrincipalesState();
+        Ciudades_PrincipalesState state = mediator.getCiudades_PrincipalesState();
 
-        CiudadesPrincipalesContract.Router router = new CiudadesPrincipalesRouter(mediator);
-        CiudadesPrincipalesContract.Presenter presenter = new CiudadesPrincipalesPresenter(state);
-        CiudadesPrincipalesContract.Model model = new CiudadesPrincipalesModel();
+        Ciudades_PrincipalesContract.Router router = new Ciudades_PrincipalesRouter(mediator);
+        Ciudades_PrincipalesContract.Presenter presenter = new Ciudades_PrincipalesPresenter(state);
+        Ciudades_PrincipalesContract.Model model = new Ciudades_PrincipalesModel();
         presenter.injectModel(model);
         presenter.injectRouter(router);
         presenter.injectView(new WeakReference<>(view));

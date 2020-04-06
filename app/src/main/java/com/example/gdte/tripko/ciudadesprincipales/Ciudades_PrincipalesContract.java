@@ -2,12 +2,12 @@ package com.example.gdte.tripko.ciudadesprincipales;
 
 import java.lang.ref.WeakReference;
 
-public interface CiudadesPrincipalesContract {
+public interface Ciudades_PrincipalesContract {
 
     interface View {
         void injectPresenter(Presenter presenter);
 
-        void displayData(CiudadesPrincipalesViewModel viewModel);
+        void displayData(Ciudades_PrincipalesViewModel viewModel);
     }
 
     interface Presenter {
@@ -27,8 +27,8 @@ public interface CiudadesPrincipalesContract {
     interface Router {
         void navigateToNextScreen();
 
-        void passDataToNextScreen(CiudadesPrincipalesState state);
+        void passDataToNextScreen(Ciudades_PrincipalesState state);
 
-        CiudadesPrincipalesState getDataFromPreviousScreen();
+        Ciudades_PrincipalesState getDataFromPreviousScreen();
     }
 }

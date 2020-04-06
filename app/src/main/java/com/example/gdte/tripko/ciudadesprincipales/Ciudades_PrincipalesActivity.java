@@ -8,20 +8,20 @@ import android.widget.TextView;
 
 import com.example.gdte.tripko.R;
 
-public class CiudadesPrincipalesActivity
-        extends AppCompatActivity implements CiudadesPrincipalesContract.View {
+public class Ciudades_PrincipalesActivity
+        extends AppCompatActivity implements Ciudades_PrincipalesContract.View {
 
-    public static String TAG = CiudadesPrincipalesActivity.class.getSimpleName();
+    public static String TAG = Ciudades_PrincipalesActivity.class.getSimpleName();
 
-    private CiudadesPrincipalesContract.Presenter presenter;
+    private Ciudades_PrincipalesContract.Presenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ciudades_principales);
+        setContentView(R.layout.activity_ciudades__principales);
 
         // do the setup
-        CiudadesPrincipalesScreen.configure(this);
+        Ciudades_PrincipalesScreen.configure(this);
     }
 
     @Override
@@ -33,7 +33,7 @@ public class CiudadesPrincipalesActivity
     }
 
     @Override
-    public void displayData(CiudadesPrincipalesViewModel viewModel) {
+    public void displayData(Ciudades_PrincipalesViewModel viewModel) {
         //Log.e(TAG, "displayData()");
 
         // deal with the data
@@ -41,7 +41,7 @@ public class CiudadesPrincipalesActivity
     }
 
     @Override
-    public void injectPresenter(CiudadesPrincipalesContract.Presenter presenter) {
+    public void injectPresenter(Ciudades_PrincipalesContract.Presenter presenter) {
         this.presenter = presenter;
     }
 }

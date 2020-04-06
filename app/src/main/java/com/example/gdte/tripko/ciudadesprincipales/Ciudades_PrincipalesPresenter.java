@@ -4,16 +4,16 @@ import android.util.Log;
 
 import java.lang.ref.WeakReference;
 
-public class CiudadesPrincipalesPresenter implements CiudadesPrincipalesContract.Presenter {
+public class Ciudades_PrincipalesPresenter implements Ciudades_PrincipalesContract.Presenter {
 
-    public static String TAG = CiudadesPrincipalesPresenter.class.getSimpleName();
+    public static String TAG = Ciudades_PrincipalesPresenter.class.getSimpleName();
 
-    private WeakReference<CiudadesPrincipalesContract.View> view;
-    private CiudadesPrincipalesState state;
-    private CiudadesPrincipalesContract.Model model;
-    private CiudadesPrincipalesContract.Router router;
+    private WeakReference<Ciudades_PrincipalesContract.View> view;
+    private Ciudades_PrincipalesState state;
+    private Ciudades_PrincipalesContract.Model model;
+    private Ciudades_PrincipalesContract.Router router;
 
-    public CiudadesPrincipalesPresenter(CiudadesPrincipalesState state) {
+    public Ciudades_PrincipalesPresenter(Ciudades_PrincipalesState state) {
         this.state = state;
     }
 
@@ -23,11 +23,11 @@ public class CiudadesPrincipalesPresenter implements CiudadesPrincipalesContract
 
         // initialize the state if is necessary
         if (state == null) {
-            state = new CiudadesPrincipalesState();
+            state = new Ciudades_PrincipalesState();
         }
 
         // use passed state if is necessary
-        CiudadesPrincipalesState savedState = router.getDataFromPreviousScreen();
+        Ciudades_PrincipalesState savedState = router.getDataFromPreviousScreen();
         if (savedState != null) {
 
             // update view and model state
@@ -51,17 +51,17 @@ public class CiudadesPrincipalesPresenter implements CiudadesPrincipalesContract
     }
 
     @Override
-    public void injectView(WeakReference<CiudadesPrincipalesContract.View> view) {
+    public void injectView(WeakReference<Ciudades_PrincipalesContract.View> view) {
         this.view = view;
     }
 
     @Override
-    public void injectModel(CiudadesPrincipalesContract.Model model) {
+    public void injectModel(Ciudades_PrincipalesContract.Model model) {
         this.model = model;
     }
 
     @Override
-    public void injectRouter(CiudadesPrincipalesContract.Router router) {
+    public void injectRouter(Ciudades_PrincipalesContract.Router router) {
         this.router = router;
     }
 }
