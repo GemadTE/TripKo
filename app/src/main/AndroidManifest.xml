@@ -20,10 +20,14 @@
         </activity>
 
         <activity android:name=".elegiridioma.Elegir_IdiomaActivity" />
-
         <activity android:name=".menuprincipal.Menu_PrincipalActivity" />
-
         <activity android:name=".sobrecorea.Sobre_CoreaActivity" />
+        <activity android:name=".entretenimiento.EntretenimientoActivity" />
+        <activity android:name=".sitiosturisticos.Sitios_TuristicosActivity" />
+        <activity android:name=".ciudadesprincipales.CiudadesPrincipalesActivity" />
+        <activity android:name=".clima.ClimaActivity" />
+        <activity android:name=".cultura.CulturaActivity" />
+        <activity android:name=".tiposdesitiosturisticos.Tipos_De_Sitios_TuristicosActivity" />
 
     </application>
 
