@@ -23,7 +23,7 @@
             style="@style/Widget.AppCompat.ImageButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/descarga" />
+            android:background="@drawable/spain_round" />
 
     </LinearLayout>
 
@@ -40,7 +40,7 @@
             android:id="@+id/englishButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/bandera_reinounido" />
+            android:background="@drawable/english_round" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
