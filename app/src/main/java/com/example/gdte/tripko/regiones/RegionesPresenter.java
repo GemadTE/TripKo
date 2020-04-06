@@ -74,6 +74,11 @@ public class RegionesPresenter implements RegionesContract.Presenter {
     }
 
     @Override
+    public void goMenuButtonClicked() {
+        router.navigateToNextScreen();
+    }
+
+    @Override
     public void injectView(WeakReference<RegionesContract.View> view) {
         this.view = view;
     }

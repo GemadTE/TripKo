@@ -1,20 +1,326 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".regiones.RegionesActivity">
 
-    <TextView
-        android:id="@+id/data"
+    <LinearLayout
+        android:id="@+id/Fondoregiones"
+        android:layout_width="600dp"
+        android:layout_height="700dp"
+        android:background="@drawable/southkorea"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.328"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.516">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/GangwonLinearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="400dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/Fondoregiones"
+        app:layout_constraintEnd_toEndOf="@id/Fondoregiones"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Fondoregiones">
+
+        <Button
+            android:id="@+id/gangwonButton"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:cursorVisible="false"
+            android:fontFamily="sans-serif"
+            android:text="@string/gangwon_text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/cardview_light_background"
+            tools:text="@string/gangwon_text" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/GyonggiLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="140dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@id/Fondoregiones"
+        app:layout_constraintStart_toStartOf="@id/Fondoregiones"
+        app:layout_constraintTop_toBottomOf="@+id/GangwonLinearLayout">
+
+        <Button
+            android:id="@+id/gyonggiButton"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:background="#00FFFFFF"
+            android:fontFamily="sans-serif"
+            android:text="@string/gyonggi_text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/cardview_light_background" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/SeulLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="180dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@id/Fondoregiones"
+        app:layout_constraintStart_toStartOf="@id/Fondoregiones"
+        app:layout_constraintTop_toTopOf="@+id/Fondoregiones">
+
+        <Button
+            android:id="@+id/seulButton"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:background="#00FFFFFF"
+            android:text="@string/seul_text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/cardview_light_background" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ChungcheongdelNorteLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="35dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@id/Fondoregiones"
+        app:layout_constraintStart_toStartOf="@id/Fondoregiones"
+        app:layout_constraintTop_toBottomOf="@+id/GyonggiLinearLayout">
+
+        <Button
+            android:id="@+id/chungcheongDelNorteButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:text="@string/chungcheong_del_norte_text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/cardview_light_background" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ChungcheongdelSurLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="170dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@id/Fondoregiones"
+        app:layout_constraintStart_toStartOf="@id/Fondoregiones"
+        app:layout_constraintTop_toBottomOf="@+id/ChungcheongdelNorteLinearLayout">
+
+        <Button
+            android:id="@+id/chungcheongDelSurButton"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:text="@string/chungcheong_del_sur_text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/cardview_light_background" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/GyeongsangdelNorteLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@id/Fondoregiones"
+        app:layout_constraintStart_toStartOf="@id/Fondoregiones"
+        app:layout_constraintTop_toBottomOf="@+id/ChungcheongdelNorteLinearLayout">
+
+        <Button
+            android:id="@+id/gyeongsangDelNorteButton"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:text="@string/gyeongsang_del_norte_text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/cardview_light_background" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/JeolladelNorteLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="150dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@id/Fondoregiones"
+        app:layout_constraintStart_toStartOf="@id/Fondoregiones"
+        app:layout_constraintTop_toBottomOf="@+id/ChungcheongdelSurLinearLayout">
+
+        <Button
+            android:id="@+id/jeollaDelNorteButton"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:text="@string/jeolla_del_norte_text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/cardview_light_background" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/GwangjuLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="200dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@id/Fondoregiones"
+        app:layout_constraintStart_toStartOf="@id/Fondoregiones"
+        app:layout_constraintTop_toBottomOf="@+id/JeolladelNorteLinearLayout">
+
+        <Button
+            android:id="@+id/gwangjuButton"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:background="#00FFFFFF"
+            android:text="@string/gwangju_text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/cardview_light_background" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/JeolladelSurLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="180dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@id/Fondoregiones"
+        app:layout_constraintStart_toStartOf="@id/Fondoregiones"
+        app:layout_constraintTop_toBottomOf="@+id/JeolladelNorteLinearLayout">
+
+        <Button
+            android:id="@+id/jeollaDelSurButton"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:background="#00FFFFFF"
+            android:text="@string/jeolla_del_sur_text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/cardview_light_background" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/DaeguLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@id/Fondoregiones"
+        app:layout_constraintStart_toStartOf="@id/Fondoregiones"
+        app:layout_constraintTop_toBottomOf="@+id/GyeongsangdelNorteLinearLayout">
+
+        <Button
+            android:id="@+id/daeguButton"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:background="#00FFFFFF"
+            android:text="@string/daegu_text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/cardview_light_background" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/GyeongsangdelSurLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@id/Fondoregiones"
+        app:layout_constraintStart_toStartOf="@id/Fondoregiones"
+        app:layout_constraintTop_toBottomOf="@+id/DaeguLinearLayout">
+
+        <Button
+            android:id="@+id/gyeongsangDelSurButton"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:background="#00FFFFFF"
+            android:text="@string/gyeongsang_del_sur_text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/cardview_light_background" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/UlsanLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="70dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@id/Fondoregiones"
+        app:layout_constraintStart_toStartOf="@id/Fondoregiones"
+        app:layout_constraintTop_toBottomOf="@+id/GyeongsangdelNorteLinearLayout">
+
+        <Button
+            android:id="@+id/ulsanButton"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:background="#00FFFFFF"
+            android:text="@string/ulsan_text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/cardview_light_background" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/BusanLinearLayout"
+        android:layout_width="58dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:rotation="-50"
+        app:layout_constraintEnd_toEndOf="@id/Fondoregiones"
+        app:layout_constraintStart_toStartOf="@id/Fondoregiones"
+        app:layout_constraintTop_toBottomOf="@+id/UlsanLinearLayout">
+
+        <Button
+            android:id="@+id/busanButton"
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:background="#00FFFFFF"
+            android:text="@string/busan_text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/cardview_light_background" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/JejuLinearLayout"
+        android:layout_width="58dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="135dp"
+        android:layout_marginEnd="245dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@id/Fondoregiones"
+        app:layout_constraintStart_toStartOf="@id/Fondoregiones"
+        app:layout_constraintTop_toBottomOf="@+id/JeolladelSurLinearLayout">
+
+        <Button
+            android:id="@+id/jejuButton"
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:background="#00FFFFFF"
+            android:text="@string/jeju_text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/cardview_light_background" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

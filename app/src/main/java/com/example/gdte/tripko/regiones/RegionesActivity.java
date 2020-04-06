@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.gdte.tripko.R;
@@ -15,14 +17,24 @@ public class RegionesActivity
 
     private RegionesContract.Presenter presenter;
 
+    Button gangwonButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_regiones);
-        getSupportActionBar().setTitle(R.string.app_name);
 
         // do the setup
         RegionesScreen.configure(this);
+
+        gangwonButton = findViewById(R.id.gangwonButton);
+
+        gangwonButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.goMenuButtonClicked();
+            }
+        });
 
         if (savedInstanceState == null) {
             presenter.onStart();
@@ -66,7 +78,6 @@ public class RegionesActivity
         //Log.e(TAG, "onDataUpdated()");
 
         // deal with the data
-        ((TextView) findViewById(R.id.data)).setText(viewModel.data);
     }
 
     @Override

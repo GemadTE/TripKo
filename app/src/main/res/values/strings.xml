@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">TripKo</string>
+    <string name="gangwon_text">Gangwon</string>
+    <string name="gyonggi_text">Gyonggi</string>
+    <string name="seul_text">Seul</string>
+    <string name="chungcheong_del_norte_text">Chungcheong del Norte</string>
+    <string name="chungcheong_del_sur_text">Chungcheong del Sur</string>
+    <string name="gyeongsang_del_norte_text">Gyeongsang del Norte</string>
+    <string name="jeolla_del_norte_text">Jeolla del Norte</string>
+    <string name="jeolla_del_sur_text">Jeolla del Sur</string>
+    <string name="gwangju_text">Gwangju</string>
+    <string name="daegu_text">Daegu</string>
+    <string name="gyeongsang_del_sur_text">Gyeongsang del Sur</string>
+    <string name="ulsan_text">Ulsan</string>
+    <string name="busan_text">Busan</string>
+    <string name="jeju_text">Jeju</string>
 </resources>

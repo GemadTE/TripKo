@@ -11,6 +11,8 @@ public interface RegionesContract {
     }
 
     interface Presenter {
+        void goMenuButtonClicked();
+
         void injectView(WeakReference<View> view);
 
         void injectModel(Model model);
