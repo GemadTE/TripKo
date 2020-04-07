@@ -1,21 +1,19 @@
-package com.example.gdte.tripko.regiones;
+package com.example.gdte.tripko.gastronomiaregiones;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.example.gdte.tripko.R;
 
-public class RegionesActivity
-        extends AppCompatActivity implements RegionesContract.View {
+public class Gastronomia_RegionesActivity
+        extends AppCompatActivity implements Gastronomia_RegionesContract.View {
 
-    public static String TAG = RegionesActivity.class.getSimpleName();
+    public static String TAG = Gastronomia_RegionesActivity.class.getSimpleName();
 
-    private RegionesContract.Presenter presenter;
+    private Gastronomia_RegionesContract.Presenter presenter;
 
     Button gangwonButton;
 
@@ -25,7 +23,7 @@ public class RegionesActivity
         setContentView(R.layout.activity_regiones);
 
         // do the setup
-        RegionesScreen.configure(this);
+        Gastronomia_RegionesScreen.configure(this);
 
         gangwonButton = findViewById(R.id.gangwonButton);
 
@@ -74,14 +72,14 @@ public class RegionesActivity
     }
 
     @Override
-    public void onDataUpdated(RegionesViewModel viewModel) {
+    public void onDataUpdated(Gastronomia_RegionesViewModel viewModel) {
         //Log.e(TAG, "onDataUpdated()");
 
         // deal with the data
     }
 
     @Override
-    public void injectPresenter(RegionesContract.Presenter presenter) {
+    public void injectPresenter(Gastronomia_RegionesContract.Presenter presenter) {
         this.presenter = presenter;
     }
 }

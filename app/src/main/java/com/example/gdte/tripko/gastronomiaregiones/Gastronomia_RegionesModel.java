@@ -1,14 +1,12 @@
-package com.example.gdte.tripko.regiones;
+package com.example.gdte.tripko.gastronomiaregiones;
 
-import android.util.Log;
+public class Gastronomia_RegionesModel implements Gastronomia_RegionesContract.Model {
 
-public class RegionesModel implements RegionesContract.Model {
-
-    public static String TAG = RegionesModel.class.getSimpleName();
+    public static String TAG = Gastronomia_RegionesModel.class.getSimpleName();
 
     private String data;
 
-    public RegionesModel(String data) {
+    public Gastronomia_RegionesModel(String data) {
         this.data = data;
     }
 

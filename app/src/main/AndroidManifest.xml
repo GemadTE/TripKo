@@ -28,7 +28,7 @@
         <activity android:name=".cultura.CulturaActivity" />
         <activity android:name=".tiposdesitiosturisticos.Tipos_De_Sitios_TuristicosActivity" />
         <activity android:name=".ciudadesprincipales.Ciudades_PrincipalesActivity" />
-        <activity android:name=".regiones.RegionesActivity" />
+        <activity android:name=".gastronomiaregiones.Gastronomia_RegionesActivity" />
         <activity android:name=".comidarestaurante.Comida_RestauranteListActivity" />
         <activity android:name=".comidarestaurantedetail.Comida_restaurante_detailActivity" />
     </application>

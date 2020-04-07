@@ -1,4 +1,4 @@
-package com.example.gdte.tripko.regiones;
+package com.example.gdte.tripko.gastronomiaregiones;
 
 import android.content.Intent;
 import android.content.Context;
@@ -6,13 +6,13 @@ import android.content.Context;
 import com.example.gdte.tripko.app.AppMediator;
 import com.example.gdte.tripko.menuprincipal.Menu_PrincipalActivity;
 
-public class RegionesRouter implements RegionesContract.Router {
+public class Gastronomia_RegionesRouter implements Gastronomia_RegionesContract.Router {
 
-    public static String TAG = RegionesRouter.class.getSimpleName();
+    public static String TAG = Gastronomia_RegionesRouter.class.getSimpleName();
 
     private AppMediator mediator;
 
-    public RegionesRouter(AppMediator mediator) {
+    public Gastronomia_RegionesRouter(AppMediator mediator) {
         this.mediator = mediator;
     }
 
@@ -25,12 +25,12 @@ public class RegionesRouter implements RegionesContract.Router {
     }
 
     @Override
-    public void passStateToNextScreen(RegionesState state) {
-        mediator.setRegionesState(state);
+    public void passStateToNextScreen(Gastronomia_Gastronomia_RegionesState state) {
+        mediator.setGastronomiaRegionesState(state);
     }
 
     @Override
-    public RegionesState getStateFromNextScreen() {
-        return mediator.getRegionesState();
+    public Gastronomia_Gastronomia_RegionesState getStateFromNextScreen() {
+        return mediator.getGastronomiaRegionesState();
     }
 }

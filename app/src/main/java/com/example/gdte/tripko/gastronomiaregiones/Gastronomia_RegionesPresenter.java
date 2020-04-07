@@ -1,19 +1,17 @@
-package com.example.gdte.tripko.regiones;
-
-import android.util.Log;
+package com.example.gdte.tripko.gastronomiaregiones;
 
 import java.lang.ref.WeakReference;
 
-public class RegionesPresenter implements RegionesContract.Presenter {
+public class Gastronomia_RegionesPresenter implements Gastronomia_RegionesContract.Presenter {
 
-    public static String TAG = RegionesPresenter.class.getSimpleName();
+    public static String TAG = Gastronomia_RegionesPresenter.class.getSimpleName();
 
-    private WeakReference<RegionesContract.View> view;
-    private RegionesState state;
-    private RegionesContract.Model model;
-    private RegionesContract.Router router;
+    private WeakReference<Gastronomia_RegionesContract.View> view;
+    private Gastronomia_Gastronomia_RegionesState state;
+    private Gastronomia_RegionesContract.Model model;
+    private Gastronomia_RegionesContract.Router router;
 
-    public RegionesPresenter(RegionesState state) {
+    public Gastronomia_RegionesPresenter(Gastronomia_Gastronomia_RegionesState state) {
         this.state = state;
     }
 
@@ -23,7 +21,7 @@ public class RegionesPresenter implements RegionesContract.Presenter {
 
         // initialize the state if is necessary
         if (state == null) {
-            state = new RegionesState();
+            state = new Gastronomia_Gastronomia_RegionesState();
         }
 
         // use passed state if is necessary
@@ -43,7 +41,7 @@ public class RegionesPresenter implements RegionesContract.Presenter {
         // Log.e(TAG, "onResume()");
 
         // use passed state if is necessary
-        RegionesState savedState = router.getStateFromNextScreen();
+        Gastronomia_Gastronomia_RegionesState savedState = router.getStateFromNextScreen();
         if (savedState != null) {
 
             // update the model if is necessary
@@ -79,17 +77,17 @@ public class RegionesPresenter implements RegionesContract.Presenter {
     }
 
     @Override
-    public void injectView(WeakReference<RegionesContract.View> view) {
+    public void injectView(WeakReference<Gastronomia_RegionesContract.View> view) {
         this.view = view;
     }
 
     @Override
-    public void injectModel(RegionesContract.Model model) {
+    public void injectModel(Gastronomia_RegionesContract.Model model) {
         this.model = model;
     }
 
     @Override
-    public void injectRouter(RegionesContract.Router router) {
+    public void injectRouter(Gastronomia_RegionesContract.Router router) {
         this.router = router;
     }
 }

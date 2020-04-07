@@ -1,13 +1,13 @@
-package com.example.gdte.tripko.regiones;
+package com.example.gdte.tripko.gastronomiaregiones;
 
 import java.lang.ref.WeakReference;
 
-public interface RegionesContract {
+public interface Gastronomia_RegionesContract {
 
     interface View {
         void injectPresenter(Presenter presenter);
 
-        void onDataUpdated(RegionesViewModel viewModel);
+        void onDataUpdated(Gastronomia_RegionesViewModel viewModel);
     }
 
     interface Presenter {
@@ -45,9 +45,9 @@ public interface RegionesContract {
     interface Router {
         void navigateToNextScreen();
 
-        void passStateToNextScreen(RegionesState state);
+        void passStateToNextScreen(Gastronomia_Gastronomia_RegionesState state);
 
-        RegionesState getStateFromNextScreen();
+        Gastronomia_Gastronomia_RegionesState getStateFromNextScreen();
 
     }
 }

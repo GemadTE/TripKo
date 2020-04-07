@@ -10,7 +10,7 @@ import com.example.gdte.tripko.cultura.CulturaState;
 import com.example.gdte.tripko.elegiridioma.Elegir_IdiomaState;
 import com.example.gdte.tripko.entretenimiento.EntretenimientoState;
 import com.example.gdte.tripko.menuprincipal.Menu_PrincipalState;
-import com.example.gdte.tripko.regiones.RegionesState;
+import com.example.gdte.tripko.gastronomiaregiones.Gastronomia_Gastronomia_RegionesState;
 import com.example.gdte.tripko.sitiosturisticos.Sitios_TuristicosState;
 import com.example.gdte.tripko.sobrecorea.Sobre_CoreaState;
 import com.example.gdte.tripko.splash.SplashState;
@@ -28,7 +28,7 @@ public class AppMediator extends Application {
     private EntretenimientoState entretenimientoState;
     private Sitios_TuristicosState sitiosTuristicosState;
     private Tipos_De_Sitios_TuristicosState tiposDeSitiosTuristicosState;
-    private RegionesState regionesState;
+    private Gastronomia_Gastronomia_RegionesState gastronomiaRegionesState;
     private Comida_RestauranteListState comidaRestauranteListState;
     private Comida_restaurante_detailState comidaRestauranteDetailState;
 
@@ -68,12 +68,12 @@ public class AppMediator extends Application {
         this.tiposDeSitiosTuristicosState=tiposDeSitiosTuristicosState;
     }
 
-    public RegionesState getRegionesState() {
-        return  regionesState;
+    public Gastronomia_Gastronomia_RegionesState getGastronomiaRegionesState() {
+        return gastronomiaRegionesState;
     }
 
-    public void setRegionesState(RegionesState regionState) {
-        regionesState = regionState;
+    public void setGastronomiaRegionesState(Gastronomia_Gastronomia_RegionesState regionState) {
+        gastronomiaRegionesState = regionState;
     }
 
     public Comida_RestauranteListState getComidaRestauranteListState() {
