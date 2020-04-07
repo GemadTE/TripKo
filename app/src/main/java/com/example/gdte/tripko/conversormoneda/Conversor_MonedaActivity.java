@@ -15,11 +15,12 @@ public class Conversor_MonedaActivity
 
     private Conversor_MonedaContract.Presenter presenter;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_conversor__moneda);
-        getSupportActionBar().setTitle(R.string.app_name);
+
 
         // do the setup
         Conversor_MonedaScreen.configure(this);
@@ -66,7 +67,6 @@ public class Conversor_MonedaActivity
         //Log.e(TAG, "onDataUpdated()");
 
         // deal with the data
-        ((TextView) findViewById(R.id.data)).setText(viewModel.data);
     }
 
     @Override

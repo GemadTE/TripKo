@@ -24,4 +24,9 @@
     <string name="comida_restaurante_text">Texto</string>
     <string name="comida_content_text">Aqui va texto.</string>
     <string name="comida_title_text">TITULO</string>
+    <string name="cantidad_text_view">Cantidad</string>
+    <string name="divisa_text">Divisa:</string>
+    <string name="ps" />
+    <string name="pasar_a_text">Pasar a:</string>
+    <string name="calcular_button_text">Calcular</string>
 </resources>
