@@ -1,17 +1,17 @@
-package com.example.gdte.tripko.comidarestaurante;
+package com.example.gdte.tripko.gastronomialist;
 
 import java.lang.ref.WeakReference;
 
-public class Comida_RestauranteListPresenter implements Comida_RestauranteListContract.Presenter {
+public class GastronomiaListPresenter implements GastronomiaListContract.Presenter {
 
-    public static String TAG = Comida_RestauranteListPresenter.class.getSimpleName();
+    public static String TAG = GastronomiaListPresenter.class.getSimpleName();
 
-    private WeakReference<Comida_RestauranteListContract.View> view;
-    private Comida_RestauranteListState state;
-    private Comida_RestauranteListContract.Model model;
-    private Comida_RestauranteListContract.Router router;
+    private WeakReference<GastronomiaListContract.View> view;
+    private GastronomiaListState state;
+    private GastronomiaListContract.Model model;
+    private GastronomiaListContract.Router router;
 
-    public Comida_RestauranteListPresenter(Comida_RestauranteListState state) {
+    public GastronomiaListPresenter(GastronomiaListState state) {
         this.state = state;
     }
 
@@ -21,11 +21,11 @@ public class Comida_RestauranteListPresenter implements Comida_RestauranteListCo
 
         // initialize the state if is necessary
         if (state == null) {
-            state = new Comida_RestauranteListState();
+            state = new GastronomiaListState();
         }
 
         // use passed state if is necessary
-        Comida_RestauranteListState savedState = router.getStateFromPreviousScreen();
+        GastronomiaListState savedState = router.getStateFromPreviousScreen();
         if (savedState != null) {
 
             // update the model if is necessary
@@ -46,7 +46,7 @@ public class Comida_RestauranteListPresenter implements Comida_RestauranteListCo
         // Log.e(TAG, "onResume()");
 
         // use passed state if is necessary
-        Comida_RestauranteListState savedState = router.getStateFromNextScreen();
+        GastronomiaListState savedState = router.getStateFromNextScreen();
         if (savedState != null) {
 
             // update the model if is necessary
@@ -77,17 +77,17 @@ public class Comida_RestauranteListPresenter implements Comida_RestauranteListCo
     }
 
     @Override
-    public void injectView(WeakReference<Comida_RestauranteListContract.View> view) {
+    public void injectView(WeakReference<GastronomiaListContract.View> view) {
         this.view = view;
     }
 
     @Override
-    public void injectModel(Comida_RestauranteListContract.Model model) {
+    public void injectModel(GastronomiaListContract.Model model) {
         this.model = model;
     }
 
     @Override
-    public void injectRouter(Comida_RestauranteListContract.Router router) {
+    public void injectRouter(GastronomiaListContract.Router router) {
         this.router = router;
     }
 }

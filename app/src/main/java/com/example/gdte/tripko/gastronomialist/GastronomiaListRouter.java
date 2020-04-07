@@ -1,45 +1,45 @@
-package com.example.gdte.tripko.comidarestaurante;
+package com.example.gdte.tripko.gastronomialist;
 
 import android.content.Intent;
 import android.content.Context;
 
 import com.example.gdte.tripko.app.AppMediator;
 
-public class Comida_RestauranteListRouter implements Comida_RestauranteListContract.Router {
+public class GastronomiaListRouter implements GastronomiaListContract.Router {
 
-    public static String TAG = Comida_RestauranteListRouter.class.getSimpleName();
+    public static String TAG = GastronomiaListRouter.class.getSimpleName();
 
     private AppMediator mediator;
 
-    public Comida_RestauranteListRouter(AppMediator mediator) {
+    public GastronomiaListRouter(AppMediator mediator) {
         this.mediator = mediator;
     }
 
     @Override
     public void navigateToNextScreen() {
         Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, Comida_RestauranteListActivity.class);
+        Intent intent = new Intent(context, GastronomiaListActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
     }
 
     @Override
-    public void passStateToNextScreen(Comida_RestauranteListState state) {
+    public void passStateToNextScreen(GastronomiaListState state) {
         mediator.setComidaRestauranteListState(state);
     }
 
     @Override
-    public void passStateToPreviousScreen(Comida_RestauranteListState state) {
+    public void passStateToPreviousScreen(GastronomiaListState state) {
         mediator.setComidaRestauranteListState(state);
     }
 
     @Override
-    public Comida_RestauranteListState getStateFromPreviousScreen() {
+    public GastronomiaListState getStateFromPreviousScreen() {
         return mediator.getComidaRestauranteListState();
     }
 
     @Override
-    public Comida_RestauranteListState getStateFromNextScreen() {
+    public GastronomiaListState getStateFromNextScreen() {
         return mediator.getComidaRestauranteListState();
     }
 }

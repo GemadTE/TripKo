@@ -1,18 +1,17 @@
-package com.example.gdte.tripko.comidarestaurante;
+package com.example.gdte.tripko.gastronomialist;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.widget.TextView;
 
 import com.example.gdte.tripko.R;
 
-public class Comida_RestauranteListActivity
-        extends AppCompatActivity implements Comida_RestauranteListContract.View {
+public class GastronomiaListActivity
+        extends AppCompatActivity implements GastronomiaListContract.View {
 
-    public static String TAG = Comida_RestauranteListActivity.class.getSimpleName();
+    public static String TAG = GastronomiaListActivity.class.getSimpleName();
 
-    private Comida_RestauranteListContract.Presenter presenter;
+    private GastronomiaListContract.Presenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +20,7 @@ public class Comida_RestauranteListActivity
 
 
         // do the setup
-        Comida_RestauranteListScreen.configure(this);
+        GastronomiaListScreen.configure(this);
 
         if (savedInstanceState == null) {
             presenter.onStart();
@@ -61,7 +60,7 @@ public class Comida_RestauranteListActivity
     }
 
     @Override
-    public void onDataUpdated(Comida_RestauranteListViewModel viewModel) {
+    public void onDataUpdated(GastronomiaListViewModel viewModel) {
         //Log.e(TAG, "onDataUpdated()");
 
         // deal with the data
@@ -69,7 +68,7 @@ public class Comida_RestauranteListActivity
     }
 
     @Override
-    public void injectPresenter(Comida_RestauranteListContract.Presenter presenter) {
+    public void injectPresenter(GastronomiaListContract.Presenter presenter) {
         this.presenter = presenter;
     }
 }
