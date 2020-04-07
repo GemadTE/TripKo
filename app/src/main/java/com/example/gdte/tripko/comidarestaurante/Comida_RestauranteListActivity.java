@@ -18,7 +18,7 @@ public class Comida_RestauranteListActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comida_restaurante);
-        getSupportActionBar().setTitle(R.string.app_name);
+
 
         // do the setup
         Comida_RestauranteListScreen.configure(this);
@@ -65,7 +65,7 @@ public class Comida_RestauranteListActivity
         //Log.e(TAG, "onDataUpdated()");
 
         // deal with the data
-        ((TextView) findViewById(R.id.data)).setText(viewModel.data);
+
     }
 
     @Override

@@ -22,4 +22,6 @@
     <string name="busan_text">Busan</string>
     <string name="jeju_text">Jeju</string>
     <string name="comida_restaurante_text">Texto</string>
+    <string name="comida_content_text">Aqui va texto.</string>
+    <string name="comida_title_text">TITULO</string>
 </resources>

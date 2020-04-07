@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
 
-        <activity android:name=".regiones.RegionesActivity">
+        <activity android:name=".splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,6 +28,9 @@
         <activity android:name=".cultura.CulturaActivity" />
         <activity android:name=".tiposdesitiosturisticos.Tipos_De_Sitios_TuristicosActivity" />
         <activity android:name=".ciudadesprincipales.Ciudades_PrincipalesActivity" />
+        <activity android:name=".regiones.RegionesActivity" />
+        <activity android:name=".comidarestaurante.Comida_RestauranteListActivity" />
+        <activity android:name=".comidarestaurantedetail.Comida_restaurante_detailActivity" />
     </application>
 
 </manifest>

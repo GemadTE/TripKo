@@ -5,6 +5,7 @@ import android.app.Application;
 import com.example.gdte.tripko.ciudadesprincipales.Ciudades_PrincipalesState;
 import com.example.gdte.tripko.clima.ClimaState;
 import com.example.gdte.tripko.comidarestaurante.Comida_RestauranteListState;
+import com.example.gdte.tripko.comidarestaurantedetail.Comida_restaurante_detailState;
 import com.example.gdte.tripko.cultura.CulturaState;
 import com.example.gdte.tripko.elegiridioma.Elegir_IdiomaState;
 import com.example.gdte.tripko.entretenimiento.EntretenimientoState;
@@ -29,6 +30,7 @@ public class AppMediator extends Application {
     private Tipos_De_Sitios_TuristicosState tiposDeSitiosTuristicosState;
     private RegionesState regionesState;
     private Comida_RestauranteListState comidaRestauranteListState;
+    private Comida_restaurante_detailState comidaRestauranteDetailState;
 
     public SplashState getSplashState() { return splashState; }
     public void setSplashState(SplashState splashState) { this.splashState = splashState; }
@@ -80,5 +82,13 @@ public class AppMediator extends Application {
 
     public void setComidaRestauranteListState(Comida_RestauranteListState comidaRestauranteState) {
         comidaRestauranteListState = comidaRestauranteState;
+    }
+
+    public Comida_restaurante_detailState getComidarestaurantedetailState() {
+        return comidaRestauranteDetailState;
+    }
+
+    public void setComidarestaurantedetailState(Comida_restaurante_detailState comida_restaurante_detailState) {
+        comidaRestauranteDetailState = comida_restaurante_detailState;
     }
 }
