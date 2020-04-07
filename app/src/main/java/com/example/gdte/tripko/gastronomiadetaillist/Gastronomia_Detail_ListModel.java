@@ -1,14 +1,12 @@
-package com.example.gdte.tripko.comidarestaurantedetail;
+package com.example.gdte.tripko.gastronomiadetaillist;
 
-import android.util.Log;
+public class Gastronomia_Detail_ListModel implements Gastronomia_Detail_ListContract.Model {
 
-public class Comida_restaurante_detailModel implements Comida_restaurante_detailContract.Model {
-
-    public static String TAG = Comida_restaurante_detailModel.class.getSimpleName();
+    public static String TAG = Gastronomia_Detail_ListModel.class.getSimpleName();
 
     private String data;
 
-    public Comida_restaurante_detailModel(String data) {
+    public Gastronomia_Detail_ListModel(String data) {
         this.data = data;
     }
 

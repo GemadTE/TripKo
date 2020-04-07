@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".comidarestaurantedetail.Comida_restaurante_detailActivity">
+    tools:context=".gastronomiadetaillist.Gastronomia_Detail_ListActivity">
 
     <TextView
         android:id="@+id/comidaRestauranteTitleTextView"

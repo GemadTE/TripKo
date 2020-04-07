@@ -1,13 +1,13 @@
-package com.example.gdte.tripko.comidarestaurantedetail;
+package com.example.gdte.tripko.gastronomiadetaillist;
 
 import java.lang.ref.WeakReference;
 
-public interface Comida_restaurante_detailContract {
+public interface Gastronomia_Detail_ListContract {
 
     interface View {
         void injectPresenter(Presenter presenter);
 
-        void onDataUpdated(Comida_restaurante_detailViewModel viewModel);
+        void onDataUpdated(Gastronomia_Detail_ListViewModel viewModel);
     }
 
     interface Presenter {
@@ -43,12 +43,12 @@ public interface Comida_restaurante_detailContract {
     interface Router {
         void navigateToNextScreen();
 
-        void passStateToNextScreen(Comida_restaurante_detailState state);
+        void passStateToNextScreen(Gastronomia_Detail_ListState state);
 
-        Comida_restaurante_detailState getStateFromPreviousScreen();
+        Gastronomia_Detail_ListState getStateFromPreviousScreen();
 
-        Comida_restaurante_detailState getStateFromNextScreen();
+        Gastronomia_Detail_ListState getStateFromNextScreen();
 
-        void passStateToPreviousScreen(Comida_restaurante_detailState state);
+        void passStateToPreviousScreen(Gastronomia_Detail_ListState state);
     }
 }

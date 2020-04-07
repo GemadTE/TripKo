@@ -1,19 +1,17 @@
-package com.example.gdte.tripko.comidarestaurantedetail;
-
-import android.util.Log;
+package com.example.gdte.tripko.gastronomiadetaillist;
 
 import java.lang.ref.WeakReference;
 
-public class Comida_restaurante_detailPresenter implements Comida_restaurante_detailContract.Presenter {
+public class Gastronomia_Detail_ListPresenter implements Gastronomia_Detail_ListContract.Presenter {
 
-    public static String TAG = Comida_restaurante_detailPresenter.class.getSimpleName();
+    public static String TAG = Gastronomia_Detail_ListPresenter.class.getSimpleName();
 
-    private WeakReference<Comida_restaurante_detailContract.View> view;
-    private Comida_restaurante_detailState state;
-    private Comida_restaurante_detailContract.Model model;
-    private Comida_restaurante_detailContract.Router router;
+    private WeakReference<Gastronomia_Detail_ListContract.View> view;
+    private Gastronomia_Detail_ListState state;
+    private Gastronomia_Detail_ListContract.Model model;
+    private Gastronomia_Detail_ListContract.Router router;
 
-    public Comida_restaurante_detailPresenter(Comida_restaurante_detailState state) {
+    public Gastronomia_Detail_ListPresenter(Gastronomia_Detail_ListState state) {
         this.state = state;
     }
 
@@ -23,11 +21,11 @@ public class Comida_restaurante_detailPresenter implements Comida_restaurante_de
 
         // initialize the state if is necessary
         if (state == null) {
-            state = new Comida_restaurante_detailState();
+            state = new Gastronomia_Detail_ListState();
         }
 
         // use passed state if is necessary
-        Comida_restaurante_detailState savedState = router.getStateFromPreviousScreen();
+        Gastronomia_Detail_ListState savedState = router.getStateFromPreviousScreen();
         if (savedState != null) {
 
             // update the model if is necessary
@@ -48,7 +46,7 @@ public class Comida_restaurante_detailPresenter implements Comida_restaurante_de
         // Log.e(TAG, "onResume()");
 
         // use passed state if is necessary
-        Comida_restaurante_detailState savedState = router.getStateFromNextScreen();
+        Gastronomia_Detail_ListState savedState = router.getStateFromNextScreen();
         if (savedState != null) {
 
             // update the model if is necessary
@@ -79,17 +77,17 @@ public class Comida_restaurante_detailPresenter implements Comida_restaurante_de
     }
 
     @Override
-    public void injectView(WeakReference<Comida_restaurante_detailContract.View> view) {
+    public void injectView(WeakReference<Gastronomia_Detail_ListContract.View> view) {
         this.view = view;
     }
 
     @Override
-    public void injectModel(Comida_restaurante_detailContract.Model model) {
+    public void injectModel(Gastronomia_Detail_ListContract.Model model) {
         this.model = model;
     }
 
     @Override
-    public void injectRouter(Comida_restaurante_detailContract.Router router) {
+    public void injectRouter(Gastronomia_Detail_ListContract.Router router) {
         this.router = router;
     }
 }

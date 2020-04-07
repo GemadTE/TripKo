@@ -1,20 +1,19 @@
-package com.example.gdte.tripko.comidarestaurantedetail;
+package com.example.gdte.tripko.gastronomiadetaillist;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.TextView;
 
 import com.example.gdte.tripko.R;
 
-public class Comida_restaurante_detailActivity
-        extends AppCompatActivity implements Comida_restaurante_detailContract.View {
+public class Gastronomia_Detail_ListActivity
+        extends AppCompatActivity implements Gastronomia_Detail_ListContract.View {
 
-    public static String TAG = Comida_restaurante_detailActivity.class.getSimpleName();
+    public static String TAG = Gastronomia_Detail_ListActivity.class.getSimpleName();
 
-    private Comida_restaurante_detailContract.Presenter presenter;
+    private Gastronomia_Detail_ListContract.Presenter presenter;
 
     private TextView comidaRestauranteTitleTextView,comidaTitle1TextView,comidaTitle2TextView;
 
@@ -26,7 +25,7 @@ public class Comida_restaurante_detailActivity
         setContentView(R.layout.activity_comida_restaurante_detail);
 
         // do the setup
-        Comida_restaurante_detailScreen.configure(this);
+        Gastronomia_Detail_ListScreen.configure(this);
 
 
         comidaRestauranteTitleTextView = findViewById(R.id.comidaRestauranteTitleTextView);
@@ -74,14 +73,14 @@ public class Comida_restaurante_detailActivity
     }
 
     @Override
-    public void onDataUpdated(Comida_restaurante_detailViewModel viewModel) {
+    public void onDataUpdated(Gastronomia_Detail_ListViewModel viewModel) {
         //Log.e(TAG, "onDataUpdated()");
 
         // deal with the data
     }
 
     @Override
-    public void injectPresenter(Comida_restaurante_detailContract.Presenter presenter) {
+    public void injectPresenter(Gastronomia_Detail_ListContract.Presenter presenter) {
         this.presenter = presenter;
     }
 }
