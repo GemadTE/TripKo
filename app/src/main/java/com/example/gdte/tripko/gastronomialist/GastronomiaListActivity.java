@@ -16,7 +16,7 @@ public class GastronomiaListActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_comida_restaurante);
+        setContentView(R.layout.activity_gastronomia_list);
 
 
         // do the setup

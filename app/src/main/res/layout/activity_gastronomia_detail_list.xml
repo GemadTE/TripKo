@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <include
-        layout="@layout/comida_restaurante_detail_list"
+        layout="@layout/gastronomia_detail_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"

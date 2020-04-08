@@ -23,7 +23,7 @@ public class Gastronomia_RegionesActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_regiones);
+        setContentView(R.layout.activity_gastronomia_regiones);
 
         // do the setup
         Gastronomia_RegionesScreen.configure(this);

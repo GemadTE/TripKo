@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/comidaRestauranteList"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:listitem="@layout/comida_restaurante_content"
-    app:layoutManager="LinearLayoutManager"
-    tools:context=".gastronomialist.GastronomiaListActivity" />
+    tools:listitem="@layout/gastronomia_detail_list_content" />

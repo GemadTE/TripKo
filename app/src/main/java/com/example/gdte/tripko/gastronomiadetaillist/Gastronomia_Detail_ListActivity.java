@@ -22,7 +22,7 @@ public class Gastronomia_Detail_ListActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_comida_restaurante_detail);
+        setContentView(R.layout.activity_gastronomia_detail_list);
 
         // do the setup
         Gastronomia_Detail_ListScreen.configure(this);
