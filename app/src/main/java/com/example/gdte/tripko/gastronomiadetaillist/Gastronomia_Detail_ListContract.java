@@ -21,6 +21,8 @@ public interface Gastronomia_Detail_ListContract {
 
         void onStart();
 
+        void goHomeButtonClicked();
+
         void onRestart();
 
         void onBackPressed();
@@ -42,6 +44,8 @@ public interface Gastronomia_Detail_ListContract {
 
     interface Router {
         void navigateToNextScreen();
+
+        void navigateToHomeScreen();
 
         void passStateToNextScreen(Gastronomia_Detail_ListState state);
 

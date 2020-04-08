@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.Context;
 
 import com.example.gdte.tripko.app.AppMediator;
+import com.example.gdte.tripko.menuprincipal.Menu_PrincipalActivity;
 
 public class Gastronomia_Detail_ListRouter implements Gastronomia_Detail_ListContract.Router {
 
@@ -19,6 +20,14 @@ public class Gastronomia_Detail_ListRouter implements Gastronomia_Detail_ListCon
     public void navigateToNextScreen() {
         Context context = mediator.getApplicationContext();
         Intent intent = new Intent(context, Gastronomia_Detail_ListActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
+    }
+
+    @Override
+    public void navigateToHomeScreen() {
+        Context context = mediator.getApplicationContext();
+        Intent intent = new Intent(context, Menu_PrincipalActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
     }

@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.gdte.tripko.R;
@@ -15,7 +17,9 @@ public class Gastronomia_Detail_ListActivity
 
     private Gastronomia_Detail_ListContract.Presenter presenter;
 
-    private TextView comidaRestauranteTitleTextView,comidaTitle1TextView,comidaTitle2TextView;
+    private TextView comidaRestauranteTitleTextView, comidaTitle1TextView, comidaTitle2TextView;
+
+    private ImageButton menuDesplegableImageButton, homeImageButton;
 
     private RecyclerView comidaRestauranteList;
 
@@ -32,8 +36,17 @@ public class Gastronomia_Detail_ListActivity
         comidaTitle1TextView = findViewById(R.id.comidaTitleTextView);
         comidaTitle2TextView = findViewById(R.id.comidaTitle2TextView);
 
+        menuDesplegableImageButton = findViewById(R.id.menuDesplegableImageButton);
+        homeImageButton = findViewById(R.id.homeImageButton);
+
         comidaRestauranteList = findViewById(R.id.comidaRestauranteList);
 
+        homeImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.goHomeButtonClicked();
+            }
+        });
 
         if (savedInstanceState == null) {
             presenter.onStart();

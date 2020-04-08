@@ -34,6 +34,11 @@ public class Gastronomia_Detail_ListPresenter implements Gastronomia_Detail_List
     }
 
     @Override
+    public void goHomeButtonClicked() {
+        router.navigateToHomeScreen();
+    }
+
+    @Override
     public void onRestart() {
         // Log.e(TAG, "onRestart()");
 
