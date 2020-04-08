@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.Context;
 
 import com.example.gdte.tripko.app.AppMediator;
+import com.example.gdte.tripko.menuprincipal.Menu_PrincipalActivity;
 
 public class Conversor_MonedaRouter implements Conversor_MonedaContract.Router {
 
@@ -17,9 +18,9 @@ public class Conversor_MonedaRouter implements Conversor_MonedaContract.Router {
     }
 
     @Override
-    public void navigateToNextScreen() {
+    public void navigateToHomeScreen() {
         Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, Conversor_MonedaActivity.class);
+        Intent intent = new Intent(context, Menu_PrincipalActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
     }

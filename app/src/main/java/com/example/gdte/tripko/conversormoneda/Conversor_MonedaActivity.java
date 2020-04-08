@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -50,6 +51,14 @@ public class Conversor_MonedaActivity
         homeImageButton = findViewById(R.id.homeImageButton);
 
         calcularButton = findViewById(R.id.calcularButton);
+
+        homeImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.goHomeButtonClicked();
+            }
+        });
+
 
         // do the setup
         Conversor_MonedaScreen.configure(this);

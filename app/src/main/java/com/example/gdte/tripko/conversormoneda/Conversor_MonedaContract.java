@@ -11,6 +11,8 @@ public interface Conversor_MonedaContract {
     }
 
     interface Presenter {
+        void goHomeButtonClicked();
+
         void injectView(WeakReference<View> view);
 
         void injectModel(Model model);
@@ -41,7 +43,7 @@ public interface Conversor_MonedaContract {
     }
 
     interface Router {
-        void navigateToNextScreen();
+        void navigateToHomeScreen();
 
         void passStateToNextScreen(Conversor_MonedaState state);
 
