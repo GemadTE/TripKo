@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.example.gdte.tripko.R;
 
@@ -17,6 +18,8 @@ public class Gastronomia_RegionesActivity
 
     Button gangwonButton;
 
+    private ImageButton menuDesplegableImageButton,homeImageButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,10 +30,20 @@ public class Gastronomia_RegionesActivity
 
         gangwonButton = findViewById(R.id.gangwonButton);
 
+        menuDesplegableImageButton = findViewById(R.id.menuDesplegableImageButton);
+        homeImageButton = findViewById(R.id.homeImageButton);
+
         gangwonButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 presenter.goMenuButtonClicked();
+            }
+        });
+
+        homeImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.goHomeButtonClicked();
             }
         });
 

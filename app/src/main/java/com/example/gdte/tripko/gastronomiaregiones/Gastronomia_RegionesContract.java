@@ -23,6 +23,8 @@ public interface Gastronomia_RegionesContract {
 
         void onStart();
 
+        void goHomeButtonClicked();
+
         void onRestart();
 
         void onBackPressed();
@@ -45,9 +47,11 @@ public interface Gastronomia_RegionesContract {
     interface Router {
         void navigateToNextScreen();
 
-        void passStateToNextScreen(Gastronomia_Gastronomia_RegionesState state);
+        void navigateToHomeScreen();
 
-        Gastronomia_Gastronomia_RegionesState getStateFromNextScreen();
+        void passStateToNextScreen(Gastronomia_RegionesState state);
+
+        Gastronomia_RegionesState getStateFromNextScreen();
 
     }
 }

@@ -17,7 +17,7 @@ public class Gastronomia_RegionesScreen {
         String data = context.get().getString(R.string.app_name);
 
         AppMediator mediator = (AppMediator) context.get().getApplication();
-        Gastronomia_Gastronomia_RegionesState state = mediator.getGastronomiaRegionesState();
+        Gastronomia_RegionesState state = mediator.getGastronomiaRegionesState();
 
         Gastronomia_RegionesContract.Router router = new Gastronomia_RegionesRouter(mediator);
         Gastronomia_RegionesContract.Presenter presenter = new Gastronomia_RegionesPresenter(state);

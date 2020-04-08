@@ -7,11 +7,11 @@ public class Gastronomia_RegionesPresenter implements Gastronomia_RegionesContra
     public static String TAG = Gastronomia_RegionesPresenter.class.getSimpleName();
 
     private WeakReference<Gastronomia_RegionesContract.View> view;
-    private Gastronomia_Gastronomia_RegionesState state;
+    private Gastronomia_RegionesState state;
     private Gastronomia_RegionesContract.Model model;
     private Gastronomia_RegionesContract.Router router;
 
-    public Gastronomia_RegionesPresenter(Gastronomia_Gastronomia_RegionesState state) {
+    public Gastronomia_RegionesPresenter(Gastronomia_RegionesState state) {
         this.state = state;
     }
 
@@ -21,11 +21,16 @@ public class Gastronomia_RegionesPresenter implements Gastronomia_RegionesContra
 
         // initialize the state if is necessary
         if (state == null) {
-            state = new Gastronomia_Gastronomia_RegionesState();
+            state = new Gastronomia_RegionesState();
         }
 
         // use passed state if is necessary
 
+    }
+
+    @Override
+    public void goHomeButtonClicked() {
+        router.navigateToHomeScreen();
     }
 
     @Override
@@ -41,7 +46,7 @@ public class Gastronomia_RegionesPresenter implements Gastronomia_RegionesContra
         // Log.e(TAG, "onResume()");
 
         // use passed state if is necessary
-        Gastronomia_Gastronomia_RegionesState savedState = router.getStateFromNextScreen();
+        Gastronomia_RegionesState savedState = router.getStateFromNextScreen();
         if (savedState != null) {
 
             // update the model if is necessary
