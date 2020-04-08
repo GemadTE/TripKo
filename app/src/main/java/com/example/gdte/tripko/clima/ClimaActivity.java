@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.gdte.tripko.R;
@@ -14,6 +15,7 @@ public class ClimaActivity
     public static String TAG = ClimaActivity.class.getSimpleName();
 
     private ClimaContract.Presenter presenter;
+    private TextView climaTitle,climaDescriptionText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +24,8 @@ public class ClimaActivity
 
         // do the setup
         ClimaScreen.configure(this);
+        climaTitle=findViewById(R.id.climaTitle);
+        climaDescriptionText=findViewById(R.id.climaDescriptionText);
     }
 
     @Override
