@@ -35,4 +35,8 @@
         fríos y secos y veranos cálidos y lluviosos. La temperatura media de Seúl en enero es de –5 °C,
         y en julio de 25 °C. Las temperaturas del invierno son más elevadas a lo largo de la costa
         meridional y bastante más bajas en el interior montañoso.</string>
+    <string name="ciudades_principales_title">Ciudades principales</string>
+    <string name="ciudades_principales_text">   Ya sea por la cantidad de población de la ciudad,
+        por su gastronomía, cultura o zonas turísticas... Estas son las cinco principales ciudades
+        de Corea del Sur:</string>
 </resources>
