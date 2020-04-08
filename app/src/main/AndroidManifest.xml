@@ -33,6 +33,7 @@
         <activity android:name=".gastronomiadetaillist.Gastronomia_Detail_ListActivity" />
         <activity android:name=".conversormoneda.Conversor_MonedaActivity" />
 
+
     </application>
 
 </manifest>
