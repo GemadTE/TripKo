@@ -9,7 +9,7 @@
         android:layout_width="357dp"
         android:layout_height="200dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="100dp"
         android:background="@drawable/btn_rounded"
         android:text="@string/comida_restaurante_text"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"

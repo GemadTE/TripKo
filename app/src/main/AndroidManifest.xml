@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
 
-        <activity android:name=".gastronomiaregiones.Gastronomia_RegionesActivity">
+        <activity android:name=".gastronomialist.GastronomiaListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,8 +28,8 @@
         <activity android:name=".cultura.CulturaActivity" />
         <activity android:name=".tiposdesitiosturisticos.Tipos_De_Sitios_TuristicosActivity" />
         <activity android:name=".ciudadesprincipales.Ciudades_PrincipalesActivity" />
-
-        <activity android:name=".gastronomialist.GastronomiaListActivity" />
+        <activity android:name=".gastronomiaregiones.Gastronomia_RegionesActivity" />
+        <activity android:name=".conversormoneda.Conversor_MonedaActivity" />
 
     </application>
 

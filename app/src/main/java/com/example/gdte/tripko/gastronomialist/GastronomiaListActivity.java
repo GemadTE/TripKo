@@ -3,6 +3,8 @@ package com.example.gdte.tripko.gastronomialist;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 
 import com.example.gdte.tripko.R;
 
@@ -13,11 +15,22 @@ public class GastronomiaListActivity
 
     private GastronomiaListContract.Presenter presenter;
 
+    private ImageButton menuDesplegableImageButton,homeImageButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gastronomia_list);
 
+        menuDesplegableImageButton = findViewById(R.id.menuDesplegableImageButton);
+        homeImageButton = findViewById(R.id.homeImageButton);
+
+        homeImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.goHomeButtonClicked();
+            }
+        });
 
         // do the setup
         GastronomiaListScreen.configure(this);

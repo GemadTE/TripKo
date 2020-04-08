@@ -8,6 +8,54 @@
     android:fitsSystemWindows="true"
     tools:context=".gastronomialist.GastronomiaListActivity">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cabecera"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#478BA2"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageButton
+            android:id="@+id/menuDesplegableImageButton"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/menu_desplegable"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tripkoTextView"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tripkoTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/rancho"
+            android:text="@string/tripko_text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            android:textColor="#F2A490"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/homeImageButton"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/home"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.8"
+            app:layout_constraintStart_toEndOf="@+id/tripkoTextView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <FrameLayout
         android:id="@+id/frameLayout"

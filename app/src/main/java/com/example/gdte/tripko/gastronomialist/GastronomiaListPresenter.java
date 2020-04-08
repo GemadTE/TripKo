@@ -34,6 +34,11 @@ public class GastronomiaListPresenter implements GastronomiaListContract.Present
     }
 
     @Override
+    public void goHomeButtonClicked() {
+        router.navigateToHomeScreen();
+    }
+
+    @Override
     public void onRestart() {
         // Log.e(TAG, "onRestart()");
 
