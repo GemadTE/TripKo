@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.gdte.tripko.R;
@@ -14,6 +15,8 @@ public class Sobre_CoreaActivity
     public static String TAG = Sobre_CoreaActivity.class.getSimpleName();
 
     private Sobre_CoreaContract.Presenter presenter;
+    private TextView sobreCoreaTitle,sobreCoreaDescriptionText;
+    private ImageView image1, image2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +25,12 @@ public class Sobre_CoreaActivity
 
         // do the setup
         Sobre_CoreaScreen.configure(this);
+
+        sobreCoreaDescriptionText=findViewById(R.id.sobreCoreaDescriptionText);
+        sobreCoreaTitle=findViewById(R.id.sobreCoreaTitle);
+        image1=findViewById(R.id.image1);
+        image2=findViewById(R.id.image2);
+
     }
 
     @Override
@@ -34,10 +43,7 @@ public class Sobre_CoreaActivity
 
     @Override
     public void displayData(Sobre_CoreaViewModel viewModel) {
-        //Log.e(TAG, "displayData()");
 
-        // deal with the data
-        ((TextView) findViewById(R.id.data)).setText(viewModel.data);
     }
 
     @Override

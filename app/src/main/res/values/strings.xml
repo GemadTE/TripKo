@@ -30,4 +30,9 @@
     <string name="pasar_a_text">Pasar a:</string>
     <string name="calcular_button_text">Calcular</string>
     <string name="tripko_text">TripKo</string>
+    <string name="clima_title">Clima</string>
+    <string name="clima_text">   El clima de Corea del Sur es básicamente continental, con inviernos
+        fríos y secos y veranos cálidos y lluviosos. La temperatura media de Seúl en enero es de –5 °C,
+        y en julio de 25 °C. Las temperaturas del invierno son más elevadas a lo largo de la costa
+        meridional y bastante más bajas en el interior montañoso.</string>
 </resources>

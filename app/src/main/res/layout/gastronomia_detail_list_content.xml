@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imageView1"
+            android:id="@+id/image1"
             android:layout_width="137.77dp"
             android:layout_height="98dp"
             android:layout_marginStart="20dp"
@@ -92,7 +92,7 @@
         </RelativeLayout>
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/image2"
             android:layout_width="137.77dp"
             android:layout_height="98dp"
             android:layout_marginTop="10dp"
