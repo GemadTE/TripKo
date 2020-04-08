@@ -30,7 +30,7 @@
         <activity android:name=".ciudadesprincipales.Ciudades_PrincipalesActivity" />
         <activity android:name=".gastronomiaregiones.Gastronomia_RegionesActivity" />
         <activity android:name=".gastronomialist.GastronomiaListActivity" />
-        <activity android:name=".gastronomiadetaillist.Gastronomia_Detail_ListActivity" />
+
     </application>
 
 </manifest>

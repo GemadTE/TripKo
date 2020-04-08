@@ -6,10 +6,59 @@
     android:layout_height="match_parent"
     tools:context=".conversormoneda.Conversor_MonedaActivity">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#478BA2"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageButton
+            android:id="@+id/menuDesplegableImageButton"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/menu_desplegable"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tripkoTextView"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tripkoTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/rancho"
+            android:text="@string/tripko_text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            android:textColor="#F2A490"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/homeImageButton"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/home"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.8"
+            app:layout_constraintStart_toEndOf="@+id/tripkoTextView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="500dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -31,7 +80,7 @@
                 android:textColor="@android:color/background_dark" />
 
             <TextView
-                android:id="@+id/divisaTextView2"
+                android:id="@+id/divisaTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="80dp"
@@ -39,7 +88,7 @@
                 android:textColor="@android:color/background_dark" />
 
             <TextView
-                android:id="@+id/pasarATextView3"
+                android:id="@+id/pasarATextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="80dp"
@@ -64,7 +113,7 @@
                 android:inputType="numberDecimal" />
 
             <Spinner
-                android:id="@+id/DivisaSpinner"
+                android:id="@+id/divisaSpinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -73,7 +122,7 @@
                 android:layout_weight="1" />
 
             <Spinner
-                android:id="@+id/PasarASpinner3"
+                android:id="@+id/pasarASpinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -94,4 +143,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

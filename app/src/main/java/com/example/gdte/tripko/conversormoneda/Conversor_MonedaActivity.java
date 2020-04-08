@@ -4,9 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.gdte.tripko.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class Conversor_MonedaActivity
         extends AppCompatActivity implements Conversor_MonedaContract.View {
@@ -15,12 +20,36 @@ public class Conversor_MonedaActivity
 
     private Conversor_MonedaContract.Presenter presenter;
 
+    private TextView cantidadTextView, divisaTextView, pasarATextView,tripkoTextView;
+
+    private EditText cantidadEditText;
+
+    private Spinner divisaSpinner, pasarASpinner;
+
+    private ImageButton menuDesplegableImageButton,homeImageButton;
+
+    private Button calcularButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_conversor__moneda);
 
+        cantidadTextView = findViewById(R.id.cantidadTextView);
+        divisaTextView = findViewById(R.id.divisaTextView);
+        pasarATextView = findViewById(R.id.pasarATextView);
+        tripkoTextView = findViewById(R.id.tripkoTextView);
+
+        cantidadEditText = findViewById(R.id.cantidadEditText);
+
+        divisaSpinner = findViewById(R.id.divisaSpinner);
+        pasarASpinner = findViewById(R.id.pasarASpinner);
+
+        menuDesplegableImageButton = findViewById(R.id.menuDesplegableImageButton);
+        homeImageButton = findViewById(R.id.homeImageButton);
+
+        calcularButton = findViewById(R.id.calcularButton);
 
         // do the setup
         Conversor_MonedaScreen.configure(this);
