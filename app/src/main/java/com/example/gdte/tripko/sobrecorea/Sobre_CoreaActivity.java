@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,6 +19,8 @@ public class Sobre_CoreaActivity
     private Sobre_CoreaContract.Presenter presenter;
     private TextView sobreCoreaTitle,sobreCoreaDescriptionText;
     private ImageView image1, image2;
+    private Button climaButton, culturaButton, ciudadesPrincipalesButton;
+    private ImageButton menuDesplegableImageButton, homeImageButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,10 +30,16 @@ public class Sobre_CoreaActivity
         // do the setup
         Sobre_CoreaScreen.configure(this);
 
+        menuDesplegableImageButton=findViewById(R.id.menuDesplegableImageButton);
+        homeImageButton=findViewById(R.id.homeImageButton);
+
         sobreCoreaDescriptionText=findViewById(R.id.sobreCoreaDescriptionText);
         sobreCoreaTitle=findViewById(R.id.sobreCoreaTitle);
         image1=findViewById(R.id.image1);
         image2=findViewById(R.id.image2);
+        climaButton=findViewById(R.id.climaButton);
+        culturaButton=findViewById(R.id.culturaButton);
+        ciudadesPrincipalesButton=findViewById(R.id.ciudadesPrincipalesButton);
 
     }
 

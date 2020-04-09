@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,6 +17,7 @@ public class ClimaActivity
 
     private ClimaContract.Presenter presenter;
     private TextView climaTitle,climaDescriptionText;
+    private ImageButton menuDesplegableImageButton, homeImageButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,9 @@ public class ClimaActivity
 
         // do the setup
         ClimaScreen.configure(this);
+        menuDesplegableImageButton=findViewById(R.id.menuDesplegableImageButton);
+        homeImageButton=findViewById(R.id.homeImageButton);
+
         climaTitle=findViewById(R.id.climaTitle);
         climaDescriptionText=findViewById(R.id.climaDescriptionText);
     }

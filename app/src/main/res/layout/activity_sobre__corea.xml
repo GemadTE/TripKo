@@ -57,20 +57,20 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ScrollView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.23000002">
+        app:layout_constraintTop_toBottomOf="@+id/cabecera"
+        app:layout_constraintVertical_bias="0.48000002">
 
         <LinearLayout
             android:id="@+id/LinearLayout"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
-            android:layout_marginTop="40dp"
             android:layout_marginRight="15dp"
             android:orientation="vertical">
 
@@ -102,6 +102,32 @@
                 android:layout_width="match_parent"
                 android:layout_height="165dp"
                 app:srcCompat="@drawable/sobre_corea2" />
+
+            <TextView
+                android:id="@+id/sobreCoreaText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="140dp"
+                android:text="@string/sobre_corea_text2"
+                tools:text="@string/sobre_corea_text2" />
+
+            <Button
+                android:id="@+id/climaButton"
+                android:layout_width="wrap_content"
+                android:layout_height="95dp"
+                android:background="@drawable/clima" />
+
+            <Button
+                android:id="@+id/ciudadesPrincipalesButton"
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:background="@drawable/ciudades_principales" />
+
+            <Button
+                android:id="@+id/culturaButton"
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:background="@drawable/cultura" />
         </LinearLayout>
     </ScrollView>
 

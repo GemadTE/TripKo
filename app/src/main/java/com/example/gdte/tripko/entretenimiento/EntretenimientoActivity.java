@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.gdte.tripko.R;
@@ -14,6 +15,7 @@ public class EntretenimientoActivity
     public static String TAG = EntretenimientoActivity.class.getSimpleName();
 
     private EntretenimientoContract.Presenter presenter;
+    private ImageButton menuDesplegableImageButton, homeImageButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +24,9 @@ public class EntretenimientoActivity
 
         // do the setup
         EntretenimientoScreen.configure(this);
+        menuDesplegableImageButton=findViewById(R.id.menuDesplegableImageButton);
+        homeImageButton=findViewById(R.id.homeImageButton);
+
     }
 
     @Override
