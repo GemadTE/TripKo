@@ -7,6 +7,76 @@
     android:padding="0dp"
     tools:context=".ciudadesprincipales.Ciudades_PrincipalesActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/cabecera">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ciudadesPrincipalesTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginBottom="15dp"
+                android:text="@string/ciudades_principales_title"
+                tools:text="@string/ciudades_principales_title" />
+
+            <TextView
+                android:id="@+id/ciudadesPrincipalesDescriptionText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/ciudades_principales_text" />
+
+            <ImageView
+                android:id="@+id/seul"
+                android:layout_width="match_parent"
+                android:layout_height="319dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                app:srcCompat="@drawable/seul" />
+
+            <ImageView
+                android:id="@+id/busan"
+                android:layout_width="match_parent"
+                android:layout_height="486dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                app:srcCompat="@drawable/busan" />
+
+            <ImageView
+                android:id="@+id/incheon"
+                android:layout_width="match_parent"
+                android:layout_height="388dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                app:srcCompat="@drawable/incheon" />
+
+            <ImageView
+                android:id="@+id/daegu"
+                android:layout_width="match_parent"
+                android:layout_height="229dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                app:srcCompat="@drawable/daegu" />
+
+            <ImageView
+                android:id="@+id/daejeon"
+                android:layout_width="match_parent"
+                android:layout_height="390dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                app:srcCompat="@drawable/daejeon" />
+        </LinearLayout>
+    </ScrollView>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cabecera"
         android:layout_width="match_parent"
@@ -55,31 +125,4 @@
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginRight="15dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cabecera"
-        app:layout_constraintVertical_bias="0.03">
-
-        <TextView
-            android:id="@+id/ciudadesPrincipalesTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="150dp"
-            android:layout_marginBottom="15dp"
-            android:text="@string/ciudades_principales_title"
-            tools:text="@string/ciudades_principales_title" />
-
-        <TextView
-            android:id="@+id/ciudadesPrincipalesDescriptionText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/ciudades_principales_text" />
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

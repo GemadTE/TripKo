@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.gdte.tripko.R;
@@ -14,6 +15,8 @@ public class Ciudades_PrincipalesActivity
     public static String TAG = Ciudades_PrincipalesActivity.class.getSimpleName();
 
     private Ciudades_PrincipalesContract.Presenter presenter;
+    private TextView ciudadesPricipalesTitle,ciudadesPricipalesDescriptionText;
+    private ImageView seul, busan, incheon, daegu, daejeon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +25,13 @@ public class Ciudades_PrincipalesActivity
 
         // do the setup
         Ciudades_PrincipalesScreen.configure(this);
+        ciudadesPricipalesDescriptionText=findViewById(R.id.ciudadesPrincipalesDescriptionText);
+        ciudadesPricipalesTitle=findViewById(R.id.ciudadesPrincipalesTitle);
+        seul=findViewById(R.id.seul);
+        busan=findViewById(R.id.busan);
+        incheon=findViewById(R.id.incheon);
+        daegu=findViewById(R.id.daegu);
+        daejeon=findViewById(R.id.daejeon);
     }
 
     @Override
