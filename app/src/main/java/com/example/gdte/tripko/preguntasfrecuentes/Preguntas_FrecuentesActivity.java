@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.gdte.tripko.R;
@@ -15,11 +17,27 @@ public class Preguntas_FrecuentesActivity
 
     private Preguntas_FrecuentesContract.Presenter presenter;
 
+    private TextView tripkoTextView;
+
+
+    private ImageButton homeImageButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_preguntas__frecuentes);
         getSupportActionBar().setTitle(R.string.app_name);
+
+        tripkoTextView = findViewById(R.id.tripkoTextView);
+
+        homeImageButton = findViewById(R.id.homeImageButton);
+
+        homeImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.goHomeButtonClicked();
+            }
+        });
 
         // do the setup
         Preguntas_FrecuentesScreen.configure(this);

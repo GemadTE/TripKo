@@ -48,5 +48,6 @@
     <string name="gastronomia_btn_text">Gastronomía</string>
     <string name="sitios_turisticos_btn_text">Sitios Turísticos</string>
     <string name="contactos_de_interes_btn_text">Contactos de Interés</string>
+    <string name="contactanos_text_button">Contactanos</string>
 
 </resources>

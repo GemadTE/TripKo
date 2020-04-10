@@ -79,6 +79,11 @@ public class Preguntas_FrecuentesPresenter implements Preguntas_FrecuentesContra
     }
 
     @Override
+    public void goHomeButtonClicked() {
+        router.navigateToHomeScreen();
+    }
+
+    @Override
     public void injectView(WeakReference<Preguntas_FrecuentesContract.View> view) {
         this.view = view;
     }

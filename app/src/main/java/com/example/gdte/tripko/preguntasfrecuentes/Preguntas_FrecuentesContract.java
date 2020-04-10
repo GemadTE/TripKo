@@ -11,6 +11,8 @@ public interface Preguntas_FrecuentesContract {
     }
 
     interface Presenter {
+        void goHomeButtonClicked();
+
         void injectView(WeakReference<View> view);
 
         void injectModel(Model model);
@@ -42,6 +44,8 @@ public interface Preguntas_FrecuentesContract {
 
     interface Router {
         void navigateToNextScreen();
+
+        void navigateToHomeScreen();
 
         void passStateToNextScreen(Preguntas_FrecuentesState state);
 
