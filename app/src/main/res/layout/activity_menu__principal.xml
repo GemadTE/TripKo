@@ -52,6 +52,7 @@
             app:layout_constraintHorizontal_bias="0.8"
             app:layout_constraintStart_toEndOf="@id/tripkoTextView"
             app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ScrollView
