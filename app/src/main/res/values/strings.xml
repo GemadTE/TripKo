@@ -40,4 +40,13 @@
         por su gastronomía, cultura o zonas turísticas... Estas son las cinco principales ciudades
         de Corea del Sur:</string>
     <string name="sobre_corea_text2">Más información</string>
+    <string name="sobre_corea_btn_text">Sobre Corea del Sur</string>
+    <string name="idioma_btn_text">Idioma</string>
+    <string name="conversion_de_moneda_btn_text">Conversión de Moneda</string>
+    <string name="transporte_btn_text">Transporte</string>
+    <string name="entretenimineto_btn_text">Entretenimiento</string>
+    <string name="gastronomia_btn_text">Gastronomía</string>
+    <string name="sitios_turisticos_btn_text">Sitios Turísticos</string>
+    <string name="contactos_de_interes_btn_text">Contactos de Interés</string>
+
 </resources>
