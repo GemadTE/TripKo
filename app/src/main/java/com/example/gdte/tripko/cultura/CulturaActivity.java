@@ -3,7 +3,6 @@ package com.example.gdte.tripko.cultura;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -15,7 +14,7 @@ public class CulturaActivity
     public static String TAG = CulturaActivity.class.getSimpleName();
 
     private CulturaContract.Presenter presenter;
-    private ImageButton menuDesplegableImageButton, homeImageButton;
+    private ImageButton preguntasFrecuentesImageButton, homeImageButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +23,7 @@ public class CulturaActivity
 
         // do the setup
         CulturaScreen.configure(this);
-        menuDesplegableImageButton=findViewById(R.id.menuDesplegableImageButton);
+        preguntasFrecuentesImageButton=findViewById(R.id.preguntasFrecuentesImageButton);
         homeImageButton=findViewById(R.id.homeImageButton);
 
     }

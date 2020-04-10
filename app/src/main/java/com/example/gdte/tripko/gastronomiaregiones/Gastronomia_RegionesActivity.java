@@ -18,7 +18,7 @@ public class Gastronomia_RegionesActivity
 
     Button gangwonButton;
 
-    private ImageButton menuDesplegableImageButton,homeImageButton;
+    private ImageButton preguntasFrecuentesImageButton,homeImageButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +30,7 @@ public class Gastronomia_RegionesActivity
 
         gangwonButton = findViewById(R.id.gangwonButton);
 
-        menuDesplegableImageButton = findViewById(R.id.menuDesplegableImageButton);
+        preguntasFrecuentesImageButton = findViewById(R.id.preguntasFrecuentesImageButton);
         homeImageButton = findViewById(R.id.homeImageButton);
 
         gangwonButton.setOnClickListener(new View.OnClickListener() {

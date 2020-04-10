@@ -3,7 +3,6 @@ package com.example.gdte.tripko.entretenimiento;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -15,7 +14,7 @@ public class EntretenimientoActivity
     public static String TAG = EntretenimientoActivity.class.getSimpleName();
 
     private EntretenimientoContract.Presenter presenter;
-    private ImageButton menuDesplegableImageButton, homeImageButton;
+    private ImageButton preguntasFrecuentesImageButton, homeImageButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +23,7 @@ public class EntretenimientoActivity
 
         // do the setup
         EntretenimientoScreen.configure(this);
-        menuDesplegableImageButton=findViewById(R.id.menuDesplegableImageButton);
+        preguntasFrecuentesImageButton=findViewById(R.id.preguntasFrecuentesImageButton);
         homeImageButton=findViewById(R.id.homeImageButton);
 
     }

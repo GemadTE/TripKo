@@ -3,9 +3,7 @@ package com.example.gdte.tripko.clima;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.gdte.tripko.R;
@@ -17,7 +15,7 @@ public class ClimaActivity
 
     private ClimaContract.Presenter presenter;
     private TextView climaTitle,climaDescriptionText;
-    private ImageButton menuDesplegableImageButton, homeImageButton;
+    private ImageButton preguntasFrecuentesImageButton, homeImageButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +24,7 @@ public class ClimaActivity
 
         // do the setup
         ClimaScreen.configure(this);
-        menuDesplegableImageButton=findViewById(R.id.menuDesplegableImageButton);
+        preguntasFrecuentesImageButton=findViewById(R.id.preguntasFrecuentesImageButton);
         homeImageButton=findViewById(R.id.homeImageButton);
 
         climaTitle=findViewById(R.id.climaTitle);

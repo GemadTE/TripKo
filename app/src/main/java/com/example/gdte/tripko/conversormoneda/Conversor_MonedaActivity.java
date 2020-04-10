@@ -3,7 +3,6 @@ package com.example.gdte.tripko.conversormoneda;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,7 +11,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.gdte.tripko.R;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class Conversor_MonedaActivity
         extends AppCompatActivity implements Conversor_MonedaContract.View {
@@ -27,7 +25,7 @@ public class Conversor_MonedaActivity
 
     private Spinner divisaSpinner, pasarASpinner;
 
-    private ImageButton menuDesplegableImageButton,homeImageButton;
+    private ImageButton preguntasFrecuentesImageButton,homeImageButton;
 
     private Button calcularButton;
 
@@ -47,7 +45,7 @@ public class Conversor_MonedaActivity
         divisaSpinner = findViewById(R.id.divisaSpinner);
         pasarASpinner = findViewById(R.id.pasarASpinner);
 
-        menuDesplegableImageButton = findViewById(R.id.menuDesplegableImageButton);
+        preguntasFrecuentesImageButton = findViewById(R.id.preguntasFrecuentesImageButton);
         homeImageButton = findViewById(R.id.homeImageButton);
 
         calcularButton = findViewById(R.id.calcularButton);

@@ -3,7 +3,6 @@ package com.example.gdte.tripko.ciudadesprincipales;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -18,7 +17,7 @@ public class Ciudades_PrincipalesActivity
     private Ciudades_PrincipalesContract.Presenter presenter;
     private TextView ciudadesPricipalesTitle,ciudadesPricipalesDescriptionText;
     private ImageView seul, busan, incheon, daegu, daejeon;
-    private ImageButton menuDesplegableImageButton, homeImageButton;
+    private ImageButton preguntasFrecuentesImageButton, homeImageButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +27,7 @@ public class Ciudades_PrincipalesActivity
         // do the setup
         Ciudades_PrincipalesScreen.configure(this);
 
-        menuDesplegableImageButton=findViewById(R.id.menuDesplegableImageButton);
+        preguntasFrecuentesImageButton=findViewById(R.id.preguntasFrecuentesImageButton);
         homeImageButton=findViewById(R.id.homeImageButton);
 
         ciudadesPricipalesDescriptionText=findViewById(R.id.ciudadesPrincipalesDescriptionText);

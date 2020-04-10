@@ -12,6 +12,7 @@ import com.example.gdte.tripko.elegiridioma.Elegir_IdiomaState;
 import com.example.gdte.tripko.entretenimiento.EntretenimientoState;
 import com.example.gdte.tripko.menuprincipal.Menu_PrincipalState;
 import com.example.gdte.tripko.gastronomiaregiones.Gastronomia_RegionesState;
+import com.example.gdte.tripko.preguntasfrecuentes.Preguntas_FrecuentesState;
 import com.example.gdte.tripko.sitiosturisticos.Sitios_TuristicosState;
 import com.example.gdte.tripko.sobrecorea.Sobre_CoreaState;
 import com.example.gdte.tripko.splash.SplashState;
@@ -33,41 +34,86 @@ public class AppMediator extends Application {
     private GastronomiaListState comidaRestauranteListState;
     private Gastronomia_Detail_ListState comidaRestauranteDetailState;
     private Conversor_MonedaState conversorMonedaState;
+    private Preguntas_FrecuentesState preguntasFrecuentesState;
 
-    public SplashState getSplashState() { return splashState; }
-    public void setSplashState(SplashState splashState) { this.splashState = splashState; }
-
-    public Elegir_IdiomaState getElegirIdiomaState() { return  elegirIdiomaState; }
-    public void setElegirIdiomaState(Elegir_IdiomaState elegirIdiomaState) { this.elegirIdiomaState = elegirIdiomaState; }
-
-    public Menu_PrincipalState getMenu_PrincipalState() { return menu_principalState; }
-    public void setMenu_PrincipalState(Menu_PrincipalState menu_principalState) { this.menu_principalState = menu_principalState; }
-
-    public Sobre_CoreaState getSobre_CoreaState() { return sobreCoreaState; }
-    public void setSobre_CoreaState(Sobre_CoreaState sobreCoreaState) { this.sobreCoreaState=sobreCoreaState; }
-
-    public CulturaState getCulturaState() { return culturaState; }
-    public void setCulturaState(CulturaState culturaState) { this.culturaState=culturaState; }
-
-    public ClimaState getClimaState() { return climaState; }
-    public void setClimaState (ClimaState climaState) { this.climaState=climaState;}
-
-    public Ciudades_PrincipalesState getCiudadesPrincipalesState(){ return ciudadesPrincipalesSate;}
-    public void setCiudadesPrincipalesState (Ciudades_PrincipalesState ciudadesPrincipalesSate)
-    {this.ciudadesPrincipalesSate=ciudadesPrincipalesSate;}
-
-    public EntretenimientoState getEntretenimientoState() {return entretenimientoState;}
-    public void setEntretenimientoState (EntretenimientoState entretenimientoState)
-    {this.entretenimientoState=entretenimientoState;}
-
-    public Sitios_TuristicosState getSitiosTuristicosState(){return sitiosTuristicosState;}
-    public void setSitiosTuristicosState (Sitios_TuristicosState sitiosTuristicosState){
-        this.sitiosTuristicosState=sitiosTuristicosState;
+    public SplashState getSplashState() {
+        return splashState;
     }
 
-    public Tipos_De_Sitios_TuristicosState getTiposDeSitiosTuristicosState(){return tiposDeSitiosTuristicosState;}
-    public void setTiposDeSitiosTuristicosState (Tipos_De_Sitios_TuristicosState tiposDeSitiosTuristicosState){
-        this.tiposDeSitiosTuristicosState=tiposDeSitiosTuristicosState;
+    public void setSplashState(SplashState splashState) {
+        this.splashState = splashState;
+    }
+
+    public Elegir_IdiomaState getElegirIdiomaState() {
+        return elegirIdiomaState;
+    }
+
+    public void setElegirIdiomaState(Elegir_IdiomaState elegirIdiomaState) {
+        this.elegirIdiomaState = elegirIdiomaState;
+    }
+
+    public Menu_PrincipalState getMenu_PrincipalState() {
+        return menu_principalState;
+    }
+
+    public void setMenu_PrincipalState(Menu_PrincipalState menu_principalState) {
+        this.menu_principalState = menu_principalState;
+    }
+
+    public Sobre_CoreaState getSobre_CoreaState() {
+        return sobreCoreaState;
+    }
+
+    public void setSobre_CoreaState(Sobre_CoreaState sobreCoreaState) {
+        this.sobreCoreaState = sobreCoreaState;
+    }
+
+    public CulturaState getCulturaState() {
+        return culturaState;
+    }
+
+    public void setCulturaState(CulturaState culturaState) {
+        this.culturaState = culturaState;
+    }
+
+    public ClimaState getClimaState() {
+        return climaState;
+    }
+
+    public void setClimaState(ClimaState climaState) {
+        this.climaState = climaState;
+    }
+
+    public Ciudades_PrincipalesState getCiudadesPrincipalesState() {
+        return ciudadesPrincipalesSate;
+    }
+
+    public void setCiudadesPrincipalesState(Ciudades_PrincipalesState ciudadesPrincipalesSate) {
+        this.ciudadesPrincipalesSate = ciudadesPrincipalesSate;
+    }
+
+    public EntretenimientoState getEntretenimientoState() {
+        return entretenimientoState;
+    }
+
+    public void setEntretenimientoState(EntretenimientoState entretenimientoState) {
+        this.entretenimientoState = entretenimientoState;
+    }
+
+    public Sitios_TuristicosState getSitiosTuristicosState() {
+        return sitiosTuristicosState;
+    }
+
+    public void setSitiosTuristicosState(Sitios_TuristicosState sitiosTuristicosState) {
+        this.sitiosTuristicosState = sitiosTuristicosState;
+    }
+
+    public Tipos_De_Sitios_TuristicosState getTiposDeSitiosTuristicosState() {
+        return tiposDeSitiosTuristicosState;
+    }
+
+    public void setTiposDeSitiosTuristicosState(Tipos_De_Sitios_TuristicosState tiposDeSitiosTuristicosState) {
+        this.tiposDeSitiosTuristicosState = tiposDeSitiosTuristicosState;
     }
 
     public Gastronomia_RegionesState getGastronomiaRegionesState() {
@@ -100,5 +146,13 @@ public class AppMediator extends Application {
 
     public void setConversorMonedaState(Conversor_MonedaState conversor_monedaState) {
         conversorMonedaState = conversor_monedaState;
+    }
+
+    public Preguntas_FrecuentesState getPreguntasFrecuentesState() {
+        return preguntasFrecuentesState;
+    }
+
+    public void setPreguntasFrecuentesState(Preguntas_FrecuentesState preguntas_frecuentesState) {
+        preguntasFrecuentesState = preguntasFrecuentesState;
     }
 }

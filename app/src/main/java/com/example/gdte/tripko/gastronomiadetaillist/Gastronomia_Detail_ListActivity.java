@@ -19,7 +19,7 @@ public class Gastronomia_Detail_ListActivity
 
     private TextView comidaRestauranteTitleTextView, comidaTitle1TextView, comidaTitle2TextView;
 
-    private ImageButton menuDesplegableImageButton, homeImageButton;
+    private ImageButton preguntasFrecuentesImageButton, homeImageButton;
 
     private RecyclerView comidaRestauranteList;
 
@@ -36,7 +36,7 @@ public class Gastronomia_Detail_ListActivity
         comidaTitle1TextView = findViewById(R.id.comidaTitleTextView);
         comidaTitle2TextView = findViewById(R.id.comidaTitle2TextView);
 
-        menuDesplegableImageButton = findViewById(R.id.menuDesplegableImageButton);
+        preguntasFrecuentesImageButton = findViewById(R.id.preguntasFrecuentesImageButton);
         homeImageButton = findViewById(R.id.homeImageButton);
 
         comidaRestauranteList = findViewById(R.id.comidaRestauranteList);

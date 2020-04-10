@@ -15,14 +15,14 @@ public class GastronomiaListActivity
 
     private GastronomiaListContract.Presenter presenter;
 
-    private ImageButton menuDesplegableImageButton,homeImageButton;
+    private ImageButton preguntasFrecuentesImageButton,homeImageButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gastronomia_list);
 
-        menuDesplegableImageButton = findViewById(R.id.menuDesplegableImageButton);
+        preguntasFrecuentesImageButton = findViewById(R.id.preguntasFrecuentesImageButton);
         homeImageButton = findViewById(R.id.homeImageButton);
 
         homeImageButton.setOnClickListener(new View.OnClickListener() {
