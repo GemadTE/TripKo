@@ -4,6 +4,7 @@ import android.app.Application;
 
 import com.example.gdte.tripko.ciudadesprincipales.Ciudades_PrincipalesState;
 import com.example.gdte.tripko.clima.ClimaState;
+import com.example.gdte.tripko.contactosdeinteres.Contactos_De_InteresState;
 import com.example.gdte.tripko.conversormoneda.Conversor_MonedaState;
 import com.example.gdte.tripko.gastronomialist.GastronomiaListState;
 import com.example.gdte.tripko.gastronomiadetaillist.Gastronomia_Detail_ListState;
@@ -35,6 +36,7 @@ public class AppMediator extends Application {
     private Gastronomia_Detail_ListState comidaRestauranteDetailState;
     private Conversor_MonedaState conversorMonedaState;
     private Preguntas_FrecuentesState preguntasFrecuentesState;
+    private Contactos_De_InteresState contactosDeInteresState;
 
     public SplashState getSplashState() {
         return splashState;
@@ -154,5 +156,13 @@ public class AppMediator extends Application {
 
     public void setPreguntasFrecuentesState(Preguntas_FrecuentesState preguntas_frecuentesState) {
         preguntasFrecuentesState = preguntasFrecuentesState;
+    }
+
+    public Contactos_De_InteresState getContactosDeInteresState(){
+        return contactosDeInteresState;
+    }
+
+    public void setContactosDeInteresState(Contactos_De_InteresState contactosDeInteresState){
+        this.contactosDeInteresState = contactosDeInteresState;
     }
 }
