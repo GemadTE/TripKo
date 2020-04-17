@@ -49,5 +49,13 @@
     <string name="sitios_turisticos_btn_text">Sitios Turísticos</string>
     <string name="contactos_de_interes_btn_text">Contactos de Interés</string>
     <string name="contactanos_text_button">Contactanos</string>
+    <string name="aeropuertos_btn_text">Aeropuertos</string>
+    <string name="ferrocarril_btn_text">Ferrocarril</string>
+    <string name="autobuses_btn_text">Autobuses</string>
+    <string name="metro_btn_text">Metro</string>
+    <string name="ferri_btn_text">Ferri</string>
+    <string name="taxis_btn_text">Taxis</string>
+    <string name="alquiler_de_coches_btn_text">Alquiler de Coches</string>
+    <string name="tarjetas_de_transporte_btn_text">Tarjetas de Transporte</string>
 
 </resources>

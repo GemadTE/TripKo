@@ -18,6 +18,7 @@ import com.example.gdte.tripko.sitiosturisticos.Sitios_TuristicosState;
 import com.example.gdte.tripko.sobrecorea.Sobre_CoreaState;
 import com.example.gdte.tripko.splash.SplashState;
 import com.example.gdte.tripko.tiposdesitiosturisticos.Tipos_De_Sitios_TuristicosState;
+import com.example.gdte.tripko.transportecategory.Transporte_CategoryState;
 
 public class AppMediator extends Application {
 
@@ -37,6 +38,7 @@ public class AppMediator extends Application {
     private Conversor_MonedaState conversorMonedaState;
     private Preguntas_FrecuentesState preguntasFrecuentesState;
     private Contactos_De_InteresState contactosDeInteresState;
+    private Transporte_CategoryState transporteCategoryState;
 
     public SplashState getSplashState() {
         return splashState;
@@ -164,5 +166,13 @@ public class AppMediator extends Application {
 
     public void setContactosDeInteresState(Contactos_De_InteresState contactosDeInteresState){
         this.contactosDeInteresState = contactosDeInteresState;
+    }
+
+    public void setTransporteCategoryState(Transporte_CategoryState transporteCategoryState) {
+        this.transporteCategoryState = transporteCategoryState;
+    }
+
+    public Transporte_CategoryState getTransporteCategoryState() {
+        return transporteCategoryState;
     }
 }

@@ -32,7 +32,6 @@
         <activity android:name=".gastronomialist.GastronomiaListActivity" />
         <activity android:name=".gastronomiadetaillist.Gastronomia_Detail_ListActivity" />
         <activity android:name=".contactosdeinteres.Contactos_De_InteresActivity" />
-
-
+        <activity android:name=".transportecategory.Transporte_CategoryActivity" />
     </application>
 </manifest>
