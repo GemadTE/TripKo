@@ -5,6 +5,13 @@ import android.content.Intent;
 import android.content.Context;
 
 import com.example.gdte.tripko.app.AppMediator;
+import com.example.gdte.tripko.contactosdeinteres.Contactos_De_InteresActivity;
+import com.example.gdte.tripko.conversormoneda.Conversor_MonedaActivity;
+import com.example.gdte.tripko.entretenimiento.EntretenimientoActivity;
+import com.example.gdte.tripko.gastronomiaregiones.Gastronomia_RegionesActivity;
+import com.example.gdte.tripko.sitiosturisticos.Sitios_TuristicosActivity;
+import com.example.gdte.tripko.sobrecorea.Sobre_CoreaActivity;
+import com.example.gdte.tripko.transportecategory.Transporte_CategoryActivity;
 
 public class Menu_PrincipalRouter implements Menu_PrincipalContract.Router {
 
@@ -16,12 +23,12 @@ public class Menu_PrincipalRouter implements Menu_PrincipalContract.Router {
         this.mediator = mediator;
     }
 
-    @Override
+   /* @Override
     public void navigateToNextScreen() {
         Context context = mediator.getApplicationContext();
         Intent intent = new Intent(context, Menu_PrincipalActivity.class);
         context.startActivity(intent);
-    }
+    }*/
 
     @Override
     public void passDataToNextScreen(Menu_PrincipalState state) {
@@ -32,5 +39,61 @@ public class Menu_PrincipalRouter implements Menu_PrincipalContract.Router {
     public Menu_PrincipalState getDataFromPreviousScreen() {
         Menu_PrincipalState state = mediator.getMenu_PrincipalState();
         return state;
+    }
+
+    @Override
+    public void navigateToSobreCoreaScreen() {
+        Context context = mediator.getApplicationContext();
+        Intent intent = new Intent(context, Sobre_CoreaActivity.class);
+        context.startActivity(intent);
+    }
+
+    @Override
+    public void navigateToIdiomaScreen() {
+        Context context = mediator.getApplicationContext();
+        Intent intent = new Intent(context, Menu_PrincipalActivity.class);
+        context.startActivity(intent);
+    }
+
+    @Override
+    public void navigateToConversionDeMonedaScreen() {
+        Context context = mediator.getApplicationContext();
+        Intent intent = new Intent(context, Conversor_MonedaActivity.class);
+        context.startActivity(intent);
+    }
+
+    @Override
+    public void navigateToTransporteScreen() {
+        Context context = mediator.getApplicationContext();
+        Intent intent = new Intent(context, Transporte_CategoryActivity.class);
+        context.startActivity(intent);
+    }
+
+    @Override
+    public void navigateToEntretenimientoScreen() {
+        Context context = mediator.getApplicationContext();
+        Intent intent = new Intent(context, EntretenimientoActivity.class);
+        context.startActivity(intent);
+    }
+
+    @Override
+    public void navigateToGastronomiaScreen() {
+        Context context = mediator.getApplicationContext();
+        Intent intent = new Intent(context, Gastronomia_RegionesActivity.class);
+        context.startActivity(intent);
+    }
+
+    @Override
+    public void navigateToSitiosTuristicosScreen() {
+        Context context = mediator.getApplicationContext();
+        Intent intent = new Intent(context, Sitios_TuristicosActivity.class);
+        context.startActivity(intent);
+    }
+
+    @Override
+    public void navigateToContactosDeInteresScreen() {
+        Context context = mediator.getApplicationContext();
+        Intent intent = new Intent(context, Contactos_De_InteresActivity.class);
+        context.startActivity(intent);
     }
 }

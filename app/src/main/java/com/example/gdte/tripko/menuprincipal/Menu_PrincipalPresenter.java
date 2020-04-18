@@ -51,6 +51,38 @@ public class Menu_PrincipalPresenter implements Menu_PrincipalContract.Presenter
     }
 
     @Override
+    public void onMenuOptionClicked(int option) {
+        switch (option){
+            case 0:
+                router.navigateToSobreCoreaScreen();
+                break;
+            case 1:
+                router.navigateToIdiomaScreen();
+                break;
+            case 2:
+                router.navigateToConversionDeMonedaScreen();
+                break;
+            case 3:
+                router.navigateToTransporteScreen();
+                break;
+            case 4:
+                router.navigateToEntretenimientoScreen();
+                break;
+            case 5:
+                router.navigateToGastronomiaScreen();
+                break;
+            case 6:
+                router.navigateToSitiosTuristicosScreen();
+                break;
+            case 7:
+                router.navigateToContactosDeInteresScreen();
+                break;
+            default:
+                break;
+        }
+    }
+
+    @Override
     public void injectView(WeakReference<Menu_PrincipalContract.View> view) {
         this.view = view;
     }

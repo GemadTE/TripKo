@@ -18,6 +18,8 @@ public interface Menu_PrincipalContract {
         void injectRouter(Router router);
 
         void fetchData();
+
+        void onMenuOptionClicked(int option);
     }
 
     interface Model {
@@ -25,10 +27,26 @@ public interface Menu_PrincipalContract {
     }
 
     interface Router {
-        void navigateToNextScreen();
+        // void navigateToNextScreen();
 
         void passDataToNextScreen(Menu_PrincipalState state);
 
         Menu_PrincipalState getDataFromPreviousScreen();
+
+        void navigateToSobreCoreaScreen();
+
+        void navigateToIdiomaScreen();
+
+        void navigateToConversionDeMonedaScreen();
+
+        void navigateToTransporteScreen();
+
+        void navigateToEntretenimientoScreen();
+
+        void navigateToGastronomiaScreen();
+
+        void navigateToSitiosTuristicosScreen();
+
+        void navigateToContactosDeInteresScreen();
     }
 }
