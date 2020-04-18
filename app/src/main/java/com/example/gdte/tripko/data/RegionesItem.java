@@ -4,19 +4,18 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-
-
-public class GastronomiaItem {
+public class RegionesItem {
 
     private int id;
+
     private String content;
 
-    @SerializedName("gastronomiaDetail")
-    public List<GastronomiaDetailItem> items;
+    @SerializedName("gastronomiaItem")
+    public List<GastronomiaItem> gastronomiaItemList;
 
-    public GastronomiaItem(int id, String content){
-        this.id = id;
-        this.content = content;
+    @Override
+    public String toString() {
+        return content;
     }
 
     public int getId() {
@@ -33,10 +32,5 @@ public class GastronomiaItem {
 
     public void setContent(String content) {
         this.content = content;
-    }
-
-    @Override
-    public String toString(){
-        return content;
     }
 }

@@ -1,0 +1,21 @@
+{
+  "regiones": [
+    {
+      "id": 1,
+      "content": "Pepito",
+      "gastronomia": [
+        {
+          "id": 1,
+          "content": "Restaurante",
+          "gastronomiaDetail": [
+            {
+              "id": 1,
+              "comidaContent": "Hola",
+              "comidaTitle": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
