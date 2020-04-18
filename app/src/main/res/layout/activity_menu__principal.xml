@@ -74,7 +74,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
-                    android:src="@drawable/ic_btn_sobre_corea" />
+                    app:srcCompat="@drawable/ic_btn_sobre_corea" />
 
                 <TextView
                     android:id="@+id/sobreCorea_btn_txt"
@@ -101,7 +101,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="32dp"
-                    android:src="@drawable/ic_btn_idioma" />
+                    app:srcCompat="@drawable/ic_btn_idioma" />
 
                 <TextView
                     android:id="@+id/idioma_btn_txt"
@@ -128,7 +128,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="32dp"
-                    android:src="@drawable/ic_btn_conversion_de_moneda" />
+                    app:srcCompat="@drawable/ic_btn_conversion_de_moneda" />
 
                 <TextView
                     android:id="@+id/conversion_de_moneda_btn_txt"
@@ -155,7 +155,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:src="@drawable/ic_btn_transporte" />
+                    app:srcCompat="@drawable/ic_btn_transporte" />
 
                 <TextView
                     android:id="@+id/transporte_btn_txt"
@@ -182,7 +182,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="32dp"
-                    android:src="@drawable/ic_btn_entretenimiento" />
+                    app:srcCompat="@drawable/ic_btn_entretenimiento" />
 
                 <TextView
                     android:id="@+id/entretenimiento_btn_txt"
@@ -209,7 +209,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="24dp"
-                    android:src="@drawable/ic_btn_gastronomia" />
+                    app:srcCompat="@drawable/ic_btn_gastronomia" />
 
                 <TextView
                     android:id="@+id/gastronomia_btn_txt"
@@ -236,7 +236,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:src="@drawable/ic_btn_sitios_turisticos" />
+                    app:srcCompat="@drawable/ic_btn_sitios_turisticos" />
 
                 <TextView
                     android:id="@+id/sitios_turisticos_btn_text"
@@ -263,7 +263,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
-                    android:src="@drawable/ic_btn_contactos_de_interes" />
+                    app:srcCompat="@drawable/ic_btn_contactos_de_interes" />
 
                 <TextView
                     android:id="@+id/contactos_de_interes_btn_text"

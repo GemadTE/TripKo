@@ -1,0 +1,49 @@
+{
+  "regiones": [
+    {
+      "id": 1,
+      "content": "Pepito",
+      "gastronomia": [
+        {
+          "id": 1,
+          "content": "Restaurantes",
+          "gastronomiaDetail": [
+            {
+              "id": 1,
+              "comidaContent": "Hola",
+              "comidaTitle": "Tortilla"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "content": "Platos",
+          "gastronomiaDetail": [
+            {
+              "id": 1,
+              "comidaContent": "Bueno",
+              "comidaTitle": "Papas"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "content": "Juanito",
+      "gastronomia": [
+        {
+          "id": 1,
+          "content": "Restaurante",
+          "gastronomiaDetail": [
+            {
+              "id": 1,
+              "comidaContent": "pepe",
+              "comidaTitle": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

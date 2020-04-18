@@ -5,6 +5,7 @@ import android.content.Context;
 
 import com.example.gdte.tripko.app.AppMediator;
 import com.example.gdte.tripko.data.GastronomiaItem;
+import com.example.gdte.tripko.data.RegionItem;
 import com.example.gdte.tripko.gastronomiadetaillist.Gastronomia_Detail_ListActivity;
 import com.example.gdte.tripko.menuprincipal.Menu_PrincipalActivity;
 
@@ -39,15 +40,10 @@ public class GastronomiaListRouter implements GastronomiaListContract.Router {
         mediator.setGastronomiaItem(item);
     }
 
-
     @Override
-    public void passStateToNextScreen(GastronomiaListState state) {
-        mediator.setComidaRestauranteListState(state);
-    }
-
-    @Override
-    public void passStateToPreviousScreen(GastronomiaListState state) {
-        mediator.setComidaRestauranteListState(state);
+    public RegionItem getDataFromRegionListScreen() {
+        RegionItem region = mediator.getRegionItem();
+        return region;
     }
 
     @Override

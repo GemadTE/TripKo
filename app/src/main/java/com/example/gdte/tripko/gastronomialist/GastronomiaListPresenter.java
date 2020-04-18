@@ -1,8 +1,11 @@
 package com.example.gdte.tripko.gastronomialist;
 
 import com.example.gdte.tripko.data.GastronomiaItem;
+import com.example.gdte.tripko.data.RegionItem;
+import com.example.gdte.tripko.data.RepositoryContract;
 
 import java.lang.ref.WeakReference;
+import java.util.List;
 
 public class GastronomiaListPresenter implements GastronomiaListContract.Presenter {
 
@@ -18,19 +21,28 @@ public class GastronomiaListPresenter implements GastronomiaListContract.Present
     }
 
     @Override
-    public void onStart() {
-        // Log.e(TAG, "onStart()");
+    public void fetchProductListData() {
+        // Log.e(TAG, "fetchProductListData()");
 
-        // initialize the state if is necessary
-        if (state == null) {
-            state = new GastronomiaListState();
+        // set passed state
+        RegionItem regionItem = router.getDataFromRegionListScreen();
+
+        if (regionItem != null) {
+            state.region = regionItem;
         }
 
-        // use passed state if is necessary
-        GastronomiaListState savedState = router.getStateFromPreviousScreen();
-        if (savedState != null) {
+        // call the model
+        model.fetchGastronomiaListData(state.region,
+                new RepositoryContract.GetGastronomiaListCallback() {
 
-        }
+                    @Override
+                    public void setGastronomiaList(List<GastronomiaItem> gastronomiaItems) {
+                        state.gastronomiaItems = gastronomiaItems;
+
+                        view.get().displayProductListData(state);
+                    }
+                });
+
     }
 
     @Override
@@ -38,47 +50,6 @@ public class GastronomiaListPresenter implements GastronomiaListContract.Present
         router.navigateToHomeScreen();
     }
 
-    @Override
-    public void fetchProductListData() {
-        // Log.e(TAG, "fetchProductListData()");
-
-        // call the model
-        state.gastronomiaItems = model.fetchProductListData();
-
-        view.get().displayProductListData(state);
-
-    }
-
-    @Override
-    public void onResume() {
-        // Log.e(TAG, "onResume()");
-
-        // use passed state if is necessary
-        GastronomiaListState savedState = router.getStateFromNextScreen();
-        if (savedState != null) {
-
-        }
-
-
-        // update the view
-        view.get().displayProductListData(state);
-
-    }
-
-    @Override
-    public void onBackPressed() {
-        // Log.e(TAG, "onBackPressed()");
-    }
-
-    @Override
-    public void onPause() {
-        // Log.e(TAG, "onPause()");
-    }
-
-    @Override
-    public void onDestroy() {
-        // Log.e(TAG, "onDestroy()");
-    }
 
     @Override
     public void selectGastronomiaListData(GastronomiaItem item) {

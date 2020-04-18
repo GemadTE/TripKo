@@ -8,6 +8,7 @@ import com.example.gdte.tripko.contactosdeinteres.Contactos_De_InteresState;
 import com.example.gdte.tripko.conversormoneda.Conversor_MonedaState;
 import com.example.gdte.tripko.data.GastronomiaDetailItem;
 import com.example.gdte.tripko.data.GastronomiaItem;
+import com.example.gdte.tripko.data.RegionItem;
 import com.example.gdte.tripko.gastronomialist.GastronomiaListState;
 import com.example.gdte.tripko.gastronomiadetaillist.Gastronomia_Detail_ListState;
 import com.example.gdte.tripko.cultura.CulturaState;
@@ -15,7 +16,7 @@ import com.example.gdte.tripko.elegiridioma.Elegir_IdiomaState;
 import com.example.gdte.tripko.entretenimiento.EntretenimientoState;
 import com.example.gdte.tripko.idioma.IdiomaState;
 import com.example.gdte.tripko.menuprincipal.Menu_PrincipalState;
-import com.example.gdte.tripko.gastronomiaregiones.Gastronomia_RegionesState;
+import com.example.gdte.tripko.regiones.Region_ListState;
 import com.example.gdte.tripko.preguntasfrecuentes.Preguntas_FrecuentesState;
 import com.example.gdte.tripko.sitiosturisticos.Sitios_TuristicosState;
 import com.example.gdte.tripko.sobrecorea.Sobre_CoreaState;
@@ -35,15 +36,16 @@ public class AppMediator extends Application {
     private EntretenimientoState entretenimientoState;
     private Sitios_TuristicosState sitiosTuristicosState;
     private Tipos_De_Sitios_TuristicosState tiposDeSitiosTuristicosState;
-    private Gastronomia_RegionesState gastronomiaRegionesState;
-    private GastronomiaListState comidaRestauranteListState;
-    private Gastronomia_Detail_ListState comidaRestauranteDetailState;
+    private Region_ListState RegionListState = new Region_ListState();
+    private GastronomiaListState comidaRestauranteListState = new GastronomiaListState();
+    private Gastronomia_Detail_ListState comidaRestauranteDetailState = new Gastronomia_Detail_ListState();
     private Conversor_MonedaState conversorMonedaState;
     private Preguntas_FrecuentesState preguntasFrecuentesState;
     private Contactos_De_InteresState contactosDeInteresState;
     private Transporte_CategoryState transporteCategoryState;
     private IdiomaState idiomaState;
 
+    private RegionItem regionItem;
     private GastronomiaItem gastronomiaItem;
     private GastronomiaDetailItem gastronomiaDetailItem;
 
@@ -127,12 +129,12 @@ public class AppMediator extends Application {
         this.tiposDeSitiosTuristicosState = tiposDeSitiosTuristicosState;
     }
 
-    public Gastronomia_RegionesState getGastronomiaRegionesState() {
-        return gastronomiaRegionesState;
+    public Region_ListState getRegionListState() {
+        return RegionListState;
     }
 
-    public void setGastronomiaRegionesState(Gastronomia_RegionesState regionState) {
-        gastronomiaRegionesState = regionState;
+    public void setRegionListState(Region_ListState regionState) {
+        RegionListState = regionState;
     }
 
     public GastronomiaListState getComidaRestauranteListState() {
@@ -182,6 +184,19 @@ public class AppMediator extends Application {
     public Transporte_CategoryState getTransporteCategoryState() {
         return transporteCategoryState;
     }
+
+
+
+
+    public RegionItem getRegionItem() {
+        RegionItem item = regionItem;
+        return item;
+    }
+
+    public void setRegionItem(RegionItem regionItem) {
+        this.regionItem = regionItem;
+    }
+
 
     public GastronomiaItem getGastronomiaItem() {
         return gastronomiaItem;

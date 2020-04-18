@@ -4,6 +4,8 @@ import android.util.Log;
 
 import com.example.gdte.tripko.data.GastronomiaDetailItem;
 import com.example.gdte.tripko.data.GastronomiaItem;
+import com.example.gdte.tripko.data.RegionItem;
+import com.example.gdte.tripko.data.RepositoryContract;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,28 +15,17 @@ public class GastronomiaListModel implements GastronomiaListContract.Model {
     public static String TAG = GastronomiaListModel.class.getSimpleName();
 
     private final List<GastronomiaItem> itemList = new ArrayList<>();
-    private final int COUNT = 2;
+    private RepositoryContract repository;
 
-    public GastronomiaListModel() {
-        for (int index = 1; index <= COUNT; index++) {
-            addGastronomia(createGastronomia(index));
-        }
+    public GastronomiaListModel(RepositoryContract repository) {
+       this.repository = repository;
     }
 
     @Override
-    public List<GastronomiaItem> fetchProductListData() {
+    public void fetchGastronomiaListData(
+            RegionItem region, RepositoryContract.GetGastronomiaListCallback callback) {
+
         Log.e(TAG, "fetchProductListData()");
-        return itemList;
-    }
-
-    private void addGastronomia(GastronomiaItem item) {
-        itemList.add(item);
-    }
-
-    private GastronomiaItem createGastronomia(int position) {
-        String content = "Restaurante " + position;
-
-        return new GastronomiaItem(position,content);
-
+        repository.getGastronomiaList(region, callback);
     }
 }

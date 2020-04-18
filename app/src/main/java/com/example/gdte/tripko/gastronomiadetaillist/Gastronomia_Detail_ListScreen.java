@@ -6,6 +6,8 @@ import androidx.fragment.app.FragmentActivity;
 
 import com.example.gdte.tripko.R;
 import com.example.gdte.tripko.app.AppMediator;
+import com.example.gdte.tripko.data.AppRepository;
+import com.example.gdte.tripko.data.RepositoryContract;
 
 public class Gastronomia_Detail_ListScreen {
 
@@ -18,6 +20,8 @@ public class Gastronomia_Detail_ListScreen {
 
         AppMediator mediator = (AppMediator) context.get().getApplication();
         Gastronomia_Detail_ListState state = mediator.getComidarestaurantedetailState();
+        RepositoryContract repository = AppRepository.getInstance(context.get());
+
 
         Gastronomia_Detail_ListContract.Router router = new Gastronomia_Detail_ListRouter(mediator);
         Gastronomia_Detail_ListContract.Presenter presenter = new Gastronomia_Detail_ListPresenter(state);

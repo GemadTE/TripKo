@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.example.gdte.tripko.R;
 import com.example.gdte.tripko.data.GastronomiaItem;
+import com.example.gdte.tripko.data.RegionItem;
 
 public class GastronomiaListActivity
         extends AppCompatActivity implements GastronomiaListContract.View {
@@ -45,6 +46,14 @@ public class GastronomiaListActivity
             }
         });
 
+        gastronomiaListAdapter = new GastronomiaListAdapter(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GastronomiaItem item = (GastronomiaItem) v.getTag();
+                presenter.selectGastronomiaListData(item);
+            }
+        });
+
         RecyclerView recyclerView = findViewById(R.id.gastronomiaList);
         recyclerView.setAdapter(gastronomiaListAdapter);
 
@@ -54,38 +63,15 @@ public class GastronomiaListActivity
         presenter.fetchProductListData();
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        // load the data
-        presenter.onResume();
-    }
 
     @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-
-        presenter.onBackPressed();
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-
-        presenter.onPause();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-
-        presenter.onDestroy();
-    }
-
-    @Override
-    public void displayProductListData(GastronomiaListViewModel viewModel) {
-        gastronomiaListAdapter.setItems(viewModel.gastronomiaItems);
+    public void displayProductListData(final GastronomiaListViewModel viewModel) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                gastronomiaListAdapter.setItems(viewModel.gastronomiaItems);
+            }
+        });
     }
 
     @Override
