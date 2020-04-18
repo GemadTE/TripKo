@@ -20,6 +20,8 @@ public interface Menu_PrincipalContract {
         void fetchData();
 
         void onMenuOptionClicked(int option);
+
+        void onPreguntasFrecuentesClicked();
     }
 
     interface Model {
@@ -48,5 +50,7 @@ public interface Menu_PrincipalContract {
         void navigateToSitiosTuristicosScreen();
 
         void navigateToContactosDeInteresScreen();
+
+        void navigateToPreguntasFrecuentesScreen();
     }
 }

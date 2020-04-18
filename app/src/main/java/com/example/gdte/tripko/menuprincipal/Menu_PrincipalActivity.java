@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -20,6 +21,8 @@ public class Menu_PrincipalActivity
     private LinearLayout sobreCoreaBtn, idiomaBtn, conversionDeMonedaBtn, transporteBtn,
             entreteniminetoBtn, gastronomiaBtn, sitiosTuristicosBtn, contactosDeInteresBtn;
 
+    private ImageButton preguntasFrecuentesImageButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +36,8 @@ public class Menu_PrincipalActivity
         gastronomiaBtn = findViewById(R.id.gastronomia_btn);
         sitiosTuristicosBtn = findViewById(R.id.sitios_turisticos_btn);
         contactosDeInteresBtn = findViewById(R.id.contactos_de_interes_btn);
+
+        preguntasFrecuentesImageButton = findViewById(R.id.preguntasFrecuentesImageButton);
 
         sobreCoreaBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,6 +86,13 @@ public class Menu_PrincipalActivity
             @Override
             public void onClick(View v) {
                 presenter.onMenuOptionClicked(7);
+            }
+        });
+
+        preguntasFrecuentesImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.onPreguntasFrecuentesClicked();
             }
         });
 

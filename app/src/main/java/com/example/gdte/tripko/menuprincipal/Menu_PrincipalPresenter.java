@@ -83,6 +83,11 @@ public class Menu_PrincipalPresenter implements Menu_PrincipalContract.Presenter
     }
 
     @Override
+    public void onPreguntasFrecuentesClicked() {
+        router.navigateToPreguntasFrecuentesScreen();
+    }
+
+    @Override
     public void injectView(WeakReference<Menu_PrincipalContract.View> view) {
         this.view = view;
     }

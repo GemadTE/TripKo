@@ -13,6 +13,7 @@ import com.example.gdte.tripko.gastronomiadetaillist.Gastronomia_Detail_ListStat
 import com.example.gdte.tripko.cultura.CulturaState;
 import com.example.gdte.tripko.elegiridioma.Elegir_IdiomaState;
 import com.example.gdte.tripko.entretenimiento.EntretenimientoState;
+import com.example.gdte.tripko.idioma.IdiomaState;
 import com.example.gdte.tripko.menuprincipal.Menu_PrincipalState;
 import com.example.gdte.tripko.gastronomiaregiones.Gastronomia_RegionesState;
 import com.example.gdte.tripko.preguntasfrecuentes.Preguntas_FrecuentesState;
@@ -41,6 +42,7 @@ public class AppMediator extends Application {
     private Preguntas_FrecuentesState preguntasFrecuentesState;
     private Contactos_De_InteresState contactosDeInteresState;
     private Transporte_CategoryState transporteCategoryState;
+    private IdiomaState idiomaState;
 
     private GastronomiaItem gastronomiaItem;
     private GastronomiaDetailItem gastronomiaDetailItem;
@@ -195,5 +197,13 @@ public class AppMediator extends Application {
 
     public void setGastronomiaDetailItem(GastronomiaDetailItem gastronomiaDetailItem) {
         this.gastronomiaDetailItem = gastronomiaDetailItem;
+    }
+
+    public IdiomaState getIdiomaState(){
+        return idiomaState;
+    }
+
+    public void setIdiomaState(IdiomaState idiomaState) {
+        this.idiomaState = idiomaState;
     }
 }

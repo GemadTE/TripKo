@@ -9,6 +9,8 @@ import com.example.gdte.tripko.contactosdeinteres.Contactos_De_InteresActivity;
 import com.example.gdte.tripko.conversormoneda.Conversor_MonedaActivity;
 import com.example.gdte.tripko.entretenimiento.EntretenimientoActivity;
 import com.example.gdte.tripko.gastronomiaregiones.Gastronomia_RegionesActivity;
+import com.example.gdte.tripko.idioma.IdiomaActivity;
+import com.example.gdte.tripko.preguntasfrecuentes.Preguntas_FrecuentesActivity;
 import com.example.gdte.tripko.sitiosturisticos.Sitios_TuristicosActivity;
 import com.example.gdte.tripko.sobrecorea.Sobre_CoreaActivity;
 import com.example.gdte.tripko.transportecategory.Transporte_CategoryActivity;
@@ -51,7 +53,7 @@ public class Menu_PrincipalRouter implements Menu_PrincipalContract.Router {
     @Override
     public void navigateToIdiomaScreen() {
         Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, Menu_PrincipalActivity.class);
+        Intent intent = new Intent(context, IdiomaActivity.class);
         context.startActivity(intent);
     }
 
@@ -94,6 +96,13 @@ public class Menu_PrincipalRouter implements Menu_PrincipalContract.Router {
     public void navigateToContactosDeInteresScreen() {
         Context context = mediator.getApplicationContext();
         Intent intent = new Intent(context, Contactos_De_InteresActivity.class);
+        context.startActivity(intent);
+    }
+
+    @Override
+    public void navigateToPreguntasFrecuentesScreen() {
+        Context context = mediator.getApplicationContext();
+        Intent intent = new Intent(context, Preguntas_FrecuentesActivity.class);
         context.startActivity(intent);
     }
 }
