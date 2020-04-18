@@ -1,21 +1,28 @@
 package com.example.gdte.tripko.gastronomialist;
 
+import com.example.gdte.tripko.data.GastronomiaItem;
+
 import java.lang.ref.WeakReference;
+import java.util.List;
 
 public interface GastronomiaListContract {
 
     interface View {
         void injectPresenter(Presenter presenter);
 
-        void onDataUpdated(GastronomiaListViewModel viewModel);
+        void displayProductListData(GastronomiaListViewModel viewModel);
     }
 
     interface Presenter {
+        void selectGastronomiaListData(GastronomiaItem item);
+
         void injectView(WeakReference<View> view);
 
         void injectModel(Model model);
 
         void injectRouter(Router router);
+
+        void fetchProductListData();
 
         void onResume();
 
@@ -23,7 +30,6 @@ public interface GastronomiaListContract {
 
         void goHomeButtonClicked();
 
-        void onRestart();
 
         void onBackPressed();
 
@@ -33,19 +39,16 @@ public interface GastronomiaListContract {
     }
 
     interface Model {
-        String getStoredData();
 
-        void onDataFromNextScreen(String data);
-
-        void onRestartScreen(String data);
-
-        void onDataFromPreviousScreen(String data);
+        List<GastronomiaItem> fetchProductListData();
     }
 
     interface Router {
-        void navigateToNextScreen();
+        void navigateToGastronomiaDetailListScreen();
 
         void navigateToHomeScreen();
+
+        void passDataToGastronomiaDetailListScreen(GastronomiaItem item);
 
         void passStateToNextScreen(GastronomiaListState state);
 

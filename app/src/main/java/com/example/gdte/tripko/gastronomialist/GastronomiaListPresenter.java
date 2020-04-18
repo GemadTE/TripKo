@@ -1,5 +1,7 @@
 package com.example.gdte.tripko.gastronomialist;
 
+import com.example.gdte.tripko.data.GastronomiaItem;
+
 import java.lang.ref.WeakReference;
 
 public class GastronomiaListPresenter implements GastronomiaListContract.Presenter {
@@ -28,8 +30,6 @@ public class GastronomiaListPresenter implements GastronomiaListContract.Present
         GastronomiaListState savedState = router.getStateFromPreviousScreen();
         if (savedState != null) {
 
-            // update the model if is necessary
-            model.onDataFromPreviousScreen(savedState.data);
         }
     }
 
@@ -39,11 +39,14 @@ public class GastronomiaListPresenter implements GastronomiaListContract.Present
     }
 
     @Override
-    public void onRestart() {
-        // Log.e(TAG, "onRestart()");
+    public void fetchProductListData() {
+        // Log.e(TAG, "fetchProductListData()");
 
-        // update the model if is necessary
-        model.onRestartScreen(state.data);
+        // call the model
+        state.gastronomiaItems = model.fetchProductListData();
+
+        view.get().displayProductListData(state);
+
     }
 
     @Override
@@ -54,15 +57,11 @@ public class GastronomiaListPresenter implements GastronomiaListContract.Present
         GastronomiaListState savedState = router.getStateFromNextScreen();
         if (savedState != null) {
 
-            // update the model if is necessary
-            model.onDataFromNextScreen(savedState.data);
         }
 
-        // call the model and update the state
-        state.data = model.getStoredData();
 
         // update the view
-        view.get().onDataUpdated(state);
+        view.get().displayProductListData(state);
 
     }
 
@@ -79,6 +78,12 @@ public class GastronomiaListPresenter implements GastronomiaListContract.Present
     @Override
     public void onDestroy() {
         // Log.e(TAG, "onDestroy()");
+    }
+
+    @Override
+    public void selectGastronomiaListData(GastronomiaItem item) {
+        router.passDataToGastronomiaDetailListScreen(item);
+        router.navigateToGastronomiaDetailListScreen();
     }
 
     @Override

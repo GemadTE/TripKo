@@ -1,12 +1,15 @@
 package com.example.gdte.tripko.gastronomialist;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.example.gdte.tripko.R;
+import com.example.gdte.tripko.data.GastronomiaItem;
 
 public class GastronomiaListActivity
         extends AppCompatActivity implements GastronomiaListContract.View {
@@ -15,7 +18,9 @@ public class GastronomiaListActivity
 
     private GastronomiaListContract.Presenter presenter;
 
-    private ImageButton preguntasFrecuentesImageButton,homeImageButton;
+    private ImageButton preguntasFrecuentesImageButton, homeImageButton;
+
+    private GastronomiaListAdapter gastronomiaListAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,15 +37,21 @@ public class GastronomiaListActivity
             }
         });
 
+        gastronomiaListAdapter = new GastronomiaListAdapter(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GastronomiaItem item = (GastronomiaItem) v.getTag();
+                presenter.selectGastronomiaListData(item);
+            }
+        });
+
+        RecyclerView recyclerView = findViewById(R.id.gastronomiaList);
+        recyclerView.setAdapter(gastronomiaListAdapter);
+
         // do the setup
         GastronomiaListScreen.configure(this);
 
-        if (savedInstanceState == null) {
-            presenter.onStart();
-
-        } else {
-            presenter.onRestart();
-        }
+        presenter.fetchProductListData();
     }
 
     @Override
@@ -73,11 +84,8 @@ public class GastronomiaListActivity
     }
 
     @Override
-    public void onDataUpdated(GastronomiaListViewModel viewModel) {
-        //Log.e(TAG, "onDataUpdated()");
-
-        // deal with the data
-
+    public void displayProductListData(GastronomiaListViewModel viewModel) {
+        gastronomiaListAdapter.setItems(viewModel.gastronomiaItems);
     }
 
     @Override

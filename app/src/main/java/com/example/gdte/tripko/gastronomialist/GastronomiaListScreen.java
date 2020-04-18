@@ -21,7 +21,7 @@ public class GastronomiaListScreen {
 
         GastronomiaListContract.Router router = new GastronomiaListRouter(mediator);
         GastronomiaListContract.Presenter presenter = new GastronomiaListPresenter(state);
-        GastronomiaListContract.Model model = new GastronomiaListModel(data);
+        GastronomiaListContract.Model model = new GastronomiaListModel();
         presenter.injectModel(model);
         presenter.injectRouter(router);
         presenter.injectView(new WeakReference<>(view));

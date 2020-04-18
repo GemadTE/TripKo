@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.content.Context;
 
 import com.example.gdte.tripko.app.AppMediator;
+import com.example.gdte.tripko.data.GastronomiaItem;
+import com.example.gdte.tripko.gastronomiadetaillist.Gastronomia_Detail_ListActivity;
 import com.example.gdte.tripko.menuprincipal.Menu_PrincipalActivity;
 
 public class GastronomiaListRouter implements GastronomiaListContract.Router {
@@ -17,9 +19,9 @@ public class GastronomiaListRouter implements GastronomiaListContract.Router {
     }
 
     @Override
-    public void navigateToNextScreen() {
+    public void navigateToGastronomiaDetailListScreen() {
         Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, GastronomiaListActivity.class);
+        Intent intent = new Intent(context, Gastronomia_Detail_ListActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
     }
@@ -31,6 +33,12 @@ public class GastronomiaListRouter implements GastronomiaListContract.Router {
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
     }
+
+    @Override
+    public void passDataToGastronomiaDetailListScreen(GastronomiaItem item) {
+        mediator.setGastronomiaItem(item);
+    }
+
 
     @Override
     public void passStateToNextScreen(GastronomiaListState state) {

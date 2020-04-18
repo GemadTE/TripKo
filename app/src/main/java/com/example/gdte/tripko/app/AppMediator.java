@@ -6,6 +6,8 @@ import com.example.gdte.tripko.ciudadesprincipales.Ciudades_PrincipalesState;
 import com.example.gdte.tripko.clima.ClimaState;
 import com.example.gdte.tripko.contactosdeinteres.Contactos_De_InteresState;
 import com.example.gdte.tripko.conversormoneda.Conversor_MonedaState;
+import com.example.gdte.tripko.data.GastronomiaDetailItem;
+import com.example.gdte.tripko.data.GastronomiaItem;
 import com.example.gdte.tripko.gastronomialist.GastronomiaListState;
 import com.example.gdte.tripko.gastronomiadetaillist.Gastronomia_Detail_ListState;
 import com.example.gdte.tripko.cultura.CulturaState;
@@ -39,6 +41,9 @@ public class AppMediator extends Application {
     private Preguntas_FrecuentesState preguntasFrecuentesState;
     private Contactos_De_InteresState contactosDeInteresState;
     private Transporte_CategoryState transporteCategoryState;
+
+    private GastronomiaItem gastronomiaItem;
+    private GastronomiaDetailItem gastronomiaDetailItem;
 
     public SplashState getSplashState() {
         return splashState;
@@ -174,5 +179,21 @@ public class AppMediator extends Application {
 
     public Transporte_CategoryState getTransporteCategoryState() {
         return transporteCategoryState;
+    }
+
+    public GastronomiaItem getGastronomiaItem() {
+        return gastronomiaItem;
+    }
+
+    public void setGastronomiaItem(GastronomiaItem gastronomiaItem) {
+        this.gastronomiaItem = gastronomiaItem;
+    }
+
+    public GastronomiaDetailItem getGastronomiaDetailItem() {
+        return gastronomiaDetailItem;
+    }
+
+    public void setGastronomiaDetailItem(GastronomiaDetailItem gastronomiaDetailItem) {
+        this.gastronomiaDetailItem = gastronomiaDetailItem;
     }
 }
