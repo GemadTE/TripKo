@@ -2,7 +2,11 @@ package com.example.gdte.tripko.sitiosturisticos;
 
 import android.util.Log;
 
+import com.example.gdte.tripko.data.RepositoryContract;
+import com.example.gdte.tripko.data.Sitios_TuristicosItem;
+
 import java.lang.ref.WeakReference;
+import java.util.List;
 
 public class Sitios_TuristicosPresenter implements Sitios_TuristicosContract.Presenter {
 
@@ -18,36 +22,31 @@ public class Sitios_TuristicosPresenter implements Sitios_TuristicosContract.Pre
     }
 
     @Override
-    public void fetchData() {
-        // Log.e(TAG, "fetchData()");
-
-        // initialize the state if is necessary
-        if (state == null) {
-            state = new Sitios_TuristicosState();
-        }
-
-        // use passed state if is necessary
-        Sitios_TuristicosState savedState = router.getDataFromPreviousScreen();
-        if (savedState != null) {
-
-            // update view and model state
-            state.data = savedState.data;
-
-            // update the view
-            view.get().displayData(state);
-
-            return;
-        }
+    public void fetchSitioTuristicoListData() {
+        // Log.e(TAG, "fetchCategoryListData()");
 
         // call the model
-        String data = model.fetchData();
+        model.fetchSitioTuristicoListData(new RepositoryContract.GetSitioTuristicoListCallback() {
 
-        // set view state
-        state.data = data;
+            @Override
+            public void setSitioTuristicoList(List<Sitios_TuristicosItem> sitiosTuristicosItem) {
+                state.sitiosTuristicos = sitiosTuristicosItem;
 
-        // update the view
-        view.get().displayData(state);
+                view.get().displaySitioTuristicoListData(state);
+            }
+        });
 
+    }
+
+    @Override
+    public void selectSitioTuristicoListData(Sitios_TuristicosItem item) {
+        router.passDataToSitioTuristicoDetailListScreen(item);
+        router.navigateToSitioTuristicoDetailListScreen();
+    }
+
+    @Override
+    public void goHomeButtonClicked() {
+        router.navigateToHomeScreen();
     }
 
     @Override

@@ -5,6 +5,9 @@ import android.content.Intent;
 import android.content.Context;
 
 import com.example.gdte.tripko.app.AppMediator;
+import com.example.gdte.tripko.data.Sitios_TuristicosItem;
+import com.example.gdte.tripko.menuprincipal.Menu_PrincipalActivity;
+import com.example.gdte.tripko.sitiosturisticosdetaillist.Sitios_Turisticos_DetailListActivity;
 
 public class Sitios_TuristicosRouter implements Sitios_TuristicosContract.Router {
 
@@ -17,20 +20,24 @@ public class Sitios_TuristicosRouter implements Sitios_TuristicosContract.Router
     }
 
     @Override
-    public void navigateToNextScreen() {
+    public void navigateToSitioTuristicoDetailListScreen() {
         Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, Sitios_TuristicosActivity.class);
+        Intent intent = new Intent(context, Sitios_Turisticos_DetailListActivity.class);
         context.startActivity(intent);
     }
 
     @Override
-    public void passDataToNextScreen(Sitios_TuristicosState state) {
-        mediator.setSitiosTuristicosState(state);
+    public void navigateToHomeScreen() {
+        Context context = mediator.getApplicationContext();
+        Intent intent = new Intent(context, Menu_PrincipalActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
     }
 
     @Override
-    public Sitios_TuristicosState getDataFromPreviousScreen() {
-        Sitios_TuristicosState state = mediator.getSitiosTuristicosState();
-        return state;
+    public void passDataToSitioTuristicoDetailListScreen(Sitios_TuristicosItem item) {
+        mediator.setSitiosTuristicosItem(item);
     }
+
+
 }

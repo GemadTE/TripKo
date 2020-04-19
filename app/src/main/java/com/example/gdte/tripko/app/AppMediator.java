@@ -9,6 +9,8 @@ import com.example.gdte.tripko.conversormoneda.Conversor_MonedaState;
 import com.example.gdte.tripko.data.GastronomiaDetailItem;
 import com.example.gdte.tripko.data.GastronomiaItem;
 import com.example.gdte.tripko.data.RegionItem;
+import com.example.gdte.tripko.data.Sitios_TuristicosDetailItem;
+import com.example.gdte.tripko.data.Sitios_TuristicosItem;
 import com.example.gdte.tripko.gastronomialist.GastronomiaListState;
 import com.example.gdte.tripko.gastronomiadetaillist.Gastronomia_Detail_ListState;
 import com.example.gdte.tripko.cultura.CulturaState;
@@ -26,28 +28,30 @@ import com.example.gdte.tripko.transportecategory.Transporte_CategoryState;
 
 public class AppMediator extends Application {
 
-    private SplashState splashState;
-    private Elegir_IdiomaState elegirIdiomaState;
-    private Menu_PrincipalState menu_principalState;
-    private Sobre_CoreaState sobreCoreaState;
-    private CulturaState culturaState;
-    private ClimaState climaState;
+    private SplashState splashState = new SplashState();
+    private Elegir_IdiomaState elegirIdiomaState = new Elegir_IdiomaState();
+    private Menu_PrincipalState menu_principalState = new Menu_PrincipalState();
+    private Sobre_CoreaState sobreCoreaState = new Sobre_CoreaState();
+    private CulturaState culturaState = new CulturaState();
+    private ClimaState climaState = new ClimaState();
     private Ciudades_PrincipalesState ciudadesPrincipalesSate;
     private EntretenimientoState entretenimientoState;
-    private Sitios_TuristicosState sitiosTuristicosState;
-    private Sitios_Turisticos_DetailList_DetailListState tiposDeSitiosTuristicosState;
+    private Sitios_TuristicosState sitiosTuristicosState = new Sitios_TuristicosState();
+    private Sitios_Turisticos_DetailList_DetailListState tiposDeSitiosTuristicosState = new Sitios_Turisticos_DetailList_DetailListState();
     private Region_ListState RegionListState = new Region_ListState();
     private GastronomiaListState comidaRestauranteListState = new GastronomiaListState();
     private Gastronomia_Detail_ListState comidaRestauranteDetailState = new Gastronomia_Detail_ListState();
-    private Conversor_MonedaState conversorMonedaState;
-    private Preguntas_FrecuentesState preguntasFrecuentesState;
-    private Contactos_De_InteresState contactosDeInteresState;
-    private Transporte_CategoryState transporteCategoryState;
-    private IdiomaState idiomaState;
+    private Conversor_MonedaState conversorMonedaState = new Conversor_MonedaState();
+    private Preguntas_FrecuentesState preguntasFrecuentesState = new Preguntas_FrecuentesState();
+    private Contactos_De_InteresState contactosDeInteresState = new Contactos_De_InteresState();
+    private Transporte_CategoryState transporteCategoryState = new Transporte_CategoryState();
+    private IdiomaState idiomaState = new IdiomaState();
 
     private RegionItem regionItem;
     private GastronomiaItem gastronomiaItem;
     private GastronomiaDetailItem gastronomiaDetailItem;
+    private Sitios_TuristicosItem sitiosTuristicosItem;
+    private Sitios_TuristicosDetailItem sitiosTuristicosDetailItem;
 
     public SplashState getSplashState() {
         return splashState;
@@ -212,6 +216,22 @@ public class AppMediator extends Application {
 
     public void setGastronomiaDetailItem(GastronomiaDetailItem gastronomiaDetailItem) {
         this.gastronomiaDetailItem = gastronomiaDetailItem;
+    }
+
+    public Sitios_TuristicosItem getSitiosTuristicosItem() {
+        return sitiosTuristicosItem;
+    }
+
+    public void setSitiosTuristicosItem(Sitios_TuristicosItem sitiosTuristicosItem) {
+        this.sitiosTuristicosItem = sitiosTuristicosItem;
+    }
+
+    public Sitios_TuristicosDetailItem getSitiosTuristicosDetailItem() {
+        return sitiosTuristicosDetailItem;
+    }
+
+    public void setSitiosTuristicosDetailItem(Sitios_TuristicosDetailItem sitiosTuristicosDetailItem) {
+        this.sitiosTuristicosDetailItem = sitiosTuristicosDetailItem;
     }
 
     public IdiomaState getIdiomaState(){

@@ -1,5 +1,7 @@
 package com.example.gdte.tripko.data;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 public class Sitios_TuristicosItem {
@@ -8,7 +10,8 @@ public class Sitios_TuristicosItem {
 
     public String title;
 
-    public List<SitiosTuristicosDetailItem> sitiosTuristicosDetailItems;
+    @SerializedName("tiposDeSitios")
+    public List<Sitios_TuristicosDetailItem> sitiosTuristicosDetailItems;
 
     @Override
     public String toString() {

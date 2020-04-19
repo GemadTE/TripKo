@@ -391,7 +391,7 @@ public class AppRepository implements RepositoryContract {
                 }
 
                 for (Sitios_TuristicosItem sitios_turisticosItem : sitiosTuristicosItems) {
-                    for (SitiosTuristicosDetailItem sitiosTuristicosDetailItem : sitios_turisticosItem.sitiosTuristicosDetailItems) {
+                    for (Sitios_TuristicosDetailItem sitiosTuristicosDetailItem : sitios_turisticosItem.sitiosTuristicosDetailItems) {
                         sitiosTuristicosDetailItem.sitiosTuristicosId = sitios_turisticosItem.id;
 
                     }
@@ -407,8 +407,8 @@ public class AppRepository implements RepositoryContract {
         return false;
     }
 
-    private List<SitiosTuristicosDetailItem> loadSitiosTuristicosDetail(int sitioTuristicoId) {
-        List<SitiosTuristicosDetailItem> sitiosTuristicosDetailItems = new ArrayList();
+    private List<Sitios_TuristicosDetailItem> loadSitiosTuristicosDetail(int sitioTuristicoId) {
+        List<Sitios_TuristicosDetailItem> sitiosTuristicosDetailItems = new ArrayList();
 
         for (Sitios_TuristicosItem sitios_turisticosItem : sitios_turisticosItems) {
             if (sitios_turisticosItem.id == sitioTuristicoId) {
@@ -419,9 +419,9 @@ public class AppRepository implements RepositoryContract {
         return sitiosTuristicosDetailItems;
     }
 
-    private SitiosTuristicosDetailItem loadSitioTuristicoDetail(int id) {
+    private Sitios_TuristicosDetailItem loadSitioTuristicoDetail(int id) {
         for (Sitios_TuristicosItem sitios_turisticosItem : sitios_turisticosItems) {
-            for (SitiosTuristicosDetailItem sitiosTuristicosDetailItem : sitios_turisticosItem.sitiosTuristicosDetailItems) {
+            for (Sitios_TuristicosDetailItem sitiosTuristicosDetailItem : sitios_turisticosItem.sitiosTuristicosDetailItems) {
                 if (sitiosTuristicosDetailItem.id == id) {
                     return sitiosTuristicosDetailItem;
                 }

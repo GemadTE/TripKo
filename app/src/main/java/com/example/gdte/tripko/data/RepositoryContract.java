@@ -48,11 +48,11 @@ public interface RepositoryContract {
     }
 
     interface GetSitioTuristicoDetailListCallback {
-        void setSitioTuristicoDetailList(List<SitiosTuristicosDetailItem> sitioTuristicoDetailItem);
+        void setSitioTuristicoDetailList(List<Sitios_TuristicosDetailItem> sitioTuristicoDetailItem);
     }
 
     interface GetSitioTuristicoDetailCallback {
-        void setSitioTuristicoDetai(SitiosTuristicosDetailItem sitioTuristicoDetailItem);
+        void setSitioTuristicoDetai(Sitios_TuristicosDetailItem sitioTuristicoDetailItem);
     }
 
     interface GetSitioTuristicoListCallback {

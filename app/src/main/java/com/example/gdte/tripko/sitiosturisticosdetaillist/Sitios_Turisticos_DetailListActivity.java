@@ -19,7 +19,7 @@ public class Sitios_Turisticos_DetailListActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sitios_turisticos_detaillist);
+        setContentView(R.layout.activity_sitios_turisticos_detail_list);
 
         // do the setup
         Sitios_Turisticos_DetailListScreen.configure(this);

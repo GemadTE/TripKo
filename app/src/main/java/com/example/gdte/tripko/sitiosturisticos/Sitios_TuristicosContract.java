@@ -1,5 +1,8 @@
 package com.example.gdte.tripko.sitiosturisticos;
 
+import com.example.gdte.tripko.data.RepositoryContract;
+import com.example.gdte.tripko.data.Sitios_TuristicosItem;
+
 import java.lang.ref.WeakReference;
 
 public interface Sitios_TuristicosContract {
@@ -7,28 +10,35 @@ public interface Sitios_TuristicosContract {
     interface View {
         void injectPresenter(Presenter presenter);
 
-        void displayData(Sitios_TuristicosViewModel viewModel);
+        void displaySitioTuristicoListData(Sitios_TuristicosViewModel viewModel);
     }
 
     interface Presenter {
+        void fetchSitioTuristicoListData();
+
+        void selectSitioTuristicoListData(Sitios_TuristicosItem item);
+
+        void goHomeButtonClicked();
+
         void injectView(WeakReference<View> view);
 
         void injectModel(Model model);
 
         void injectRouter(Router router);
-
-        void fetchData();
     }
 
     interface Model {
-        String fetchData();
+
+        void fetchSitioTuristicoListData(
+                RepositoryContract.GetSitioTuristicoListCallback callback);
     }
 
     interface Router {
-        void navigateToNextScreen();
+        void navigateToSitioTuristicoDetailListScreen();
 
-        void passDataToNextScreen(Sitios_TuristicosState state);
+        void navigateToHomeScreen();
 
-        Sitios_TuristicosState getDataFromPreviousScreen();
+        void passDataToSitioTuristicoDetailListScreen(Sitios_TuristicosItem item);
+
     }
 }

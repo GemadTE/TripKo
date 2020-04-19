@@ -146,18 +146,18 @@
     {
       "id": 1,
       "title": "Museos",
-      "museos": [
+      "tiposDeSitios": [
         {
           "id": 1,
-          "museoTitle": "Museo1",
-          "museoContent": "...",
+          "title": "Museo1",
+          "content": "...",
           "detail": "...",
           "image": "..."
         },
         {
           "id": 2,
-          "museoTitle": "Museo2",
-          "museoContent": "...",
+          "title": "Museo2",
+          "content": "...",
           "detail": "...",
           "image": "..."
         }
@@ -166,18 +166,18 @@
     {
       "id": 2,
       "title": "Templos",
-      "templos": [
+      "tiposDeSitios": [
         {
           "id": 1,
-          "temploTitle": "Templo1",
-          "temploContent": "...",
+          "title": "Templo1",
+          "content": "...",
           "detail": "...",
           "image": "..."
         },
         {
           "id": 2,
-          "temploTitle": "Templo2",
-          "temploContent": "...",
+          "title": "Templo2",
+          "content": "...",
           "detail": "...",
           "image": "..."
         }
@@ -186,18 +186,18 @@
     {
       "id": 3,
       "title": "Fortalezas",
-      "fortalezas": [
+      "tiposDeSitios": [
         {
           "id": 1,
-          "fortalezaTitle": "Fortaleza1",
-          "fortalezaContent": "...",
+          "title": "Fortaleza1",
+          "content": "...",
           "detail": "...",
           "image": "..."
         },
         {
           "id": 2,
-          "fortalezaTitle": "Fortaleza2",
-          "fortalezaContent": "...",
+          "title": "Fortaleza2",
+          "content": "...",
           "detail": "...",
           "image": "..."
         }
@@ -206,18 +206,18 @@
     {
       "id": 4,
       "title": "Otros",
-      "otros": [
+      "tiposDeSitios": [
         {
           "id": 1,
-          "otroTitle": "Otro1",
-          "otroContent": "...",
+          "title": "Otro1",
+          "content": "...",
           "detail": "...",
           "image": "..."
         },
         {
           "id": 2,
-          "otroTitle": "Otro2",
-          "otroContent": "...",
+          "title": "Otro2",
+          "content": "...",
           "detail": "...",
           "image": "..."
         }
