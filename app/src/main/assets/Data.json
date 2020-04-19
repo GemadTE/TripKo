@@ -98,18 +98,18 @@
     {
       "id": 1,
       "title": "Parques",
-      "parques": [
+      "sitiosDeEntretenimiento": [
         {
           "id": 1,
-          "parqueTitle": "Parque1",
-          "parqueContent": "...",
+          "title": "Parque1",
+          "content": "...",
           "detail": "...",
           "image": "..."
         },
         {
           "id": 2,
-          "parqueTitle": "Parque2",
-          "parqueContent": "...",
+          "title": "Parque2",
+          "content": "...",
           "detail": "...",
           "image": "..."
         }
@@ -118,18 +118,18 @@
     {
       "id": 2,
       "title": "Con la familia o amigos",
-      "conLaFamiliaOAmigos": [
+      "sitiosDeEntretenimiento": [
         {
           "id": 1,
-          "famAmTitle": "ActividadFamiliar1",
-          "famAmContent": "...",
+          "title": "ActividadFamiliar1",
+          "content": "...",
           "detail": "...",
           "image": "..."
         },
         {
           "id": 2,
-          "famAmTitle": "ActividadFamiliar2",
-          "famAmContent": "...",
+          "title": "ActividadFamiliar2",
+          "content": "...",
           "detail": "...",
           "image": "..."
         }
@@ -138,18 +138,18 @@
     {
       "id": 3,
       "title": "Actividades nocturnas",
-      "actividadesNocturnas": [
+      "sitiosDeEntretenimiento": [
         {
           "id": 1,
-          "actNocTitle": "ActividadNocturna1",
-          "actNocContent": "...",
+          "title": "ActividadNocturna1",
+          "content": "...",
           "detail": "...",
           "image": "..."
         },
         {
           "id": 2,
-          "actNocTitle": "ActividadNocturna2",
-          "actNocContent": "...",
+          "title": "ActividadNocturna2",
+          "content": "...",
           "detail": "...",
           "image": "..."
         }

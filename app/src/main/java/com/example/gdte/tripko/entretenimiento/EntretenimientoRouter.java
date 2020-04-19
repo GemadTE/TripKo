@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.content.Context;
 
 import com.example.gdte.tripko.app.AppMediator;
+import com.example.gdte.tripko.data.EntretenimientoItem;
+import com.example.gdte.tripko.entretenimientodetaillist.Entretenimiento_Detail_ListActivity;
 import com.example.gdte.tripko.menuprincipal.Menu_PrincipalActivity;
 import com.example.gdte.tripko.preguntasfrecuentes.Preguntas_FrecuentesActivity;
 
@@ -19,9 +21,9 @@ public class EntretenimientoRouter implements EntretenimientoContract.Router {
     }
 
     @Override
-    public void navigateToNextScreen() {
+    public void navigateToEntretenimientoDetailListScreen() {
         Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, EntretenimientoActivity.class);
+        Intent intent = new Intent(context, Entretenimiento_Detail_ListActivity.class);
         context.startActivity(intent);
     }
 
@@ -45,6 +47,12 @@ public class EntretenimientoRouter implements EntretenimientoContract.Router {
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
     }
+
+    @Override
+    public void passDataToEntretenimientoDetailListScreen(EntretenimientoItem item) {
+        mediator.setEntretenimientoItem(item);
+    }
+
 
     @Override
     public EntretenimientoState getDataFromPreviousScreen() {

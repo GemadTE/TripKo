@@ -65,7 +65,7 @@ public class Contactos_De_InteresActivity
         //Log.e(TAG, "onDataUpdated()");
 
         // deal with the data
-        ((TextView) findViewById(R.id.data)).setText(viewModel.data);
+       // ((TextView) findViewById(R.id.data)).setText(viewModel.data);
     }
 
     @Override

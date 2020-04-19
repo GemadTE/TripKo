@@ -41,7 +41,9 @@ public interface RepositoryContract {
 
     void getRegionList(AppRepository.GetRegionListCallback callback);
 
-    //CULTURA
+
+    //////////////////////////////////CULTURA/////////////////////////////////////////////////////
+
     void loadCultura(final FetchCulturaDataCallback callback);
 
     void getCultura(final int id, final GetCulturaCallback callback);
@@ -60,7 +62,8 @@ public interface RepositoryContract {
         void setCultura(CulturaItem cultura);
     }
 
-    //ENTRETENIMIENTO
+    /////////////////////////////ENTRETENIMIENTO//////////////////////////////////////////////////
+
     void loadEntretenimiento(final FetchEntretenimientoDataCallback callback);
 
     void getEntretenimientoDetailList(
@@ -98,7 +101,7 @@ public interface RepositoryContract {
     }
 
 
-    //////////////////////////////////////////Sitios Turisticos//////////////////////////
+    //////////////////////////////////////////Sitios Turisticos////////////////////////////////////////
 
 
     interface FetchSitioTuristicoDataCallback {

@@ -18,95 +18,98 @@
         android:layout_height="170dp"
         android:layout_gravity="left|top"
         android:background="@drawable/forma_btn_rounded"
-        android:orientation="horizontal"
-        android:text="Title1" >
-
-        <TextView
-            android:id="@+id/title1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            tools:text="ejemplo1" />
+        android:orientation="vertical"
+        android:text="Title1">
 
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_marginStart="40dp"
             app:srcCompat="@drawable/ic_btn_contactos_de_interes" />
+
+        <TextView
+            android:id="@+id/title1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:text="ejemplo1" />
+
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/rigthLayout1"
         android:layout_width="170dp"
         android:layout_height="170dp"
         android:layout_gravity="left|top"
         android:background="@drawable/btn_rounded"
-        android:orientation="horizontal"
-        android:text="Title1" >
-
-        <EditText
-            android:id="@+id/title2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="textPersonName"
-            tools:text="ejemplo2" />
+        android:orientation="vertical"
+        android:text="Title1">
 
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_marginStart="40dp"
             app:srcCompat="@drawable/ic_btn_contactos_de_interes" />
+
+        <TextView
+            android:id="@+id/title2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:text="ejemplo2" />
+
+
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/leftLayout2"
         android:layout_width="170dp"
         android:layout_height="170dp"
         android:layout_gravity="left|top"
         android:background="@drawable/btn_rounded"
-        android:orientation="horizontal"
-        android:text="Title1" >
-
-        <TextView
-            android:id="@+id/title3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            tools:text="ejemplo3" />
+        android:orientation="vertical"
+        android:text="Title1">
 
         <ImageView
             android:id="@+id/imageView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_marginStart="40dp"
             app:srcCompat="@drawable/ic_btn_contactos_de_interes" />
+
+        <TextView
+            android:id="@+id/title3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:text="ejemplo3" />
+
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/rightLayout2"
         android:layout_width="170dp"
         android:layout_height="170dp"
         android:layout_gravity="left|top"
         android:background="@drawable/forma_btn_rounded"
-        android:orientation="horizontal"
-        android:text="Title1" >
-
-        <EditText
-            android:id="@+id/title4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="textPersonName"
-            tools:text="ejemplo4" />
+        android:orientation="vertical"
+        android:text="Title1">
 
         <ImageView
             android:id="@+id/imageView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_marginStart="40dp"
             app:srcCompat="@drawable/ic_btn_contactos_de_interes" />
+
+        <TextView
+            android:id="@+id/title4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:text="ejemplo4" />
+
     </LinearLayout>
 
 

@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -30,6 +31,7 @@ public class GastronomiaListActivity
 
         preguntasFrecuentesImageButton = findViewById(R.id.preguntasFrecuentesImageButton);
         homeImageButton = findViewById(R.id.homeImageButton);
+
 
         homeImageButton.setOnClickListener(new View.OnClickListener() {
             @Override

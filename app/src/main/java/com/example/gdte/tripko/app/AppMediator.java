@@ -7,6 +7,7 @@ import com.example.gdte.tripko.clima.ClimaState;
 import com.example.gdte.tripko.contactosdeinteres.Contactos_De_InteresState;
 import com.example.gdte.tripko.conversormoneda.Conversor_MonedaState;
 import com.example.gdte.tripko.culturadetail.Cultura_DetailState;
+import com.example.gdte.tripko.data.EntretenimientoItem;
 import com.example.gdte.tripko.data.GastronomiaDetailItem;
 import com.example.gdte.tripko.data.GastronomiaItem;
 import com.example.gdte.tripko.data.RegionItem;
@@ -41,8 +42,8 @@ public class AppMediator extends Application {
     private Entretenimiento_Detail_ListState entretenimientoDetailListState = new Entretenimiento_Detail_ListState();
     private Entretenimiento_DetailState entretenimientoDetailState = new Entretenimiento_DetailState();
     private ClimaState climaState = new ClimaState();
-    private Ciudades_PrincipalesState ciudadesPrincipalesSate;
-    private EntretenimientoState entretenimientoState;
+    private Ciudades_PrincipalesState ciudadesPrincipalesSate = new Ciudades_PrincipalesState();
+    private EntretenimientoState entretenimientoState = new EntretenimientoState();
     private Sitios_TuristicosState sitiosTuristicosState = new Sitios_TuristicosState();
     private Sitios_Turisticos_DetailListState tiposDeSitiosTuristicosState = new Sitios_Turisticos_DetailListState();
     private Sitios_Turisticos_DetailState sitiosTuristicosDetailState = new Sitios_Turisticos_DetailState();
@@ -60,6 +61,7 @@ public class AppMediator extends Application {
     private GastronomiaDetailItem gastronomiaDetailItem;
     private Sitios_TuristicosItem sitiosTuristicosItem;
     private Sitios_TuristicosDetailItem sitiosTuristicosDetailItem;
+    private EntretenimientoItem entretenimientoItem;
 
     public SplashState getSplashState() {
         return splashState;
@@ -270,6 +272,14 @@ public class AppMediator extends Application {
 
     public void setSitiosTuristicosDetailState(Sitios_Turisticos_DetailState sitiosTuristicosDetailState) {
         this.sitiosTuristicosDetailState = sitiosTuristicosDetailState;
+    }
+
+    public EntretenimientoItem getEntretenimientoItem() {
+        return entretenimientoItem;
+    }
+
+    public void setEntretenimientoItem(EntretenimientoItem entretenimientoItem) {
+        this.entretenimientoItem = entretenimientoItem;
     }
 
     public IdiomaState getIdiomaState(){

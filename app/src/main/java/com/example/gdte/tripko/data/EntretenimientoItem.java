@@ -5,19 +5,15 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 public class EntretenimientoItem {
+
     public int id;
-    public String content;
+    public String title;
 
-    @SerializedName("entretenimiento")
+    @SerializedName("sitiosDeEntretenimiento")
     public List<EntretenimientoDetailItem> entretenimientoDetailItems;
-
-    public EntretenimientoItem(int id, String content){
-        this.id = id;
-        this.content = content;
-    }
 
     @Override
     public String toString() {
-        return content;
+        return title;
     }
 }

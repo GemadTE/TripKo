@@ -2,7 +2,11 @@ package com.example.gdte.tripko.entretenimiento;
 
 import android.util.Log;
 
+import com.example.gdte.tripko.data.EntretenimientoItem;
+import com.example.gdte.tripko.data.RepositoryContract;
+
 import java.lang.ref.WeakReference;
+import java.util.List;
 
 public class EntretenimientoPresenter implements EntretenimientoContract.Presenter {
 
@@ -18,38 +22,26 @@ public class EntretenimientoPresenter implements EntretenimientoContract.Present
     }
 
     @Override
-    public void fetchData() {
-        // Log.e(TAG, "fetchData()");
-
-        // initialize the state if is necessary
-        if (state == null) {
-            state = new EntretenimientoState();
-        }
-
-        // use passed state if is necessary
-        EntretenimientoState savedState = router.getDataFromPreviousScreen();
-        if (savedState != null) {
-
-            // update view and model state
-            state.data = savedState.data;
-
-            // update the view
-            view.get().displayData(state);
-
-            return;
-        }
-
-
+    public void fetchEntretenimientoListData() {
+        // Log.e(TAG, "fetchCategoryListData()");
 
         // call the model
-        String data = model.fetchData();
+        model.fetchEntretenimientoListData(new RepositoryContract.GetEntretenimientoListCallback() {
 
-        // set view state
-        state.data = data;
+            @Override
+            public void setEntretenimientoList(List<EntretenimientoItem> entretenimientoItems) {
+                state.entretenimientos = entretenimientoItems;
 
-        // update the view
-        view.get().displayData(state);
+                view.get().displayEntretenimientoListData(state);
+            }
+        });
 
+    }
+
+    @Override
+    public void selectEntretenimientoListData(EntretenimientoItem item) {
+        router.passDataToEntretenimientoDetailListScreen(item);
+        router.navigateToEntretenimientoDetailListScreen();
     }
 
     @Override

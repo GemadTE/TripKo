@@ -16,6 +16,7 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+
             </intent-filter>
         </activity>
 
@@ -28,7 +29,6 @@
         <activity android:name=".entretenimientodetail.Entretenimiento_DetailActivity" />
         <activity android:name=".clima.ClimaActivity" />
         <activity android:name=".cultura.CulturaActivity" />
-        <activity android:name=".culturadetaillist.Cultura_Detail_ListActivity" />
         <activity android:name=".culturadetail.Cultura_DetailActivity" />
         <activity android:name=".sitiosturisticos.Sitios_TuristicosActivity" />
         <activity android:name=".sitiosturisticosdetaillist.Sitios_Turisticos_DetailListActivity" />
