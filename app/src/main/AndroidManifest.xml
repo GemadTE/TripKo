@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
 
-        <activity android:name=".regiones.Region_ListActivity">
+        <activity android:name=".splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,12 +24,12 @@
         <activity android:name=".sobrecorea.Sobre_CoreaActivity" />
         <activity android:name=".idioma.IdiomaActivity"/>
         <activity android:name=".entretenimiento.EntretenimientoActivity" />
-        <activity android:name=".sitiosturisticos.Sitios_TuristicosActivity" />
         <activity android:name=".clima.ClimaActivity" />
         <activity android:name=".cultura.CulturaActivity" />
-        <activity android:name=".tiposdesitiosturisticos.Tipos_De_Sitios_TuristicosActivity" />
+        <activity android:name=".sitiosturisticos.Sitios_TuristicosActivity" />
+        <activity android:name=".sitiosturisticosdetaillist.Sitios_Turisticos_DetailListActivity" />
         <activity android:name=".ciudadesprincipales.Ciudades_PrincipalesActivity" />
-
+        <activity android:name=".regiones.Region_ListActivity" />
         <activity android:name=".gastronomialist.GastronomiaListActivity" />
         <activity android:name=".gastronomiadetaillist.Gastronomia_Detail_ListActivity" />
         <activity android:name=".contactosdeinteres.Contactos_De_InteresActivity" />

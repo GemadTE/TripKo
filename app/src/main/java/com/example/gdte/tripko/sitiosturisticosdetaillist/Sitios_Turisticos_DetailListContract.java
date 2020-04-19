@@ -1,13 +1,13 @@
-package com.example.gdte.tripko.tiposdesitiosturisticos;
+package com.example.gdte.tripko.sitiosturisticosdetaillist;
 
 import java.lang.ref.WeakReference;
 
-public interface Tipos_De_Sitios_TuristicosContract {
+public interface Sitios_Turisticos_DetailListContract {
 
     interface View {
         void injectPresenter(Presenter presenter);
 
-        void displayData(Tipos_De_Sitios_TuristicosViewModel viewModel);
+        void displayData(Sitios_Turisticos_DetailListViewModel viewModel);
     }
 
     interface Presenter {
@@ -27,8 +27,8 @@ public interface Tipos_De_Sitios_TuristicosContract {
     interface Router {
         void navigateToNextScreen();
 
-        void passDataToNextScreen(Tipos_De_Sitios_TuristicosState state);
+        void passDataToNextScreen(Sitios_Turisticos_DetailList_DetailListState state);
 
-        Tipos_De_Sitios_TuristicosState getDataFromPreviousScreen();
+        Sitios_Turisticos_DetailList_DetailListState getDataFromPreviousScreen();
     }
 }

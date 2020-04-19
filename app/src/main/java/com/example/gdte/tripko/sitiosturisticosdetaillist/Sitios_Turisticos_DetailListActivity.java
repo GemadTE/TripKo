@@ -1,4 +1,4 @@
-package com.example.gdte.tripko.tiposdesitiosturisticos;
+package com.example.gdte.tripko.sitiosturisticosdetaillist;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,21 +8,21 @@ import android.widget.TextView;
 
 import com.example.gdte.tripko.R;
 
-public class Tipos_De_Sitios_TuristicosActivity
-        extends AppCompatActivity implements Tipos_De_Sitios_TuristicosContract.View {
+public class Sitios_Turisticos_DetailListActivity
+        extends AppCompatActivity implements Sitios_Turisticos_DetailListContract.View {
 
-    public static String TAG = Tipos_De_Sitios_TuristicosActivity.class.getSimpleName();
+    public static String TAG = Sitios_Turisticos_DetailListActivity.class.getSimpleName();
 
-    private Tipos_De_Sitios_TuristicosContract.Presenter presenter;
+    private Sitios_Turisticos_DetailListContract.Presenter presenter;
     private ImageButton preguntasFrecuentesImageButton, homeImageButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tipos__de__sitios__turisticos);
+        setContentView(R.layout.activity_sitios_turisticos_detaillist);
 
         // do the setup
-        Tipos_De_Sitios_TuristicosScreen.configure(this);
+        Sitios_Turisticos_DetailListScreen.configure(this);
         preguntasFrecuentesImageButton=findViewById(R.id.preguntasFrecuentesImageButton);
         homeImageButton=findViewById(R.id.homeImageButton);
 
@@ -37,7 +37,7 @@ public class Tipos_De_Sitios_TuristicosActivity
     }
 
     @Override
-    public void displayData(Tipos_De_Sitios_TuristicosViewModel viewModel) {
+    public void displayData(Sitios_Turisticos_DetailListViewModel viewModel) {
         //Log.e(TAG, "displayData()");
 
         // deal with the data
@@ -45,7 +45,7 @@ public class Tipos_De_Sitios_TuristicosActivity
     }
 
     @Override
-    public void injectPresenter(Tipos_De_Sitios_TuristicosContract.Presenter presenter) {
+    public void injectPresenter(Sitios_Turisticos_DetailListContract.Presenter presenter) {
         this.presenter = presenter;
     }
 }

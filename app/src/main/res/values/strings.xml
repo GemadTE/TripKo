@@ -57,5 +57,6 @@
     <string name="taxis_btn_text">Taxis</string>
     <string name="alquiler_de_coches_btn_text">Alquiler de Coches</string>
     <string name="tarjetas_de_transporte_btn_text">Tarjetas de Transporte</string>
+    <string name="sitios_turisticos_text">Museo</string>
 
 </resources>
