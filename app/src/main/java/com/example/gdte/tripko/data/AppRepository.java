@@ -23,11 +23,13 @@ public class AppRepository implements RepositoryContract {
 
     public static final String JSON_FILE = "Data.json";
     public static final String JSON_ROOT = "regiones";
+    public static final String JSON_SITIOS_TURISTICOS = "sitiosTuristicos";
 
     private static AppRepository INSTANCE;
 
     private Context context;
     private List<RegionItem> regiones;
+    private List<Sitios_TuristicosItem> sitios_turisticosItems;
 
     public static RepositoryContract getInstance(Context context) {
         if (INSTANCE == null) {
@@ -71,7 +73,7 @@ public class AppRepository implements RepositoryContract {
 
             @Override
             public void run() {
-                if(callback != null) {
+                if (callback != null) {
                     callback.setGastronomiaList(loadGastronomiaList(regionId));
                 }
             }
@@ -86,7 +88,7 @@ public class AppRepository implements RepositoryContract {
 
             @Override
             public void run() {
-                if(callback != null) {
+                if (callback != null) {
                     callback.setGastronomia(loadGastronomia(id));
                 }
             }
@@ -100,7 +102,7 @@ public class AppRepository implements RepositoryContract {
 
             @Override
             public void run() {
-                if(callback != null) {
+                if (callback != null) {
                     callback.setRegion(loadRegion(id));
                 }
             }
@@ -116,7 +118,7 @@ public class AppRepository implements RepositoryContract {
 
             @Override
             public void run() {
-                if(callback != null) {
+                if (callback != null) {
                     callback.setRegionList(loadRegiones());
 
                 }
@@ -267,5 +269,183 @@ public class AppRepository implements RepositoryContract {
 
     private List<RegionItem> loadRegiones() {
         return regiones;
+    }
+
+    //////////////////////////////////Sitios Turisticos//////////////////////////
+
+
+    @Override
+    public void loadSitioTuristico(final FetchSitioTuristicoDataCallback callback) {
+
+
+        AsyncTask.execute(new Runnable() {
+
+            @Override
+            public void run() {
+
+                boolean error = !loadSitiosTuristicosFromJSON(loadJSONFromAsset());
+
+                if (callback != null) {
+                    callback.onSitiosTuristicosDataFetched(error);
+                }
+            }
+        });
+
+    }
+
+    @Override
+    public void getSitioTuristicoDetailList(
+            final Sitios_TuristicosItem sitios_turisticosItem, final GetSitioTuristicoDetailListCallback callback) {
+
+        getSitioTuristicoDetailList(sitios_turisticosItem.id, callback);
+    }
+
+
+    @Override
+    public void getSitioTuristicoDetailList(
+            final int sitiosTuristicosId, final GetSitioTuristicoDetailListCallback callback) {
+
+        AsyncTask.execute(new Runnable() {
+
+            @Override
+            public void run() {
+                if (callback != null) {
+                    callback.setSitioTuristicoDetailList(loadSitiosTuristicosDetail(sitiosTuristicosId));
+                }
+            }
+        });
+
+    }
+
+
+    @Override
+    public void getSitioTuristicoDetail(final int id, final GetSitioTuristicoDetailCallback callback) {
+
+        AsyncTask.execute(new Runnable() {
+
+            @Override
+            public void run() {
+                if (callback != null) {
+                    callback.setSitioTuristicoDetai(loadSitioTuristicoDetail(id));
+                }
+            }
+        });
+    }
+
+
+    @Override
+    public void getSitioTuristico(final int id, final GetSitioTuristicoCallback callback) {
+
+        AsyncTask.execute(new Runnable() {
+
+            @Override
+            public void run() {
+                if (callback != null) {
+                    callback.setSitioTuristico(loadSitioTuristico(id));
+                }
+            }
+
+
+        });
+
+    }
+
+
+    @Override
+    public void getSitioTuristicoList(final GetSitioTuristicoListCallback callback) {
+        AsyncTask.execute(new Runnable() {
+
+            @Override
+            public void run() {
+                if (callback != null) {
+                    callback.setSitioTuristicoList(loadSitiosTuristicos());
+                }
+            }
+        });
+
+    }
+
+
+    private boolean loadSitiosTuristicosFromJSON(String json) {
+        Log.e(TAG, "loadCatalogFromJSON()");
+
+        GsonBuilder gsonBuilder = new GsonBuilder();
+        Gson gson = gsonBuilder.create();
+
+        try {
+
+            JSONObject jsonObject = new JSONObject(json);
+            JSONArray jsonArray = jsonObject.getJSONArray(JSON_SITIOS_TURISTICOS);
+
+            sitios_turisticosItems = new ArrayList();
+
+            if (jsonArray.length() > 0) {
+
+                final List<Sitios_TuristicosItem> sitiosTuristicosItems = Arrays.asList(
+                        gson.fromJson(jsonArray.toString(), Sitios_TuristicosItem[].class)
+                );
+
+
+                for (Sitios_TuristicosItem sitios_turisticosItem : sitiosTuristicosItems) {
+                    insertSitioTuristico(sitios_turisticosItem);
+                }
+
+                for (Sitios_TuristicosItem sitios_turisticosItem : sitiosTuristicosItems) {
+                    for (SitiosTuristicosDetailItem sitiosTuristicosDetailItem : sitios_turisticosItem.sitiosTuristicosDetailItems) {
+                        sitiosTuristicosDetailItem.sitiosTuristicosId = sitios_turisticosItem.id;
+
+                    }
+                }
+
+                return true;
+            }
+
+        } catch (JSONException error) {
+            Log.e(TAG, "error: " + error);
+        }
+
+        return false;
+    }
+
+    private List<SitiosTuristicosDetailItem> loadSitiosTuristicosDetail(int sitioTuristicoId) {
+        List<SitiosTuristicosDetailItem> sitiosTuristicosDetailItems = new ArrayList();
+
+        for (Sitios_TuristicosItem sitios_turisticosItem : sitios_turisticosItems) {
+            if (sitios_turisticosItem.id == sitioTuristicoId) {
+                sitiosTuristicosDetailItems = sitios_turisticosItem.sitiosTuristicosDetailItems;
+            }
+        }
+
+        return sitiosTuristicosDetailItems;
+    }
+
+    private SitiosTuristicosDetailItem loadSitioTuristicoDetail(int id) {
+        for (Sitios_TuristicosItem sitios_turisticosItem : sitios_turisticosItems) {
+            for (SitiosTuristicosDetailItem sitiosTuristicosDetailItem : sitios_turisticosItem.sitiosTuristicosDetailItems) {
+                if (sitiosTuristicosDetailItem.id == id) {
+                    return sitiosTuristicosDetailItem;
+                }
+            }
+        }
+
+        return null;
+    }
+
+    private Sitios_TuristicosItem loadSitioTuristico(int id) {
+        for (Sitios_TuristicosItem sitiosTuristicosItem : sitios_turisticosItems) {
+            if (sitiosTuristicosItem.id == id) {
+                return sitiosTuristicosItem;
+            }
+        }
+
+        return null;
+    }
+
+    private void insertSitioTuristico(Sitios_TuristicosItem sitios_turisticosItem) {
+        sitios_turisticosItems.add(sitios_turisticosItem);
+    }
+
+    private List<Sitios_TuristicosItem> loadSitiosTuristicos() {
+        return sitios_turisticosItems;
     }
 }
