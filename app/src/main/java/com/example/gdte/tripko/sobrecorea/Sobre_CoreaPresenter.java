@@ -51,6 +51,32 @@ public class Sobre_CoreaPresenter implements Sobre_CoreaContract.Presenter {
     }
 
     @Override
+    public void goHomeButtonClicked() {
+        router.navigateToHomeScreen();
+    }
+
+    @Override
+    public void goPreguntasFrecuentesButtonClicked() {
+        router.navigateToPreguntasFrecuentesScreen();
+    }
+
+
+    @Override
+    public void goClimaButtonClicked() {
+        router.navigateToClimaScreen();
+    }
+
+    @Override
+    public void goCiudadesPrincipalesButtonClicked() {
+        router.navigateToCiudadesPrincipalesScreen();
+    }
+
+    @Override
+    public void goCulturaButtonClicked() {
+        router.navigateToCulturaScreen();
+    }
+
+    @Override
     public void injectView(WeakReference<Sobre_CoreaContract.View> view) {
         this.view = view;
     }

@@ -3,12 +3,14 @@ package com.example.gdte.tripko.sobrecorea;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.gdte.tripko.R;
+import com.example.gdte.tripko.sitiosturisticos.Sitios_TuristicosScreen;
 
 public class Sobre_CoreaActivity
         extends AppCompatActivity implements Sobre_CoreaContract.View {
@@ -39,6 +41,49 @@ public class Sobre_CoreaActivity
         climaButton=findViewById(R.id.climaButton);
         culturaButton=findViewById(R.id.culturaButton);
         ciudadesPrincipalesButton=findViewById(R.id.ciudadesPrincipalesButton);
+
+
+        homeImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.goHomeButtonClicked();
+            }
+        });
+
+
+        climaButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.goClimaButtonClicked();
+            }
+        });
+
+        culturaButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.goCiudadesPrincipalesButtonClicked();
+            }
+        });
+
+
+        ciudadesPrincipalesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.goCulturaButtonClicked();
+            }
+        });
+
+
+        preguntasFrecuentesImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.goPreguntasFrecuentesButtonClicked();
+            }
+        });
+
+
+        // do the setup
+        Sobre_CoreaScreen.configure(this);
 
     }
 

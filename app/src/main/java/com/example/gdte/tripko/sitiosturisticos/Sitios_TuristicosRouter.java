@@ -5,6 +5,9 @@ import android.content.Intent;
 import android.content.Context;
 
 import com.example.gdte.tripko.app.AppMediator;
+import com.example.gdte.tripko.ciudadesprincipales.Ciudades_PrincipalesActivity;
+import com.example.gdte.tripko.clima.ClimaActivity;
+import com.example.gdte.tripko.cultura.CulturaActivity;
 import com.example.gdte.tripko.data.Sitios_TuristicosItem;
 import com.example.gdte.tripko.menuprincipal.Menu_PrincipalActivity;
 import com.example.gdte.tripko.preguntasfrecuentes.Preguntas_FrecuentesActivity;

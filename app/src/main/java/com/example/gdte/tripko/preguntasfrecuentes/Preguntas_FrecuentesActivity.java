@@ -26,7 +26,6 @@ public class Preguntas_FrecuentesActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_preguntas__frecuentes);
-        getSupportActionBar().setTitle(R.string.app_name);
 
         tripkoTextView = findViewById(R.id.tripkoTextView);
 
@@ -84,7 +83,7 @@ public class Preguntas_FrecuentesActivity
         //Log.e(TAG, "onDataUpdated()");
 
         // deal with the data
-        ((TextView) findViewById(R.id.data)).setText(viewModel.data);
+      //  ((TextView) findViewById(R.id.data)).setText(viewModel.data);
     }
 
     @Override

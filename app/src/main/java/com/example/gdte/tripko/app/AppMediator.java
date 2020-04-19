@@ -14,7 +14,6 @@ import com.example.gdte.tripko.data.RegionItem;
 import com.example.gdte.tripko.data.Sitios_TuristicosDetailItem;
 import com.example.gdte.tripko.data.Sitios_TuristicosItem;
 import com.example.gdte.tripko.entretenimientodetail.Entretenimiento_DetailState;
-import com.example.gdte.tripko.entretenimientodetaillist.Entretenimiento_Detail_ListRouter;
 import com.example.gdte.tripko.entretenimientodetaillist.Entretenimiento_Detail_ListState;
 import com.example.gdte.tripko.gastronomialist.GastronomiaListState;
 import com.example.gdte.tripko.gastronomiadetaillist.Gastronomia_Detail_ListState;
@@ -28,7 +27,7 @@ import com.example.gdte.tripko.preguntasfrecuentes.Preguntas_FrecuentesState;
 import com.example.gdte.tripko.sitiosturisticos.Sitios_TuristicosState;
 import com.example.gdte.tripko.sobrecorea.Sobre_CoreaState;
 import com.example.gdte.tripko.splash.SplashState;
-import com.example.gdte.tripko.sitiosturisticosdetaillist.Sitios_Turisticos_DetailList_DetailListState;
+import com.example.gdte.tripko.sitiosturisticosdetaillist.Sitios_Turisticos_DetailListState;
 import com.example.gdte.tripko.transportecategory.Transporte_CategoryState;
 
 public class AppMediator extends Application {
@@ -46,7 +45,7 @@ public class AppMediator extends Application {
     private Ciudades_PrincipalesState ciudadesPrincipalesSate;
     private EntretenimientoState entretenimientoState;
     private Sitios_TuristicosState sitiosTuristicosState = new Sitios_TuristicosState();
-    private Sitios_Turisticos_DetailList_DetailListState tiposDeSitiosTuristicosState = new Sitios_Turisticos_DetailList_DetailListState();
+    private Sitios_Turisticos_DetailListState tiposDeSitiosTuristicosState = new Sitios_Turisticos_DetailListState();
     private Region_ListState RegionListState = new Region_ListState();
     private GastronomiaListState comidaRestauranteListState = new GastronomiaListState();
     private Gastronomia_Detail_ListState comidaRestauranteDetailState = new Gastronomia_Detail_ListState();
@@ -134,11 +133,11 @@ public class AppMediator extends Application {
         this.sitiosTuristicosState = sitiosTuristicosState;
     }
 
-    public Sitios_Turisticos_DetailList_DetailListState getTiposDeSitiosTuristicosState() {
+    public Sitios_Turisticos_DetailListState getTiposDeSitiosTuristicosState() {
         return tiposDeSitiosTuristicosState;
     }
 
-    public void setTiposDeSitiosTuristicosState(Sitios_Turisticos_DetailList_DetailListState tiposDeSitiosTuristicosState) {
+    public void setTiposDeSitiosTuristicosState(Sitios_Turisticos_DetailListState tiposDeSitiosTuristicosState) {
         this.tiposDeSitiosTuristicosState = tiposDeSitiosTuristicosState;
     }
 

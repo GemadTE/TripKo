@@ -11,6 +11,10 @@ public interface Sitios_Turisticos_DetailListContract {
     }
 
     interface Presenter {
+        void goHomeButtonClicked();
+
+        void goPreguntasFrecuentesButtonClicked();
+
         void injectView(WeakReference<View> view);
 
         void injectModel(Model model);
@@ -27,8 +31,12 @@ public interface Sitios_Turisticos_DetailListContract {
     interface Router {
         void navigateToNextScreen();
 
-        void passDataToNextScreen(Sitios_Turisticos_DetailList_DetailListState state);
+        void navigateToHomeScreen();
 
-        Sitios_Turisticos_DetailList_DetailListState getDataFromPreviousScreen();
+        void navigateToPreguntasFrecuentesScreen();
+
+        void passDataToNextScreen(Sitios_Turisticos_DetailListState state);
+
+        Sitios_Turisticos_DetailListState getDataFromPreviousScreen();
     }
 }

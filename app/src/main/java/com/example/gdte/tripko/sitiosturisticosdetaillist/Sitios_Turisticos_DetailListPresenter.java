@@ -7,11 +7,11 @@ public class Sitios_Turisticos_DetailListPresenter implements Sitios_Turisticos_
     public static String TAG = Sitios_Turisticos_DetailListPresenter.class.getSimpleName();
 
     private WeakReference<Sitios_Turisticos_DetailListContract.View> view;
-    private Sitios_Turisticos_DetailList_DetailListState state;
+    private Sitios_Turisticos_DetailListState state;
     private Sitios_Turisticos_DetailListContract.Model model;
     private Sitios_Turisticos_DetailListContract.Router router;
 
-    public Sitios_Turisticos_DetailListPresenter(Sitios_Turisticos_DetailList_DetailListState state) {
+    public Sitios_Turisticos_DetailListPresenter(Sitios_Turisticos_DetailListState state) {
         this.state = state;
     }
 
@@ -21,11 +21,11 @@ public class Sitios_Turisticos_DetailListPresenter implements Sitios_Turisticos_
 
         // initialize the state if is necessary
         if (state == null) {
-            state = new Sitios_Turisticos_DetailList_DetailListState();
+            state = new Sitios_Turisticos_DetailListState();
         }
 
         // use passed state if is necessary
-        Sitios_Turisticos_DetailList_DetailListState savedState = router.getDataFromPreviousScreen();
+        Sitios_Turisticos_DetailListState savedState = router.getDataFromPreviousScreen();
         if (savedState != null) {
 
             // update view and model state
@@ -46,6 +46,16 @@ public class Sitios_Turisticos_DetailListPresenter implements Sitios_Turisticos_
         // update the view
         view.get().displayData(state);
 
+    }
+
+    @Override
+    public void goHomeButtonClicked() {
+        router.navigateToHomeScreen();
+    }
+
+    @Override
+    public void goPreguntasFrecuentesButtonClicked() {
+        router.navigateToPreguntasFrecuentesScreen();
     }
 
     @Override

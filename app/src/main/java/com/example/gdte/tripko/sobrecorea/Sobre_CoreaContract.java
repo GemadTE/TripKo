@@ -11,6 +11,16 @@ public interface Sobre_CoreaContract {
     }
 
     interface Presenter {
+        void goHomeButtonClicked();
+
+        void goPreguntasFrecuentesButtonClicked();
+
+        void goClimaButtonClicked();
+
+        void goCiudadesPrincipalesButtonClicked();
+
+        void goCulturaButtonClicked();
+
         void injectView(WeakReference<View> view);
 
         void injectModel(Model model);
@@ -26,6 +36,16 @@ public interface Sobre_CoreaContract {
 
     interface Router {
         void navigateToNextScreen();
+
+        void navigateToHomeScreen();
+
+        void navigateToPreguntasFrecuentesScreen();
+
+        void navigateToClimaScreen();
+
+        void navigateToCiudadesPrincipalesScreen();
+
+        void navigateToCulturaScreen();
 
         void passDataToNextScreen(Sobre_CoreaState state);
 
