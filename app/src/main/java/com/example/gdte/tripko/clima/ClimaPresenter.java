@@ -25,29 +25,20 @@ public class ClimaPresenter implements ClimaContract.Presenter {
         if (state == null) {
             state = new ClimaState();
         }
-
-        // use passed state if is necessary
-        ClimaState savedState = router.getDataFromPreviousScreen();
-        if (savedState != null) {
-
-            // update view and model state
-            state.data = savedState.data;
-
             // update the view
             view.get().displayData(state);
 
             return;
         }
 
-        // call the model
-        String data = model.fetchData();
+    @Override
+    public void goHomeButtonClicked() {
+        router.navigateToHomeScreen();
+    }
 
-        // set view state
-        state.data = data;
-
-        // update the view
-        view.get().displayData(state);
-
+    @Override
+    public void goPreguntasFrecuentesButtonClicked() {
+        router.navigateToPreguntasFrecuentesScreen();
     }
 
     @Override

@@ -23,6 +23,10 @@ public interface Entretenimiento_Detail_ListContract {
 
         void onRestart();
 
+        void goHomeButtonClicked();
+
+        void goPreguntasFrecuentesButtonClicked();
+
         void onBackPressed();
 
         void onPause();
@@ -42,6 +46,10 @@ public interface Entretenimiento_Detail_ListContract {
 
     interface Router {
         void navigateToNextScreen();
+
+        void navigateToHomeScreen();
+
+        void navigateToPreguntasFrecuentesScreen();
 
         void passStateToNextScreen(Entretenimiento_Detail_ListState state);
 

@@ -51,6 +51,18 @@ public class CulturaPresenter implements CulturaContract.Presenter {
     }
 
     @Override
+    public void goHomeButtonClicked() {
+        router.navigateToHomeScreen();
+    }
+
+
+    @Override
+    public void goPreguntasFrecuentesButtonClicked() {
+        router.navigateToPreguntasFrecuentesScreen();
+    }
+
+
+    @Override
     public void injectView(WeakReference<CulturaContract.View> view) {
         this.view = view;
     }

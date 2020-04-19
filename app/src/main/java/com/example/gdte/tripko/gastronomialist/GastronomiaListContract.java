@@ -16,6 +16,8 @@ public interface GastronomiaListContract {
     }
 
     interface Presenter {
+        void goPreguntasFrecuentesButtonClicked();
+
         void selectGastronomiaListData(GastronomiaItem item);
 
         void fetchProductListData();
@@ -39,6 +41,8 @@ public interface GastronomiaListContract {
         void navigateToGastronomiaDetailListScreen();
 
         void navigateToHomeScreen();
+
+        void navigateToPreguntasFrecuentesScreen();
 
         void passDataToGastronomiaDetailListScreen(GastronomiaItem item);
 

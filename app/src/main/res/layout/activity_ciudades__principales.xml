@@ -19,12 +19,11 @@
 
             <TextView
                 android:id="@+id/ciudadesPrincipalesTitle"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="140dp"
                 android:layout_marginTop="80dp"
                 android:layout_marginBottom="15dp"
-                android:text="@string/ciudades_principales_title"
                 tools:text="@string/ciudades_principales_title" />
 
             <TextView
@@ -33,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:text="@string/ciudades_principales_text" />
+                tools:text="@string/ciudades_principales_text" />
 
             <ImageView
                 android:id="@+id/seul"

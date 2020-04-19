@@ -11,6 +11,10 @@ public interface Ciudades_PrincipalesContract {
     }
 
     interface Presenter {
+        void goHomeButtonClicked();
+
+        void goPreguntasFrecuentesButtonClicked();
+
         void injectView(WeakReference<View> view);
 
         void injectModel(Model model);
@@ -25,10 +29,9 @@ public interface Ciudades_PrincipalesContract {
     }
 
     interface Router {
-        void navigateToNextScreen();
 
-        void passDataToNextScreen(Ciudades_PrincipalesState state);
+        void navigateToHomeScreen();
 
-        Ciudades_PrincipalesState getDataFromPreviousScreen();
+        void navigateToPreguntasFrecuentesScreen();
     }
 }

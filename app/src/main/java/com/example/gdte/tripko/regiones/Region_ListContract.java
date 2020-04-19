@@ -23,6 +23,8 @@ public interface Region_ListContract {
 
         void goHomeButtonClicked();
 
+        void goPreguntasFrecuentesButtonClicked();
+
         void injectView(WeakReference<View> view);
 
         void injectModel(Model model);
@@ -41,6 +43,8 @@ public interface Region_ListContract {
         void navigateToGastronomiaListScreen();
 
         void navigateToHomeScreen();
+
+        void navigateToPreguntasFrecuentesScreen();
 
         void passDataToGastronomiaListScreen(RegionItem item);
 

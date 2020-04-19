@@ -11,6 +11,10 @@ public interface ClimaContract {
     }
 
     interface Presenter {
+        void goHomeButtonClicked();
+
+        void goPreguntasFrecuentesButtonClicked();
+
         void injectView(WeakReference<View> view);
 
         void injectModel(Model model);
@@ -25,10 +29,9 @@ public interface ClimaContract {
     }
 
     interface Router {
-        void navigateToNextScreen();
 
-        void passDataToNextScreen(ClimaState state);
+        void navigateToHomeScreen();
 
-        ClimaState getDataFromPreviousScreen();
+        void navigateToPreguntasFrecuentesScreen();
     }
 }

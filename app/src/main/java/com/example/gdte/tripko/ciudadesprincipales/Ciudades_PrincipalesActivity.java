@@ -3,6 +3,7 @@ package com.example.gdte.tripko.ciudadesprincipales;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -37,6 +38,23 @@ public class Ciudades_PrincipalesActivity
         incheon=findViewById(R.id.incheon);
         daegu=findViewById(R.id.daegu);
         daejeon=findViewById(R.id.daejeon);
+
+
+        homeImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.goHomeButtonClicked();
+            }
+        });
+
+
+        preguntasFrecuentesImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.goPreguntasFrecuentesButtonClicked();
+            }
+        });
+
     }
 
     @Override
@@ -52,7 +70,9 @@ public class Ciudades_PrincipalesActivity
         //Log.e(TAG, "displayData()");
 
         // deal with the data
-        //((TextView) findViewById(R.id.data)).setText(viewModel.data);
+        ((TextView) findViewById(R.id.ciudadesPrincipalesTitle)).setText(R.string.ciudades_principales_title);
+        ((TextView) findViewById(R.id.ciudadesPrincipalesDescriptionText)).setText(R.string.ciudades_principales_text);
+        ((TextView) findViewById(R.id.tripkoTextView)).setText(R.string.tripko_text);
     }
 
     @Override

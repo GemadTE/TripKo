@@ -23,6 +23,10 @@ public interface Entretenimiento_DetailContract {
 
         void onRestart();
 
+        void goHomeButtonClicked();
+
+        void goPreguntasFrecuentesButtonClicked();
+
         void onBackPressed();
 
         void onPause();
@@ -44,6 +48,10 @@ public interface Entretenimiento_DetailContract {
         void navigateToNextScreen();
 
         void passStateToNextScreen(Entretenimiento_DetailState state);
+
+        void navigateToHomeScreen();
+
+        void navigateToPreguntasFrecuentesScreen();
 
         Entretenimiento_DetailState getStateFromPreviousScreen();
 

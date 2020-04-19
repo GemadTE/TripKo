@@ -48,6 +48,13 @@ public class Gastronomia_Detail_ListActivity
             }
         });
 
+        preguntasFrecuentesImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.goPreguntasFrecuentesButtonClicked();
+            }
+        });
+
         if (savedInstanceState == null) {
             presenter.onStart();
 

@@ -3,6 +3,7 @@ package com.example.gdte.tripko.clima;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -29,6 +30,22 @@ public class ClimaActivity
 
         climaTitle=findViewById(R.id.climaTitle);
         climaDescriptionText=findViewById(R.id.climaDescriptionText);
+
+        homeImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.goHomeButtonClicked();
+            }
+        });
+
+
+        preguntasFrecuentesImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.goPreguntasFrecuentesButtonClicked();
+            }
+        });
+
     }
 
     @Override
@@ -44,7 +61,9 @@ public class ClimaActivity
         //Log.e(TAG, "displayData()");
 
         // deal with the data
-        //((TextView) findViewById(R.id.data)).setText(viewModel.data);
+        ((TextView) findViewById(R.id.climaTitle)).setText(R.string.clima_title);
+        ((TextView) findViewById(R.id.climaDescriptionText)).setText(R.string.clima_text);
+        ((TextView) findViewById(R.id.tripkoTextView)).setText(R.string.tripko_text);
     }
 
     @Override

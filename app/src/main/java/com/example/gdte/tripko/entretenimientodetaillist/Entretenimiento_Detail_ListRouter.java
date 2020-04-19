@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.content.Context;
 
 import com.example.gdte.tripko.app.AppMediator;
+import com.example.gdte.tripko.menuprincipal.Menu_PrincipalActivity;
+import com.example.gdte.tripko.preguntasfrecuentes.Preguntas_FrecuentesActivity;
 
 public class Entretenimiento_Detail_ListRouter implements Entretenimiento_Detail_ListContract.Router {
 
@@ -20,6 +22,22 @@ public class Entretenimiento_Detail_ListRouter implements Entretenimiento_Detail
     public void navigateToNextScreen() {
         Context context = mediator.getApplicationContext();
         Intent intent = new Intent(context, Entretenimiento_Detail_ListActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
+    }
+
+    @Override
+    public void navigateToHomeScreen() {
+        Context context = mediator.getApplicationContext();
+        Intent intent = new Intent(context, Menu_PrincipalActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
+    }
+
+    @Override
+    public void navigateToPreguntasFrecuentesScreen() {
+        Context context = mediator.getApplicationContext();
+        Intent intent = new Intent(context, Preguntas_FrecuentesActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
     }

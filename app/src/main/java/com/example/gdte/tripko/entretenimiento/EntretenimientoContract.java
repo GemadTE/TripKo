@@ -11,6 +11,10 @@ public interface EntretenimientoContract {
     }
 
     interface Presenter {
+        void goHomeButtonClicked();
+
+        void goPreguntasFrecuentesButtonClicked();
+
         void injectView(WeakReference<View> view);
 
         void injectModel(Model model);
@@ -28,6 +32,10 @@ public interface EntretenimientoContract {
         void navigateToNextScreen();
 
         void passDataToNextScreen(EntretenimientoState state);
+
+        void navigateToHomeScreen();
+
+        void navigateToPreguntasFrecuentesScreen();
 
         EntretenimientoState getDataFromPreviousScreen();
     }

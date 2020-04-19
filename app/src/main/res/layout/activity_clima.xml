@@ -74,13 +74,13 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="170dp"
             android:layout_marginBottom="15dp"
-            android:text="@string/clima_title" />
+            tools:text="@string/clima_title" />
 
         <TextView
             android:id="@+id/climaDescriptionText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/clima_text" />
+            tools:text="@string/aeropuertos_btn_text" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

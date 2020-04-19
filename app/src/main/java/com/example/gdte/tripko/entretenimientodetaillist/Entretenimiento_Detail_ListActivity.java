@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.gdte.tripko.R;
@@ -14,12 +16,32 @@ public class Entretenimiento_Detail_ListActivity
     public static String TAG = Entretenimiento_Detail_ListActivity.class.getSimpleName();
 
     private Entretenimiento_Detail_ListContract.Presenter presenter;
+    private ImageButton preguntasFrecuentesImageButton, homeImageButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_entretenimiento__detail__list);
         getSupportActionBar().setTitle(R.string.app_name);
+
+        preguntasFrecuentesImageButton=findViewById(R.id.preguntasFrecuentesImageButton);
+        homeImageButton=findViewById(R.id.homeImageButton);
+
+        homeImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.goHomeButtonClicked();
+            }
+        });
+
+        preguntasFrecuentesImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.goPreguntasFrecuentesButtonClicked();
+            }
+        });
+
 
         // do the setup
         Entretenimiento_Detail_ListScreen.configure(this);
@@ -65,8 +87,6 @@ public class Entretenimiento_Detail_ListActivity
     public void onDataUpdated(Entretenimiento_Detail_ListViewModel viewModel) {
         //Log.e(TAG, "onDataUpdated()");
 
-        // deal with the data
-        ((TextView) findViewById(R.id.data)).setText(viewModel.data);
     }
 
     @Override

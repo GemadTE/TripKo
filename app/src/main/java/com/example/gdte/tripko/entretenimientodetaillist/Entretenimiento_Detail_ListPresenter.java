@@ -64,6 +64,17 @@ public class Entretenimiento_Detail_ListPresenter implements Entretenimiento_Det
     }
 
     @Override
+    public void goHomeButtonClicked() {
+        router.navigateToHomeScreen();
+    }
+
+
+    @Override
+    public void goPreguntasFrecuentesButtonClicked() {
+        router.navigateToPreguntasFrecuentesScreen();
+    }
+
+    @Override
     public void onBackPressed() {
         // Log.e(TAG, "onBackPressed()");
     }

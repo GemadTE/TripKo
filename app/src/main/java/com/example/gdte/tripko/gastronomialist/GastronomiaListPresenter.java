@@ -50,6 +50,10 @@ public class GastronomiaListPresenter implements GastronomiaListContract.Present
         router.navigateToHomeScreen();
     }
 
+    @Override
+    public void goPreguntasFrecuentesButtonClicked() {
+        router.navigateToPreguntasFrecuentesScreen();
+    }
 
     @Override
     public void selectGastronomiaListData(GastronomiaItem item) {

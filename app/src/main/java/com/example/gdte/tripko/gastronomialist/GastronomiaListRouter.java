@@ -8,6 +8,7 @@ import com.example.gdte.tripko.data.GastronomiaItem;
 import com.example.gdte.tripko.data.RegionItem;
 import com.example.gdte.tripko.gastronomiadetaillist.Gastronomia_Detail_ListActivity;
 import com.example.gdte.tripko.menuprincipal.Menu_PrincipalActivity;
+import com.example.gdte.tripko.preguntasfrecuentes.Preguntas_FrecuentesActivity;
 
 public class GastronomiaListRouter implements GastronomiaListContract.Router {
 
@@ -31,6 +32,14 @@ public class GastronomiaListRouter implements GastronomiaListContract.Router {
     public void navigateToHomeScreen() {
         Context context = mediator.getApplicationContext();
         Intent intent = new Intent(context, Menu_PrincipalActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
+    }
+
+    @Override
+    public void navigateToPreguntasFrecuentesScreen() {
+        Context context = mediator.getApplicationContext();
+        Intent intent = new Intent(context, Preguntas_FrecuentesActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
     }

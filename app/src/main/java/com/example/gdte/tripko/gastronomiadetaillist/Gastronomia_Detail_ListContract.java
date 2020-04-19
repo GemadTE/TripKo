@@ -23,6 +23,8 @@ public interface Gastronomia_Detail_ListContract {
 
         void goHomeButtonClicked();
 
+        void goPreguntasFrecuentesButtonClicked();
+
         void onRestart();
 
         void onBackPressed();
@@ -46,6 +48,8 @@ public interface Gastronomia_Detail_ListContract {
         void navigateToNextScreen();
 
         void navigateToHomeScreen();
+
+        void navigateToPreguntasFrecuentesScreen();
 
         void passStateToNextScreen(Gastronomia_Detail_ListState state);
 

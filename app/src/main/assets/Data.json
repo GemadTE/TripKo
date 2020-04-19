@@ -2,7 +2,7 @@
   "regiones": [
     {
       "id": 1,
-      "content": "Pepito",
+      "content": "Seul",
       "gastronomia": [
         {
           "id": 1,
@@ -10,8 +10,9 @@
           "gastronomiaDetail": [
             {
               "id": 1,
-              "comidaContent": "Hola",
-              "comidaTitle": "Tortilla"
+              "comidaTitle": "Restaurante1",
+              "comidaContent": "Tenemos el mejor restaurante",
+              "image" : "..."
             }
           ]
         },
@@ -21,8 +22,9 @@
           "gastronomiaDetail": [
             {
               "id": 1,
-              "comidaContent": "Bueno",
-              "comidaTitle": "Papas"
+              "comidaTitle": "Plato1",
+              "comidaContent": "El Mejor Plato",
+              "image" : "..."
             }
           ]
         }
@@ -30,7 +32,7 @@
     },
     {
       "id": 2,
-      "content": "Juanito",
+      "content": "Daegu",
       "gastronomia": [
         {
           "id": 1,
@@ -38,8 +40,20 @@
           "gastronomiaDetail": [
             {
               "id": 1,
-              "comidaContent": "pepe",
-              "comidaTitle": ""
+              "comidaContent": "Restaurante1",
+              "comidaTitle": "Tenemos el mejor restaurante"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "content": "Platos",
+          "gastronomiaDetail": [
+            {
+              "id": 1,
+              "comidaTitle": "Plato1",
+              "comidaContent": "El Mejor Plato",
+              "image" : "..."
             }
           ]
         }

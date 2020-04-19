@@ -45,8 +45,8 @@ public class Conversor_MonedaActivity
         divisaSpinner = findViewById(R.id.divisaSpinner);
         pasarASpinner = findViewById(R.id.pasarASpinner);
 
-        preguntasFrecuentesImageButton = findViewById(R.id.preguntasFrecuentesImageButton);
         homeImageButton = findViewById(R.id.homeImageButton);
+        preguntasFrecuentesImageButton = findViewById(R.id.preguntasFrecuentesImageButton);
 
         calcularButton = findViewById(R.id.calcularButton);
 
@@ -54,6 +54,13 @@ public class Conversor_MonedaActivity
             @Override
             public void onClick(View v) {
                 presenter.goHomeButtonClicked();
+            }
+        });
+
+        preguntasFrecuentesImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.goPreguntasFrecuentesButtonClicked();
             }
         });
 

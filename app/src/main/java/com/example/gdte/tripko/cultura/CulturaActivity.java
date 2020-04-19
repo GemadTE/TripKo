@@ -3,6 +3,7 @@ package com.example.gdte.tripko.cultura;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -21,10 +22,25 @@ public class CulturaActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cultura);
 
-        // do the setup
-        CulturaScreen.configure(this);
         preguntasFrecuentesImageButton=findViewById(R.id.preguntasFrecuentesImageButton);
         homeImageButton=findViewById(R.id.homeImageButton);
+
+        homeImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.goHomeButtonClicked();
+            }
+        });
+
+        preguntasFrecuentesImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.goPreguntasFrecuentesButtonClicked();
+            }
+        });
+
+        // do the setup
+        CulturaScreen.configure(this);
 
     }
 

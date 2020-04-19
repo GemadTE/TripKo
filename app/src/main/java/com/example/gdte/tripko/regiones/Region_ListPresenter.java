@@ -48,6 +48,10 @@ public class Region_ListPresenter implements Region_ListContract.Presenter {
         router.navigateToHomeScreen();
     }
 
+    @Override
+    public void goPreguntasFrecuentesButtonClicked() {
+        router.navigateToPreguntasFrecuentesScreen();
+    }
 
     @Override
     public void injectView(WeakReference<Region_ListContract.View> view) {

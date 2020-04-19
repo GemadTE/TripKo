@@ -58,21 +58,19 @@ public class Sobre_CoreaActivity
             }
         });
 
-        culturaButton.setOnClickListener(new View.OnClickListener() {
+        ciudadesPrincipalesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 presenter.goCiudadesPrincipalesButtonClicked();
             }
         });
 
-
-        ciudadesPrincipalesButton.setOnClickListener(new View.OnClickListener() {
+        culturaButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 presenter.goCulturaButtonClicked();
             }
         });
-
 
         preguntasFrecuentesImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,6 +98,7 @@ public class Sobre_CoreaActivity
         ((TextView) findViewById(R.id.tripkoTextView)).setText(R.string.tripko_text);
         ((TextView) findViewById(R.id.sobreCoreaDescriptionText)).setText(R.string.sobre_corea_text);
         ((TextView) findViewById(R.id.sobreCoreaTitle)).setText(R.string.sobre_corea_title);
+        ((TextView) findViewById(R.id.sobreCoreaText2)).setText(R.string.sobre_corea_text2);
     }
 
     @Override

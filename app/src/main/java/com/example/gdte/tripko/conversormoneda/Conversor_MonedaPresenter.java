@@ -84,6 +84,11 @@ public class Conversor_MonedaPresenter implements Conversor_MonedaContract.Prese
     }
 
     @Override
+    public void goPreguntasFrecuentesButtonClicked() {
+        router.navigateToPreguntasFrecuentesScreen();
+    }
+
+    @Override
     public void injectView(WeakReference<Conversor_MonedaContract.View> view) {
         this.view = view;
     }

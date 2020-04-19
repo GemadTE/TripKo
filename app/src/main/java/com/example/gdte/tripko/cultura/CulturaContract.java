@@ -11,6 +11,10 @@ public interface CulturaContract {
     }
 
     interface Presenter {
+        void goHomeButtonClicked();
+
+        void goPreguntasFrecuentesButtonClicked();
+
         void injectView(WeakReference<View> view);
 
         void injectModel(Model model);
@@ -26,6 +30,10 @@ public interface CulturaContract {
 
     interface Router {
         void navigateToNextScreen();
+
+        void navigateToHomeScreen();
+
+        void navigateToPreguntasFrecuentesScreen();
 
         void passDataToNextScreen(CulturaState state);
 

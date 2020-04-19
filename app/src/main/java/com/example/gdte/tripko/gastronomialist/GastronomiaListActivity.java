@@ -38,6 +38,13 @@ public class GastronomiaListActivity
             }
         });
 
+        preguntasFrecuentesImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.goPreguntasFrecuentesButtonClicked();
+            }
+        });
+
         gastronomiaListAdapter = new GastronomiaListAdapter(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

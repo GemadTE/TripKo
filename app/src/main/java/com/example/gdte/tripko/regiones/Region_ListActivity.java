@@ -49,6 +49,12 @@ public class Region_ListActivity
             }
         });
 
+        preguntasFrecuentesImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.goPreguntasFrecuentesButtonClicked();
+            }
+        });
 
         // do the setup
         Region_ListScreen.configure(this);

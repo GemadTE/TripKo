@@ -39,6 +39,8 @@ public class EntretenimientoPresenter implements EntretenimientoContract.Present
             return;
         }
 
+
+
         // call the model
         String data = model.fetchData();
 
@@ -48,6 +50,17 @@ public class EntretenimientoPresenter implements EntretenimientoContract.Present
         // update the view
         view.get().displayData(state);
 
+    }
+
+    @Override
+    public void goHomeButtonClicked() {
+        router.navigateToHomeScreen();
+    }
+
+
+    @Override
+    public void goPreguntasFrecuentesButtonClicked() {
+        router.navigateToPreguntasFrecuentesScreen();
     }
 
     @Override

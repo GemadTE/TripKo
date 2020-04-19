@@ -26,12 +26,6 @@ public class Ciudades_PrincipalesPresenter implements Ciudades_PrincipalesContra
             state = new Ciudades_PrincipalesState();
         }
 
-        // use passed state if is necessary
-        Ciudades_PrincipalesState savedState = router.getDataFromPreviousScreen();
-        if (savedState != null) {
-
-            // update view and model state
-            state.data = savedState.data;
 
             // update the view
             view.get().displayData(state);
@@ -39,16 +33,16 @@ public class Ciudades_PrincipalesPresenter implements Ciudades_PrincipalesContra
             return;
         }
 
-        // call the model
-        String data = model.fetchData();
-
-        // set view state
-        state.data = data;
-
-        // update the view
-        view.get().displayData(state);
-
+    @Override
+    public void goHomeButtonClicked() {
+        router.navigateToHomeScreen();
     }
+
+    @Override
+    public void goPreguntasFrecuentesButtonClicked() {
+        router.navigateToPreguntasFrecuentesScreen();
+    }
+
 
     @Override
     public void injectView(WeakReference<Ciudades_PrincipalesContract.View> view) {
