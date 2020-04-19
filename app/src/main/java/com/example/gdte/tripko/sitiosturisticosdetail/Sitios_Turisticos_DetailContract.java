@@ -1,13 +1,13 @@
-package com.example.gdte.tripko.culturadetaillist;
+package com.example.gdte.tripko.sitiosturisticosdetail;
 
 import java.lang.ref.WeakReference;
 
-public interface Cultura_Detail_ListContract {
+public interface Sitios_Turisticos_DetailContract {
 
     interface View {
         void injectPresenter(Presenter presenter);
 
-        void onDataUpdated(Cultura_Detail_ListViewModel viewModel);
+        void onDataUpdated(Sitios_Turisticos_DetailViewModel viewModel);
     }
 
     interface Presenter {
@@ -43,12 +43,12 @@ public interface Cultura_Detail_ListContract {
     interface Router {
         void navigateToNextScreen();
 
-        void passStateToNextScreen(Cultura_Detail_ListState state);
+        void passStateToNextScreen(Sitios_Turisticos_DetailState state);
 
-        Cultura_Detail_ListState getStateFromPreviousScreen();
+        Sitios_Turisticos_DetailState getStateFromPreviousScreen();
 
-        Cultura_Detail_ListState getStateFromNextScreen();
+        Sitios_Turisticos_DetailState getStateFromNextScreen();
 
-        void passStateToPreviousScreen(Cultura_Detail_ListState state);
+        void passStateToPreviousScreen(Sitios_Turisticos_DetailState state);
     }
 }

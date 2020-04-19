@@ -1,14 +1,14 @@
-package com.example.gdte.tripko.culturadetaillist;
+package com.example.gdte.tripko.sitiosturisticosdetail;
 
 import android.util.Log;
 
-public class Cultura_Detail_ListModel implements Cultura_Detail_ListContract.Model {
+public class Sitios_Turisticos_DetailModel implements Sitios_Turisticos_DetailContract.Model {
 
-    public static String TAG = Cultura_Detail_ListModel.class.getSimpleName();
+    public static String TAG = Sitios_Turisticos_DetailModel.class.getSimpleName();
 
     private String data;
 
-    public Cultura_Detail_ListModel(String data) {
+    public Sitios_Turisticos_DetailModel(String data) {
         this.data = data;
     }
 

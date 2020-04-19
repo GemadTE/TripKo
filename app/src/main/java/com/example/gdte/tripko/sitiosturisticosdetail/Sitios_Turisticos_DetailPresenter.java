@@ -1,19 +1,19 @@
-package com.example.gdte.tripko.culturadetaillist;
+package com.example.gdte.tripko.sitiosturisticosdetail;
 
 import android.util.Log;
 
 import java.lang.ref.WeakReference;
 
-public class Cultura_Detail_ListPresenter implements Cultura_Detail_ListContract.Presenter {
+public class Sitios_Turisticos_DetailPresenter implements Sitios_Turisticos_DetailContract.Presenter {
 
-    public static String TAG = Cultura_Detail_ListPresenter.class.getSimpleName();
+    public static String TAG = Sitios_Turisticos_DetailPresenter.class.getSimpleName();
 
-    private WeakReference<Cultura_Detail_ListContract.View> view;
-    private Cultura_Detail_ListState state;
-    private Cultura_Detail_ListContract.Model model;
-    private Cultura_Detail_ListContract.Router router;
+    private WeakReference<Sitios_Turisticos_DetailContract.View> view;
+    private Sitios_Turisticos_DetailState state;
+    private Sitios_Turisticos_DetailContract.Model model;
+    private Sitios_Turisticos_DetailContract.Router router;
 
-    public Cultura_Detail_ListPresenter(Cultura_Detail_ListState state) {
+    public Sitios_Turisticos_DetailPresenter(Sitios_Turisticos_DetailState state) {
         this.state = state;
     }
 
@@ -23,11 +23,11 @@ public class Cultura_Detail_ListPresenter implements Cultura_Detail_ListContract
 
         // initialize the state if is necessary
         if (state == null) {
-            state = new Cultura_Detail_ListState();
+            state = new Sitios_Turisticos_DetailState();
         }
 
         // use passed state if is necessary
-        Cultura_Detail_ListState savedState = router.getStateFromPreviousScreen();
+        Sitios_Turisticos_DetailState savedState = router.getStateFromPreviousScreen();
         if (savedState != null) {
 
             // update the model if is necessary
@@ -48,7 +48,7 @@ public class Cultura_Detail_ListPresenter implements Cultura_Detail_ListContract
         // Log.e(TAG, "onResume()");
 
         // use passed state if is necessary
-        Cultura_Detail_ListState savedState = router.getStateFromNextScreen();
+        Sitios_Turisticos_DetailState savedState = router.getStateFromNextScreen();
         if (savedState != null) {
 
             // update the model if is necessary
@@ -79,17 +79,17 @@ public class Cultura_Detail_ListPresenter implements Cultura_Detail_ListContract
     }
 
     @Override
-    public void injectView(WeakReference<Cultura_Detail_ListContract.View> view) {
+    public void injectView(WeakReference<Sitios_Turisticos_DetailContract.View> view) {
         this.view = view;
     }
 
     @Override
-    public void injectModel(Cultura_Detail_ListContract.Model model) {
+    public void injectModel(Sitios_Turisticos_DetailContract.Model model) {
         this.model = model;
     }
 
     @Override
-    public void injectRouter(Cultura_Detail_ListContract.Router router) {
+    public void injectRouter(Sitios_Turisticos_DetailContract.Router router) {
         this.router = router;
     }
 }

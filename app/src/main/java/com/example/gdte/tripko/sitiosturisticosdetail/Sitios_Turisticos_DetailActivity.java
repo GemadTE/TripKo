@@ -1,4 +1,4 @@
-package com.example.gdte.tripko.culturadetaillist;
+package com.example.gdte.tripko.sitiosturisticosdetail;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,21 +8,21 @@ import android.widget.TextView;
 
 import com.example.gdte.tripko.R;
 
-public class Cultura_Detail_ListActivity
-        extends AppCompatActivity implements Cultura_Detail_ListContract.View {
+public class Sitios_Turisticos_DetailActivity
+        extends AppCompatActivity implements Sitios_Turisticos_DetailContract.View {
 
-    public static String TAG = Cultura_Detail_ListActivity.class.getSimpleName();
+    public static String TAG = Sitios_Turisticos_DetailActivity.class.getSimpleName();
 
-    private Cultura_Detail_ListContract.Presenter presenter;
+    private Sitios_Turisticos_DetailContract.Presenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cultura__detail__list);
-        getSupportActionBar().setTitle(R.string.app_name);
+        setContentView(R.layout.activity_sitios__turisticos__detail);
+
 
         // do the setup
-        Cultura_Detail_ListScreen.configure(this);
+        Sitios_Turisticos_DetailScreen.configure(this);
 
         if (savedInstanceState == null) {
             presenter.onStart();
@@ -62,15 +62,14 @@ public class Cultura_Detail_ListActivity
     }
 
     @Override
-    public void onDataUpdated(Cultura_Detail_ListViewModel viewModel) {
+    public void onDataUpdated(Sitios_Turisticos_DetailViewModel viewModel) {
         //Log.e(TAG, "onDataUpdated()");
 
-        // deal with the data
-        ((TextView) findViewById(R.id.data)).setText(viewModel.data);
+
     }
 
     @Override
-    public void injectPresenter(Cultura_Detail_ListContract.Presenter presenter) {
+    public void injectPresenter(Sitios_Turisticos_DetailContract.Presenter presenter) {
         this.presenter = presenter;
     }
 }

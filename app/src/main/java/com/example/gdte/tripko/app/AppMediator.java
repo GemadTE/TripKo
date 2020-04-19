@@ -7,7 +7,6 @@ import com.example.gdte.tripko.clima.ClimaState;
 import com.example.gdte.tripko.contactosdeinteres.Contactos_De_InteresState;
 import com.example.gdte.tripko.conversormoneda.Conversor_MonedaState;
 import com.example.gdte.tripko.culturadetail.Cultura_DetailState;
-import com.example.gdte.tripko.culturadetaillist.Cultura_Detail_ListState;
 import com.example.gdte.tripko.data.GastronomiaDetailItem;
 import com.example.gdte.tripko.data.GastronomiaItem;
 import com.example.gdte.tripko.data.RegionItem;
@@ -25,6 +24,7 @@ import com.example.gdte.tripko.menuprincipal.Menu_PrincipalState;
 import com.example.gdte.tripko.regiones.Region_ListState;
 import com.example.gdte.tripko.preguntasfrecuentes.Preguntas_FrecuentesState;
 import com.example.gdte.tripko.sitiosturisticos.Sitios_TuristicosState;
+import com.example.gdte.tripko.sitiosturisticosdetail.Sitios_Turisticos_DetailState;
 import com.example.gdte.tripko.sobrecorea.Sobre_CoreaState;
 import com.example.gdte.tripko.splash.SplashState;
 import com.example.gdte.tripko.sitiosturisticosdetaillist.Sitios_Turisticos_DetailListState;
@@ -37,7 +37,6 @@ public class AppMediator extends Application {
     private Menu_PrincipalState menu_principalState = new Menu_PrincipalState();
     private Sobre_CoreaState sobreCoreaState = new Sobre_CoreaState();
     private CulturaState culturaState = new CulturaState();
-    private Cultura_Detail_ListState culturaDetailListState = new Cultura_Detail_ListState();
     private Cultura_DetailState culturaDetailState = new Cultura_DetailState();
     private Entretenimiento_Detail_ListState entretenimientoDetailListState = new Entretenimiento_Detail_ListState();
     private Entretenimiento_DetailState entretenimientoDetailState = new Entretenimiento_DetailState();
@@ -46,6 +45,7 @@ public class AppMediator extends Application {
     private EntretenimientoState entretenimientoState;
     private Sitios_TuristicosState sitiosTuristicosState = new Sitios_TuristicosState();
     private Sitios_Turisticos_DetailListState tiposDeSitiosTuristicosState = new Sitios_Turisticos_DetailListState();
+    private Sitios_Turisticos_DetailState sitiosTuristicosDetailState = new Sitios_Turisticos_DetailState();
     private Region_ListState RegionListState = new Region_ListState();
     private GastronomiaListState comidaRestauranteListState = new GastronomiaListState();
     private Gastronomia_Detail_ListState comidaRestauranteDetailState = new Gastronomia_Detail_ListState();
@@ -197,13 +197,6 @@ public class AppMediator extends Application {
         return transporteCategoryState;
     }
 
-    public Cultura_Detail_ListState getCulturaDetailListState() {
-        return culturaDetailListState;
-    }
-
-    public void setCulturaDetailListState(Cultura_Detail_ListState culturaDetailListState) {
-        this.culturaDetailListState = culturaDetailListState;
-    }
 
     public Cultura_DetailState getCulturaDetailState() {
         return culturaDetailState;
@@ -269,6 +262,14 @@ public class AppMediator extends Application {
 
     public void setSitiosTuristicosDetailItem(Sitios_TuristicosDetailItem sitiosTuristicosDetailItem) {
         this.sitiosTuristicosDetailItem = sitiosTuristicosDetailItem;
+    }
+
+    public Sitios_Turisticos_DetailState getSitiosTuristicosDetailState() {
+        return sitiosTuristicosDetailState;
+    }
+
+    public void setSitiosTuristicosDetailState(Sitios_Turisticos_DetailState sitiosTuristicosDetailState) {
+        this.sitiosTuristicosDetailState = sitiosTuristicosDetailState;
     }
 
     public IdiomaState getIdiomaState(){
