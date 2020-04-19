@@ -45,5 +45,183 @@
         }
       ]
     }
+  ],
+  "cultura": [
+    {
+      "id": 1,
+      "content": "Tradiciones",
+      "title": "Tradiciones",
+      "detail": ".....",
+      "image": " ",
+      "iconImage": " "
+    },
+    {
+      "id": 2,
+      "content": "Múscica",
+      "title": "Música",
+      "detail": ".....",
+      "image": " ",
+      "iconImage": " "
+    },
+    {
+      "id": 3,
+      "content": "Vestimenta",
+      "title": "Vestimenta",
+      "detail": ".....",
+      "image": " ",
+      "iconImage": " "
+    },
+    {
+      "id": 4,
+      "content": "Cine y televisión",
+      "title": "Cine y televisión",
+      "detail": ".....",
+      "image": " ",
+      "iconImage": " "
+    }
+  ],
+  "entretenimiento": [
+    {
+      "id": 1,
+      "title": "Parques",
+      "parques": [
+        {
+          "id": 1,
+          "parqueTitle": "Parque1",
+          "parqueContent": "...",
+          "detail": "...",
+          "image": "..."
+        },
+        {
+          "id": 2,
+          "parqueTitle": "Parque2",
+          "parqueContent": "...",
+          "detail": "...",
+          "image": "..."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Con la familia o amigos",
+      "conLaFamiliaOAmigos": [
+        {
+          "id": 1,
+          "famAmTitle": "ActividadFamiliar1",
+          "famAmContent": "...",
+          "detail": "...",
+          "image": "..."
+        },
+        {
+          "id": 2,
+          "famAmTitle": "ActividadFamiliar2",
+          "famAmContent": "...",
+          "detail": "...",
+          "image": "..."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Actividades nocturnas",
+      "actividadesNocturnas": [
+        {
+          "id": 1,
+          "actNocTitle": "ActividadNocturna1",
+          "actNocContent": "...",
+          "detail": "...",
+          "image": "..."
+        },
+        {
+          "id": 2,
+          "actNocTitle": "ActividadNocturna2",
+          "actNocContent": "...",
+          "detail": "...",
+          "image": "..."
+        }
+      ]
+    }
+  ],
+  "sitiosTuristicos": [
+    {
+      "id": 1,
+      "title": "Museos",
+      "museos": [
+        {
+          "id": 1,
+          "museoTitle": "Museo1",
+          "museoContent": "...",
+          "detail": "...",
+          "image": "..."
+        },
+        {
+          "id": 2,
+          "museoTitle": "Museo2",
+          "museoContent": "...",
+          "detail": "...",
+          "image": "..."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Templos",
+      "templos": [
+        {
+          "id": 1,
+          "temploTitle": "Templo1",
+          "temploContent": "...",
+          "detail": "...",
+          "image": "..."
+        },
+        {
+          "id": 2,
+          "temploTitle": "Templo2",
+          "temploContent": "...",
+          "detail": "...",
+          "image": "..."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Fortalezas",
+      "fortalezas": [
+        {
+          "id": 1,
+          "fortalezaTitle": "Fortaleza1",
+          "fortalezaContent": "...",
+          "detail": "...",
+          "image": "..."
+        },
+        {
+          "id": 2,
+          "fortalezaTitle": "Fortaleza2",
+          "fortalezaContent": "...",
+          "detail": "...",
+          "image": "..."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Otros",
+      "otros": [
+        {
+          "id": 1,
+          "otroTitle": "Otro1",
+          "otroContent": "...",
+          "detail": "...",
+          "image": "..."
+        },
+        {
+          "id": 2,
+          "otroTitle": "Otro2",
+          "otroContent": "...",
+          "detail": "...",
+          "image": "..."
+        }
+      ]
+    }
   ]
 }

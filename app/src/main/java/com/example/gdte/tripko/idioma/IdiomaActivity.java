@@ -18,7 +18,7 @@ public class IdiomaActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_idioma);
+        setContentView(R.layout.activity_elegir_idioma);
 
         // do the setup
         IdiomaScreen.configure(this);
