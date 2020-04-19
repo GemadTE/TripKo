@@ -103,6 +103,10 @@ public class Conversor_MonedaActivity
         //Log.e(TAG, "onDataUpdated()");
 
         // deal with the data
+        ((TextView) findViewById(R.id.cantidadTextView)).setText(R.string.cantidad_text_view);
+        ((TextView) findViewById(R.id.divisaTextView)).setText(R.string.divisa_text);
+        ((TextView) findViewById(R.id.pasarATextView)).setText(R.string.pasar_a_text);
+        ((TextView) findViewById(R.id.tripkoTextView)).setText(R.string.tripko_text);
     }
 
     @Override

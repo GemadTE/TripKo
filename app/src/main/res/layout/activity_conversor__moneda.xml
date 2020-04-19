@@ -34,13 +34,13 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="@font/rancho"
-            android:text="@string/tripko_text"
             android:textAppearance="@style/TextAppearance.AppCompat.Display2"
             android:textColor="#F2A490"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/tripko_text" />
 
         <ImageButton
             android:id="@+id/homeImageButton"
@@ -59,7 +59,7 @@
         android:id="@+id/cuerpoConstraintLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="80dp"
         app:layout_constraintBottom_toTopOf="@+id/calcularButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,6 +70,7 @@
             android:id="@+id/textLinearLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="32dp"
             android:layout_marginBottom="71dp"
             android:orientation="horizontal"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
@@ -83,24 +84,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="42dp"
-                android:text="@string/cantidad_text_view"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="@android:color/background_dark"
+                tools:text="@string/cantidad_text_view" />
 
             <TextView
                 android:id="@+id/divisaTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="80dp"
-                android:text="@string/divisa_text"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="@android:color/background_dark"
+                tools:text="@string/divisa_text" />
 
             <TextView
                 android:id="@+id/pasarATextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="80dp"
-                android:text="@string/pasar_a_text"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="@android:color/background_dark"
+                tools:text="@string/pasar_a_text" />
 
         </LinearLayout>
 
@@ -165,6 +166,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="270dp"
+        android:layout_marginBottom="60dp"
         android:text="@string/calcular_button_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
