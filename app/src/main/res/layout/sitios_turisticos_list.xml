@@ -8,3 +8,4 @@
     app:layoutManager="LinearLayoutManager"
     tools:context=".sitiosturisticos.Sitios_TuristicosActivity"
     tools:listitem="@layout/sitios_turisticos_list_content" />
+

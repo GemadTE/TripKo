@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/GridLayout1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:columnCount="2"
+    android:orientation="horizontal"
+    android:rowCount="2"
+    android:gravity="center"
+    android:layout_gravity="center"
+    tools:context=".cultura.CulturaActivity"
+    >
+
+    <Button
+        android:id="@+id/leftButton"
+        android:layout_gravity="left|top"
+        android:text="Button"
+        android:background="@drawable/forma_btn_rounded"
+        android:layout_width="170dp"
+        android:layout_height="170dp"/>
+
+    <Button
+        android:id="@+id/rightButton"
+        android:layout_gravity="left|top"
+        android:text="Button"
+        android:background="@drawable/forma_btn_rounded"
+        android:layout_width="170dp"
+        android:layout_height="170dp"/>
+
+</GridLayout>
