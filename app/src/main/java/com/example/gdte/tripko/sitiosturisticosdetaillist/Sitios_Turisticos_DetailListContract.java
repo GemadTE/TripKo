@@ -1,5 +1,9 @@
 package com.example.gdte.tripko.sitiosturisticosdetaillist;
 
+import com.example.gdte.tripko.data.RepositoryContract;
+import com.example.gdte.tripko.data.Sitios_TuristicosDetailItem;
+import com.example.gdte.tripko.data.Sitios_TuristicosItem;
+
 import java.lang.ref.WeakReference;
 
 public interface Sitios_Turisticos_DetailListContract {
@@ -7,10 +11,14 @@ public interface Sitios_Turisticos_DetailListContract {
     interface View {
         void injectPresenter(Presenter presenter);
 
-        void displayData(Sitios_Turisticos_DetailListViewModel viewModel);
+        void displayProductListData(Sitios_Turisticos_DetailListViewModel viewModel);
     }
 
     interface Presenter {
+        void fetchSitiosTuristicosDetailListData();
+
+        void selectSitioTuristicoDetailListData(Sitios_TuristicosDetailItem item);
+
         void goHomeButtonClicked();
 
         void goPreguntasFrecuentesButtonClicked();
@@ -21,22 +29,23 @@ public interface Sitios_Turisticos_DetailListContract {
 
         void injectRouter(Router router);
 
-        void fetchData();
     }
 
     interface Model {
-        String fetchData();
+
+        void fetchSitiosTuristicosListData(
+                Sitios_TuristicosItem sitios_turisticosItem, RepositoryContract.GetSitioTuristicoDetailListCallback callback);
     }
 
     interface Router {
-        void navigateToNextScreen();
+        void navigateToSitioTuristicoDetailScreen();
 
         void navigateToHomeScreen();
 
         void navigateToPreguntasFrecuentesScreen();
 
-        void passDataToNextScreen(Sitios_Turisticos_DetailListState state);
+        void passDataToSitioTuristicoDetailScreen(Sitios_TuristicosDetailItem item);
 
-        Sitios_Turisticos_DetailListState getDataFromPreviousScreen();
+        Sitios_TuristicosItem getDataFromSitiosTuristicosListScreen();
     }
 }

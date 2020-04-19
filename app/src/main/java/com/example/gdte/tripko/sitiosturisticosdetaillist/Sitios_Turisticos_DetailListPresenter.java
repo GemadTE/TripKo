@@ -1,6 +1,11 @@
 package com.example.gdte.tripko.sitiosturisticosdetaillist;
 
+import com.example.gdte.tripko.data.RepositoryContract;
+import com.example.gdte.tripko.data.Sitios_TuristicosDetailItem;
+import com.example.gdte.tripko.data.Sitios_TuristicosItem;
+
 import java.lang.ref.WeakReference;
+import java.util.List;
 
 public class Sitios_Turisticos_DetailListPresenter implements Sitios_Turisticos_DetailListContract.Presenter {
 
@@ -16,36 +21,34 @@ public class Sitios_Turisticos_DetailListPresenter implements Sitios_Turisticos_
     }
 
     @Override
-    public void fetchData() {
-        // Log.e(TAG, "fetchData()");
+    public void fetchSitiosTuristicosDetailListData() {
+        // Log.e(TAG, "fetchProductListData()");
 
-        // initialize the state if is necessary
-        if (state == null) {
-            state = new Sitios_Turisticos_DetailListState();
-        }
+        // set passed state
+        Sitios_TuristicosItem sitiosTuristicosItem = router.getDataFromSitiosTuristicosListScreen();
 
-        // use passed state if is necessary
-        Sitios_Turisticos_DetailListState savedState = router.getDataFromPreviousScreen();
-        if (savedState != null) {
-
-            // update view and model state
-            state.data = savedState.data;
-
-            // update the view
-            view.get().displayData(state);
-
-            return;
+        if (sitiosTuristicosItem != null) {
+            state.sitiosTuristicosItem = sitiosTuristicosItem;
         }
 
         // call the model
-        String data = model.fetchData();
+        model.fetchSitiosTuristicosListData(state.sitiosTuristicosItem,
+                new RepositoryContract.GetSitioTuristicoDetailListCallback() {
 
-        // set view state
-        state.data = data;
+                    @Override
+                    public void setSitioTuristicoDetailList(List<Sitios_TuristicosDetailItem> sitiosTuristicosDetailItems) {
+                        state.sitios_turisticosDetailItemList = sitiosTuristicosDetailItems;
 
-        // update the view
-        view.get().displayData(state);
+                        view.get().displayProductListData(state);
+                    }
+                });
 
+    }
+
+    @Override
+    public void selectSitioTuristicoDetailListData(Sitios_TuristicosDetailItem item) {
+        router.passDataToSitioTuristicoDetailScreen(item);
+        router.navigateToSitioTuristicoDetailScreen();
     }
 
     @Override

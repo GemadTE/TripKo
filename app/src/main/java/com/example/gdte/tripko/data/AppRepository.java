@@ -462,7 +462,6 @@ public class AppRepository implements RepositoryContract {
 
 
     private boolean loadEntretenimientoFromJSON(String json) {
-        Log.e(TAG, "loadCatalogFromJSON()");
 
         GsonBuilder gsonBuilder = new GsonBuilder();
         Gson gson = gsonBuilder.create();
@@ -639,7 +638,6 @@ public class AppRepository implements RepositoryContract {
 
 
     private boolean loadSitiosTuristicosFromJSON(String json) {
-        Log.e(TAG, "loadCatalogFromJSON()");
 
         GsonBuilder gsonBuilder = new GsonBuilder();
         Gson gson = gsonBuilder.create();

@@ -4,8 +4,10 @@ public class Sitios_TuristicosDetailItem {
 
     public int id;
 
-    public String museoTitle;
-    public String museoContent;
+    public String title;
+
+    public String content;
+
     public String detail;
     public String image;
 
@@ -14,6 +16,6 @@ public class Sitios_TuristicosDetailItem {
 
     @Override
     public String toString() {
-        return museoTitle;
+        return title;
     }
 }

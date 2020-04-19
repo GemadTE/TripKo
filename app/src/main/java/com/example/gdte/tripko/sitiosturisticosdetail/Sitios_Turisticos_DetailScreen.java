@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentActivity;
 
 import com.example.gdte.tripko.R;
 import com.example.gdte.tripko.app.AppMediator;
+import com.example.gdte.tripko.data.RepositoryContract;
 
 public class Sitios_Turisticos_DetailScreen {
 

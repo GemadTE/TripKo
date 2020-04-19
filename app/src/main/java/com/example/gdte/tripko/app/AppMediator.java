@@ -63,6 +63,7 @@ public class AppMediator extends Application {
     private Sitios_TuristicosDetailItem sitiosTuristicosDetailItem;
     private EntretenimientoItem entretenimientoItem;
 
+
     public SplashState getSplashState() {
         return splashState;
     }

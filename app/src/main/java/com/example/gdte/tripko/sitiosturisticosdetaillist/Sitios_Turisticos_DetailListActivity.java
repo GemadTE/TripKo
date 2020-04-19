@@ -1,13 +1,17 @@
 package com.example.gdte.tripko.sitiosturisticosdetaillist;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NavUtils;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.gdte.tripko.R;
+import com.example.gdte.tripko.data.Sitios_TuristicosDetailItem;
 
 public class Sitios_Turisticos_DetailListActivity
         extends AppCompatActivity implements Sitios_Turisticos_DetailListContract.View {
@@ -16,6 +20,8 @@ public class Sitios_Turisticos_DetailListActivity
 
     private Sitios_Turisticos_DetailListContract.Presenter presenter;
     private ImageButton preguntasFrecuentesImageButton, homeImageButton;
+
+    private Sitios_Turisticos_DetailListAdapter sitiosTuristicosDetailListAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,26 +45,48 @@ public class Sitios_Turisticos_DetailListActivity
             }
         });
 
+        sitiosTuristicosDetailListAdapter = new Sitios_Turisticos_DetailListAdapter(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Sitios_TuristicosDetailItem item = (Sitios_TuristicosDetailItem) v.getTag();
+                presenter.selectSitioTuristicoDetailListData(item);
+            }
+        });
+
+        RecyclerView recyclerView = findViewById(R.id.sitios_turisticos_detail_list);
+        recyclerView.setAdapter(sitiosTuristicosDetailListAdapter);
+
         // do the setup
         Sitios_Turisticos_DetailListScreen.configure(this);
 
-
+      presenter.fetchSitiosTuristicosDetailListData();
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        // load the data
-        presenter.fetchData();
-    }
 
     @Override
-    public void displayData(Sitios_Turisticos_DetailListViewModel viewModel) {
+    public void displayProductListData(final Sitios_Turisticos_DetailListViewModel viewModel) {
         //Log.e(TAG, "displayData()");
 
-        // deal with the data
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+
+                sitiosTuristicosDetailListAdapter.setItems(viewModel.sitios_turisticosDetailItemList);
+            }
+        });
+
+
      //   ((TextView) findViewById(R.id.data)).setText(viewModel.data);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == android.R.id.home) {
+            NavUtils.navigateUpFromSameTask(this);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override

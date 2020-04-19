@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.content.Context;
 
 import com.example.gdte.tripko.app.AppMediator;
+import com.example.gdte.tripko.data.Sitios_TuristicosDetailItem;
+import com.example.gdte.tripko.data.Sitios_TuristicosItem;
 import com.example.gdte.tripko.menuprincipal.Menu_PrincipalActivity;
 import com.example.gdte.tripko.preguntasfrecuentes.Preguntas_FrecuentesActivity;
 
@@ -18,7 +20,7 @@ public class Sitios_Turisticos_DetailListRouter implements Sitios_Turisticos_Det
     }
 
     @Override
-    public void navigateToNextScreen() {
+    public void navigateToSitioTuristicoDetailScreen() {
         Context context = mediator.getApplicationContext();
         Intent intent = new Intent(context, Sitios_Turisticos_DetailListActivity.class);
         context.startActivity(intent);
@@ -42,13 +44,14 @@ public class Sitios_Turisticos_DetailListRouter implements Sitios_Turisticos_Det
     }
 
     @Override
-    public void passDataToNextScreen(Sitios_Turisticos_DetailListState state) {
-        mediator.setTiposDeSitiosTuristicosState(state);
+    public void passDataToSitioTuristicoDetailScreen(Sitios_TuristicosDetailItem item) {
+
+        mediator.setSitiosTuristicosDetailItem(item);
     }
 
     @Override
-    public Sitios_Turisticos_DetailListState getDataFromPreviousScreen() {
-        Sitios_Turisticos_DetailListState state = mediator.getTiposDeSitiosTuristicosState();
-        return state;
+    public Sitios_TuristicosItem getDataFromSitiosTuristicosListScreen() {
+        Sitios_TuristicosItem sitiosTuristicosItem = mediator.getSitiosTuristicosItem();
+        return sitiosTuristicosItem;
     }
 }
