@@ -18,10 +18,10 @@
         app:layout_constraintVertical_bias="0.0">
 
         <ImageButton
-            android:id="@+id/menuDesplegableImageButton"
+            android:id="@+id/preguntasFrecuentesImageButton"
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:background="@drawable/menu_desplegable"
+            android:background="@drawable/preguntas_frecuentes"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/tripkoTextView"
             app:layout_constraintHorizontal_bias="0.2"

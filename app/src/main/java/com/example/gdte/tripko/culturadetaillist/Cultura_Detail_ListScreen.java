@@ -5,6 +5,7 @@ import java.lang.ref.WeakReference;
 import androidx.fragment.app.FragmentActivity;
 
 import com.example.gdte.tripko.R;
+import com.example.gdte.tripko.app.AppMediator;
 
 public class Cultura_Detail_ListScreen {
 
@@ -16,7 +17,7 @@ public class Cultura_Detail_ListScreen {
         String data = context.get().getString(R.string.app_name);
 
         AppMediator mediator = (AppMediator) context.get().getApplication();
-        Cultura_Detail_ListState state = mediator.getCultura_Detail_ListState();
+        Cultura_Detail_ListState state = mediator.getCulturaDetailListState();
 
         Cultura_Detail_ListContract.Router router = new Cultura_Detail_ListRouter(mediator);
         Cultura_Detail_ListContract.Presenter presenter = new Cultura_Detail_ListPresenter(state);

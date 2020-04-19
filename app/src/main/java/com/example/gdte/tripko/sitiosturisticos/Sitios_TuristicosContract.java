@@ -20,6 +20,8 @@ public interface Sitios_TuristicosContract {
 
         void goHomeButtonClicked();
 
+        void goPreguntasFrecuentesButtonClicked();
+
         void injectView(WeakReference<View> view);
 
         void injectModel(Model model);
@@ -37,6 +39,8 @@ public interface Sitios_TuristicosContract {
         void navigateToSitioTuristicoDetailListScreen();
 
         void navigateToHomeScreen();
+
+        void navigateToPreguntasFrecuentesScreen();
 
         void passDataToSitioTuristicoDetailListScreen(Sitios_TuristicosItem item);
 

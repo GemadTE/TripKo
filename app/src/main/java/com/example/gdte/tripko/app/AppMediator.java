@@ -6,11 +6,16 @@ import com.example.gdte.tripko.ciudadesprincipales.Ciudades_PrincipalesState;
 import com.example.gdte.tripko.clima.ClimaState;
 import com.example.gdte.tripko.contactosdeinteres.Contactos_De_InteresState;
 import com.example.gdte.tripko.conversormoneda.Conversor_MonedaState;
+import com.example.gdte.tripko.culturadetail.Cultura_DetailState;
+import com.example.gdte.tripko.culturadetaillist.Cultura_Detail_ListState;
 import com.example.gdte.tripko.data.GastronomiaDetailItem;
 import com.example.gdte.tripko.data.GastronomiaItem;
 import com.example.gdte.tripko.data.RegionItem;
 import com.example.gdte.tripko.data.Sitios_TuristicosDetailItem;
 import com.example.gdte.tripko.data.Sitios_TuristicosItem;
+import com.example.gdte.tripko.entretenimientodetail.Entretenimiento_DetailState;
+import com.example.gdte.tripko.entretenimientodetaillist.Entretenimiento_Detail_ListRouter;
+import com.example.gdte.tripko.entretenimientodetaillist.Entretenimiento_Detail_ListState;
 import com.example.gdte.tripko.gastronomialist.GastronomiaListState;
 import com.example.gdte.tripko.gastronomiadetaillist.Gastronomia_Detail_ListState;
 import com.example.gdte.tripko.cultura.CulturaState;
@@ -33,6 +38,10 @@ public class AppMediator extends Application {
     private Menu_PrincipalState menu_principalState = new Menu_PrincipalState();
     private Sobre_CoreaState sobreCoreaState = new Sobre_CoreaState();
     private CulturaState culturaState = new CulturaState();
+    private Cultura_Detail_ListState culturaDetailListState = new Cultura_Detail_ListState();
+    private Cultura_DetailState culturaDetailState = new Cultura_DetailState();
+    private Entretenimiento_Detail_ListState entretenimientoDetailListState = new Entretenimiento_Detail_ListState();
+    private Entretenimiento_DetailState entretenimientoDetailState = new Entretenimiento_DetailState();
     private ClimaState climaState = new ClimaState();
     private Ciudades_PrincipalesState ciudadesPrincipalesSate;
     private EntretenimientoState entretenimientoState;
@@ -189,8 +198,37 @@ public class AppMediator extends Application {
         return transporteCategoryState;
     }
 
+    public Cultura_Detail_ListState getCulturaDetailListState() {
+        return culturaDetailListState;
+    }
 
+    public void setCulturaDetailListState(Cultura_Detail_ListState culturaDetailListState) {
+        this.culturaDetailListState = culturaDetailListState;
+    }
 
+    public Cultura_DetailState getCulturaDetailState() {
+        return culturaDetailState;
+    }
+
+    public void setCulturaDetailState(Cultura_DetailState culturaDetailState) {
+        this.culturaDetailState = culturaDetailState;
+    }
+
+    public Entretenimiento_Detail_ListState getEntretenimientoDetailListState() {
+        return entretenimientoDetailListState;
+    }
+
+    public void setEntretenimientoDetailListState(Entretenimiento_Detail_ListState entretenimientoDetailListState) {
+        this.entretenimientoDetailListState = entretenimientoDetailListState;
+    }
+
+    public Entretenimiento_DetailState getEntretenimientoDetailState() {
+        return entretenimientoDetailState;
+    }
+
+    public void setEntretenimientoDetailState(Entretenimiento_DetailState entretenimientoDetailState) {
+        this.entretenimientoDetailState = entretenimientoDetailState;
+    }
 
     public RegionItem getRegionItem() {
         RegionItem item = regionItem;

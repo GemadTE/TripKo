@@ -7,6 +7,7 @@ import android.content.Context;
 import com.example.gdte.tripko.app.AppMediator;
 import com.example.gdte.tripko.data.Sitios_TuristicosItem;
 import com.example.gdte.tripko.menuprincipal.Menu_PrincipalActivity;
+import com.example.gdte.tripko.preguntasfrecuentes.Preguntas_FrecuentesActivity;
 import com.example.gdte.tripko.sitiosturisticosdetaillist.Sitios_Turisticos_DetailListActivity;
 
 public class Sitios_TuristicosRouter implements Sitios_TuristicosContract.Router {
@@ -30,6 +31,14 @@ public class Sitios_TuristicosRouter implements Sitios_TuristicosContract.Router
     public void navigateToHomeScreen() {
         Context context = mediator.getApplicationContext();
         Intent intent = new Intent(context, Menu_PrincipalActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
+    }
+
+    @Override
+    public void navigateToPreguntasFrecuentesScreen() {
+        Context context = mediator.getApplicationContext();
+        Intent intent = new Intent(context, Preguntas_FrecuentesActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
     }

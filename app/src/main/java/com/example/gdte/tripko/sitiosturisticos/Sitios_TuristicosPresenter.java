@@ -50,6 +50,11 @@ public class Sitios_TuristicosPresenter implements Sitios_TuristicosContract.Pre
     }
 
     @Override
+    public void goPreguntasFrecuentesButtonClicked() {
+        router.navigateToPreguntasFrecuentesScreen();
+    }
+
+    @Override
     public void injectView(WeakReference<Sitios_TuristicosContract.View> view) {
         this.view = view;
     }

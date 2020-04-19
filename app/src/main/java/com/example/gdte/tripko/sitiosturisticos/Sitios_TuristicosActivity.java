@@ -50,6 +50,14 @@ public class Sitios_TuristicosActivity
             }
         });
 
+
+        preguntasFrecuentesImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.goPreguntasFrecuentesButtonClicked();
+            }
+        });
+
         // do the setup
         Sitios_TuristicosScreen.configure(this);
 

@@ -4,6 +4,8 @@ import android.util.Log;
 import android.content.Intent;
 import android.content.Context;
 
+import com.example.gdte.tripko.app.AppMediator;
+
 public class Cultura_DetailRouter implements Cultura_DetailContract.Router {
 
     public static String TAG = Cultura_DetailRouter.class.getSimpleName();
@@ -24,21 +26,21 @@ public class Cultura_DetailRouter implements Cultura_DetailContract.Router {
 
     @Override
     public void passStateToNextScreen(Cultura_DetailState state) {
-        mediator.setNextCultura_DetailScreenState(state);
+        mediator.setCulturaDetailState(state);
     }
 
     @Override
     public void passStateToPreviousScreen(Cultura_DetailState state) {
-        mediator.setPreviousCultura_DetailScreenState(state);
+        mediator.setCulturaDetailState(state);
     }
 
     @Override
     public Cultura_DetailState getStateFromPreviousScreen() {
-        return mediator.getPreviousCultura_DetailScreenState();
+        return mediator.getCulturaDetailState();
     }
 
     @Override
     public Cultura_DetailState getStateFromNextScreen() {
-        return mediator.getNextCultura_DetailScreenState();
+        return mediator.getCulturaDetailState();
     }
 }

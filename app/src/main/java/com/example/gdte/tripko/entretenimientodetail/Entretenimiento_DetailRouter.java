@@ -4,6 +4,8 @@ import android.util.Log;
 import android.content.Intent;
 import android.content.Context;
 
+import com.example.gdte.tripko.app.AppMediator;
+
 public class Entretenimiento_DetailRouter implements Entretenimiento_DetailContract.Router {
 
     public static String TAG = Entretenimiento_DetailRouter.class.getSimpleName();
@@ -24,21 +26,21 @@ public class Entretenimiento_DetailRouter implements Entretenimiento_DetailContr
 
     @Override
     public void passStateToNextScreen(Entretenimiento_DetailState state) {
-        mediator.setNextEntretenimiento_DetailScreenState(state);
+        mediator.setEntretenimientoDetailState(state);
     }
 
     @Override
     public void passStateToPreviousScreen(Entretenimiento_DetailState state) {
-        mediator.setPreviousEntretenimiento_DetailScreenState(state);
+        mediator.setEntretenimientoDetailState(state);
     }
 
     @Override
     public Entretenimiento_DetailState getStateFromPreviousScreen() {
-        return mediator.getPreviousEntretenimiento_DetailScreenState();
+        return mediator.getEntretenimientoDetailState();
     }
 
     @Override
     public Entretenimiento_DetailState getStateFromNextScreen() {
-        return mediator.getNextEntretenimiento_DetailScreenState();
+        return mediator.getEntretenimientoDetailState();
     }
 }

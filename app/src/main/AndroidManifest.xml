@@ -24,8 +24,12 @@
         <activity android:name=".sobrecorea.Sobre_CoreaActivity" />
         <activity android:name=".idioma.IdiomaActivity"/>
         <activity android:name=".entretenimiento.EntretenimientoActivity" />
+        <activity android:name=".entretenimientodetaillist.Entretenimiento_Detail_ListActivity" />
+        <activity android:name=".entretenimientodetail.Entretenimiento_DetailActivity" />
         <activity android:name=".clima.ClimaActivity" />
         <activity android:name=".cultura.CulturaActivity" />
+        <activity android:name=".culturadetaillist.Cultura_Detail_ListActivity" />
+        <activity android:name=".culturadetail.Cultura_DetailActivity" />
         <activity android:name=".sitiosturisticos.Sitios_TuristicosActivity" />
         <activity android:name=".sitiosturisticosdetaillist.Sitios_Turisticos_DetailListActivity" />
         <activity android:name=".ciudadesprincipales.Ciudades_PrincipalesActivity" />
@@ -35,5 +39,6 @@
         <activity android:name=".contactosdeinteres.Contactos_De_InteresActivity" />
         <activity android:name=".transportecategory.Transporte_CategoryActivity" />
         <activity android:name=".conversormoneda.Conversor_MonedaActivity" />
+        <activity android:name=".preguntasfrecuentes.Preguntas_FrecuentesActivity" />
     </application>
 </manifest>
