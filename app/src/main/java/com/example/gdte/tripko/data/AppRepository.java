@@ -23,12 +23,15 @@ public class AppRepository implements RepositoryContract {
 
     public static final String JSON_FILE = "Data.json";
     public static final String JSON_ROOT = "regiones";
+    public static final String JSON_CULTURA = "cultura";
+    public static final String JSON_ENTRETENIMIENTO = "entretenimiento";
     public static final String JSON_SITIOS_TURISTICOS = "sitiosTuristicos";
-
     private static AppRepository INSTANCE;
 
     private Context context;
     private List<RegionItem> regiones;
+    private List<CulturaItem> culturaItems;
+    private List<EntretenimientoItem> entretenimientoItems;
     private List<Sitios_TuristicosItem> sitios_turisticosItems;
 
     public static RepositoryContract getInstance(Context context) {
@@ -73,7 +76,7 @@ public class AppRepository implements RepositoryContract {
 
             @Override
             public void run() {
-                if (callback != null) {
+                if(callback != null) {
                     callback.setGastronomiaList(loadGastronomiaList(regionId));
                 }
             }
@@ -88,7 +91,7 @@ public class AppRepository implements RepositoryContract {
 
             @Override
             public void run() {
-                if (callback != null) {
+                if(callback != null) {
                     callback.setGastronomia(loadGastronomia(id));
                 }
             }
@@ -102,7 +105,7 @@ public class AppRepository implements RepositoryContract {
 
             @Override
             public void run() {
-                if (callback != null) {
+                if(callback != null) {
                     callback.setRegion(loadRegion(id));
                 }
             }
@@ -118,7 +121,7 @@ public class AppRepository implements RepositoryContract {
 
             @Override
             public void run() {
-                if (callback != null) {
+                if(callback != null) {
                     callback.setRegionList(loadRegiones());
 
                 }
@@ -270,6 +273,275 @@ public class AppRepository implements RepositoryContract {
     private List<RegionItem> loadRegiones() {
         return regiones;
     }
+
+    ///////////////////////////////////////////CULTURA//////////////////////////////////////////////
+    @Override
+    public void loadCultura(final FetchCulturaDataCallback callback) {
+        AsyncTask.execute(new Runnable() {
+            @Override
+            public void run() {
+
+                boolean error = !loadCulturaFromJSON(loadJSONFromAsset());
+
+                if (callback != null) {
+                    callback.onCulturaDataFetched(error);
+                }
+            }
+        });
+    }
+
+    @Override
+    public void getCultura(final int id, final GetCulturaCallback callback) {
+
+        AsyncTask.execute(new Runnable() {
+
+            @Override
+            public void run() {
+                if (callback != null) {
+                    callback.setCultura(loadCultura(id));
+                }
+            }
+
+
+        });
+
+    }
+
+    @Override
+    public void getCulturaList(final GetCulturaListCallback callback) {
+        AsyncTask.execute(new Runnable() {
+
+            @Override
+            public void run() {
+                if (callback != null) {
+                    callback.setCulturaList(loadCultura());
+
+                }
+            }
+        });
+
+    }
+
+    private boolean loadCulturaFromJSON(String json) {
+        Log.e(TAG, "loadCulturaFromJSON()");
+
+        GsonBuilder gsonBuilder = new GsonBuilder();
+        Gson gson = gsonBuilder.create();
+
+        try {
+
+            JSONObject jsonObject = new JSONObject(json);
+            JSONArray jsonArray = jsonObject.getJSONArray(JSON_CULTURA);
+
+            culturaItems = new ArrayList();
+
+            if (jsonArray.length() > 0) {
+
+                final List<CulturaItem> culturaItems = Arrays.asList(
+                        gson.fromJson(jsonArray.toString(), CulturaItem[].class)
+                );
+
+
+                for (CulturaItem cultura : culturaItems) {
+                    insertCultura(cultura);
+                }
+
+                return true;
+            }
+
+        } catch (JSONException error) {
+            Log.e(TAG, "error: " + error);
+        }
+
+        return false;
+    }
+
+    private CulturaItem loadCultura(int id) {
+        for (CulturaItem cultura : culturaItems) {
+            if (cultura.id == id) {
+                return cultura;
+            }
+        }
+
+        return null;
+    }
+
+    private void insertCultura(CulturaItem cultura) {
+        culturaItems.add(cultura);
+    }
+
+    private List<CulturaItem> loadCultura() {
+        return culturaItems;
+    }
+
+    /////////////////////////////////////////ENTRETENIMIENTO////////////////////////////////////////
+    @Override
+    public void loadEntretenimiento(final FetchEntretenimientoDataCallback callback) {
+        AsyncTask.execute(new Runnable() {
+            @Override
+            public void run() {
+                boolean error = !loadEntretenimientoFromJSON(loadJSONFromAsset());
+                if (callback != null) {
+                    callback.onEntretenimientoDataFetched(error);
+                }
+            }
+        });
+    }
+
+    @Override
+    public void getEntretenimientoDetailList(
+            final EntretenimientoItem entretenimientoItem, final GetEntretenimientoDetailListCallback callback) {
+
+        getEntretenimientoDetailList(entretenimientoItem.id, callback);
+    }
+
+
+    @Override
+    public void getEntretenimientoDetailList(
+            final int entretenimientoId, final GetEntretenimientoDetailListCallback callback) {
+
+        AsyncTask.execute(new Runnable() {
+
+            @Override
+            public void run() {
+                if (callback != null) {
+                    callback.setEntretenimientoDetailList(loadEntretenimientosDetail(entretenimientoId));
+                }
+            }
+        });
+
+    }
+
+
+    @Override
+    public void getEntretenimientoDetail(final int id, final GetEntretenimientoDetailCallback callback) {
+
+        AsyncTask.execute(new Runnable() {
+
+            @Override
+            public void run() {
+                if (callback != null) {
+                    callback.setEntretenimientoDetail(loadEntretenimientoDetail(id));
+                }
+            }
+        });
+    }
+
+
+    @Override
+    public void getEntretenimiento(final int id, final GetEntretenimientoCallback callback) {
+
+        AsyncTask.execute(new Runnable() {
+
+            @Override
+            public void run() {
+                if (callback != null) {
+                    callback.setEntretenimiento(loadEntretenimiento(id));
+                }
+            }
+
+
+        });
+
+    }
+
+
+    @Override
+    public void getEntretenimientoList(final GetEntretenimientoListCallback callback) {
+        AsyncTask.execute(new Runnable() {
+
+            @Override
+            public void run() {
+                if (callback != null) {
+                    callback.setEntretenimientoList(loadEntretenimiento());
+                }
+            }
+        });
+
+    }
+
+
+    private boolean loadEntretenimientoFromJSON(String json) {
+        Log.e(TAG, "loadCatalogFromJSON()");
+
+        GsonBuilder gsonBuilder = new GsonBuilder();
+        Gson gson = gsonBuilder.create();
+
+        try {
+
+            JSONObject jsonObject = new JSONObject(json);
+            JSONArray jsonArray = jsonObject.getJSONArray(JSON_ENTRETENIMIENTO);
+
+            entretenimientoItems = new ArrayList();
+
+            if (jsonArray.length() > 0) {
+
+                final List<EntretenimientoItem> entretenimientoItems = Arrays.asList(
+                        gson.fromJson(jsonArray.toString(), EntretenimientoItem[].class)
+                );
+
+
+                for (EntretenimientoItem entretenimientoItem : entretenimientoItems) {
+                    insertEntretenimiento(entretenimientoItem);
+                }
+
+                for (EntretenimientoItem entretenimientoItem : entretenimientoItems) {
+                    for (EntretenimientoDetailItem entretenimientoDetailItem : entretenimientoItem.entretenimientoDetailItems) {
+                        entretenimientoDetailItem.entretenimientoId = entretenimientoItem.id;
+
+                    }
+                }
+
+                return true;
+            }
+
+        } catch (JSONException error) {
+            Log.e(TAG, "error: " + error);
+        }
+
+        return false;
+    }
+
+    private List<EntretenimientoDetailItem> loadEntretenimientosDetail(int entretenimientoId) {
+        List<EntretenimientoDetailItem> entretenimientoDetailItems = new ArrayList();
+
+        for (EntretenimientoItem entretenimientoItem : entretenimientoItems) {
+            if (entretenimientoItem.id == entretenimientoId) {
+                entretenimientoDetailItems = entretenimientoItem.entretenimientoDetailItems;
+            }
+        }
+        return entretenimientoDetailItems;
+    }
+
+    private EntretenimientoDetailItem loadEntretenimientoDetail(int id) {
+        for (EntretenimientoItem entretenimientoItem : entretenimientoItems) {
+            for (EntretenimientoDetailItem entretenimientoDetailItem : entretenimientoItem.entretenimientoDetailItems) {
+                if (entretenimientoDetailItem.id == id) {
+                    return entretenimientoDetailItem;
+                }
+            }
+        }
+        return null;
+    }
+
+    private EntretenimientoItem loadEntretenimiento(int id) {
+        for (EntretenimientoItem entretenimientoItem : entretenimientoItems) {
+            if (entretenimientoItem.id == id) {
+                return entretenimientoItem;
+            }
+        }
+
+        return null;
+    }
+
+    private void insertEntretenimiento(EntretenimientoItem entretenimientoItem) {
+        entretenimientoItems.add(entretenimientoItem);
+    }
+
+    private List<EntretenimientoItem> loadEntretenimiento() {
+        return entretenimientoItems;
+    }
+
 
     //////////////////////////////////Sitios Turisticos//////////////////////////
 

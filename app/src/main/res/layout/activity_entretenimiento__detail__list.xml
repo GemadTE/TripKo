@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="0dp"
-    tools:context=".entretenimiento.EntretenimientoActivity">
+    tools:context=".entretenimientodetaillist.Entretenimiento_Detail_ListActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cabecera"

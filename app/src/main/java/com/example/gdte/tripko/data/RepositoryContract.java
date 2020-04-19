@@ -36,8 +36,66 @@ public interface RepositoryContract {
             int categoryId, AppRepository.GetGastronomiaListCallback callback);
 
     void getGastronomia(int id, AppRepository.GetGastronomiatCallback callback);
+
     void getRegion(int id, AppRepository.GetRegionCallback callback);
+
     void getRegionList(AppRepository.GetRegionListCallback callback);
+
+    //CULTURA
+    void loadCultura(final FetchCulturaDataCallback callback);
+
+    void getCultura(final int id, final GetCulturaCallback callback);
+
+    void getCulturaList(final GetCulturaListCallback callback);
+
+    interface FetchCulturaDataCallback {
+        void onCulturaDataFetched(boolean error);
+    }
+
+    interface GetCulturaListCallback {
+        void setCulturaList(List<CulturaItem> loadCultura);
+    }
+
+    interface GetCulturaCallback {
+        void setCultura(CulturaItem cultura);
+    }
+
+    //ENTRETENIMIENTO
+    void loadEntretenimiento(final FetchEntretenimientoDataCallback callback);
+
+    void getEntretenimientoDetailList(
+            final EntretenimientoItem entretenimientoItem,
+            final GetEntretenimientoDetailListCallback callback);
+
+    void getEntretenimientoDetailList(
+            final int entretenimientoId, final GetEntretenimientoDetailListCallback callback);
+
+    void getEntretenimientoDetail(final int id, final GetEntretenimientoDetailCallback callback);
+
+    void getEntretenimiento(final int id, final GetEntretenimientoCallback callback);
+
+    void getEntretenimientoList(final GetEntretenimientoListCallback callback);
+
+
+    interface FetchEntretenimientoDataCallback {
+        void onEntretenimientoDataFetched(boolean error);
+    }
+
+    interface GetEntretenimientoDetailListCallback {
+        void setEntretenimientoDetailList(List<EntretenimientoDetailItem> entretenimientoDetailList);
+    }
+
+    interface GetEntretenimientoDetailCallback {
+        void setEntretenimientoDetail(EntretenimientoDetailItem loadEntretenimientoDetail);
+    }
+
+    interface GetEntretenimientoListCallback {
+        void setEntretenimientoList(List<EntretenimientoItem> loadEntretenimiento);
+    }
+
+    interface GetEntretenimientoCallback {
+        void setEntretenimiento(EntretenimientoItem entretenimiento);
+    }
 
 
     //////////////////////////////////////////Sitios Turisticos//////////////////////////
@@ -63,7 +121,6 @@ public interface RepositoryContract {
         void setSitioTuristico(Sitios_TuristicosItem sitiosTuristicosItem);
     }
 
-
     void loadSitioTuristico(AppRepository.FetchSitioTuristicoDataCallback callback);
 
     void getSitioTuristicoDetailList(
@@ -73,7 +130,9 @@ public interface RepositoryContract {
             int categoryId, AppRepository.GetSitioTuristicoDetailListCallback callback);
 
     void getSitioTuristicoDetail(int id, AppRepository.GetSitioTuristicoDetailCallback callback);
+
     void getSitioTuristico(int id, AppRepository.GetSitioTuristicoCallback callback);
+
     void getSitioTuristicoList(AppRepository.GetSitioTuristicoListCallback callback);
 
 }
