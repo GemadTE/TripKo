@@ -52,7 +52,9 @@ public class Sobre_CoreaActivity
 
     @Override
     public void displayData(Sobre_CoreaViewModel viewModel) {
-
+        ((TextView) findViewById(R.id.tripkoTextView)).setText(R.string.tripko_text);
+        ((TextView) findViewById(R.id.sobreCoreaDescriptionText)).setText(R.string.sobre_corea_text);
+        ((TextView) findViewById(R.id.sobreCoreaTitle)).setText(R.string.sobre_corea_title);
     }
 
     @Override

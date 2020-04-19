@@ -36,13 +36,13 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="@font/rancho"
-            android:text="@string/tripko_text"
             android:textAppearance="@style/TextAppearance.AppCompat.Display2"
             android:textColor="#F2A490"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/tripko_text" />
 
         <ImageButton
             android:id="@+id/homeImageButton"
@@ -94,7 +94,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="@string/sobre_corea_text"
                 tools:text="@string/sobre_corea_text" />
 
             <ImageView
