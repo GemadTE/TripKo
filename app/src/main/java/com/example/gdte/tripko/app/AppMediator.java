@@ -15,12 +15,15 @@ import com.example.gdte.tripko.data.Sitios_TuristicosDetailItem;
 import com.example.gdte.tripko.data.Sitios_TuristicosItem;
 import com.example.gdte.tripko.entretenimientodetail.Entretenimiento_DetailState;
 import com.example.gdte.tripko.entretenimientodetaillist.Entretenimiento_Detail_ListState;
+import com.example.gdte.tripko.expresionesdetaillist.Expresiones_Detail_ListState;
 import com.example.gdte.tripko.gastronomialist.GastronomiaListState;
 import com.example.gdte.tripko.gastronomiadetaillist.Gastronomia_Detail_ListState;
 import com.example.gdte.tripko.cultura.CulturaState;
 import com.example.gdte.tripko.elegiridioma.Elegir_IdiomaState;
 import com.example.gdte.tripko.entretenimiento.EntretenimientoState;
 import com.example.gdte.tripko.idioma.IdiomaState;
+import com.example.gdte.tripko.idiomaalfabeto.Idioma_AlfabetoState;
+import com.example.gdte.tripko.idiomacoreano.Idioma_CoreanoState;
 import com.example.gdte.tripko.menuprincipal.Menu_PrincipalState;
 import com.example.gdte.tripko.regiones.Region_ListState;
 import com.example.gdte.tripko.preguntasfrecuentes.Preguntas_FrecuentesState;
@@ -55,6 +58,9 @@ public class AppMediator extends Application {
     private Contactos_De_InteresState contactosDeInteresState = new Contactos_De_InteresState();
     private Transporte_CategoryState transporteCategoryState = new Transporte_CategoryState();
     private IdiomaState idiomaState = new IdiomaState();
+    private Idioma_CoreanoState idiomaCoreanoState = new Idioma_CoreanoState();
+    private Idioma_AlfabetoState idiomaAlfabetoState = new Idioma_AlfabetoState();
+    private Expresiones_Detail_ListState expresionesDetailListState = new Expresiones_Detail_ListState();
 
     private RegionItem regionItem;
     private GastronomiaItem gastronomiaItem;
@@ -289,5 +295,29 @@ public class AppMediator extends Application {
 
     public void setIdiomaState(IdiomaState idiomaState) {
         this.idiomaState = idiomaState;
+    }
+
+    public void setIdiomaCoreanoState(Idioma_CoreanoState idiomaCoreanoState) {
+        this.idiomaCoreanoState = idiomaCoreanoState;
+    }
+
+    public Idioma_CoreanoState getIdiomaCoreanoState() {
+        return idiomaCoreanoState;
+    }
+
+    public void setIdiomaAlfabetoState(Idioma_AlfabetoState idiomaAlfabetoState) {
+        this.idiomaAlfabetoState = idiomaAlfabetoState;
+    }
+
+    public Idioma_AlfabetoState getIdiomaAlfabetoState() {
+        return idiomaAlfabetoState;
+    }
+
+    public void setExpresionesDetailListState(Expresiones_Detail_ListState expresionesDetailListState) {
+        this.expresionesDetailListState = expresionesDetailListState;
+    }
+
+    public Expresiones_Detail_ListState getExpresionesDetailListState() {
+        return expresionesDetailListState;
     }
 }

@@ -18,6 +18,12 @@ public interface IdiomaContract {
         void injectRouter(Router router);
 
         void fetchData();
+
+        void onIdiomaOptionClicked(int idiomaOption);
+
+        void onPreguntasFrecuentesClicked();
+
+        void goHomeButtonClicked();
     }
 
     interface Model {
@@ -30,5 +36,15 @@ public interface IdiomaContract {
         void passDataToNextScreen(IdiomaState state);
 
         IdiomaState getDataFromPreviousScreen();
+
+        void navigateToIdiomaCoreanoScreen();
+
+        void navigateToIdiomaAlfabetoScreen();
+
+        void navigateToExpresionesDetailListScreen();
+
+        void navigateToPreguntasFrecuentesScreen();
+
+        void navigateToHomeScreen();
     }
 }

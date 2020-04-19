@@ -51,6 +51,33 @@ public class IdiomaPresenter implements IdiomaContract.Presenter {
     }
 
     @Override
+    public void onIdiomaOptionClicked(int idiomaOption) {
+        switch (idiomaOption){
+            case 0:
+                router.navigateToIdiomaCoreanoScreen();
+                break;
+            case 1:
+                router.navigateToIdiomaAlfabetoScreen();
+                break;
+            case 2:
+                router.navigateToExpresionesDetailListScreen();
+                break;
+            default:
+                break;
+        }
+    }
+
+    @Override
+    public void onPreguntasFrecuentesClicked() {
+        router.navigateToPreguntasFrecuentesScreen();
+    }
+
+    @Override
+    public void goHomeButtonClicked() {
+        router.navigateToHomeScreen();
+    }
+
+    @Override
     public void injectView(WeakReference<IdiomaContract.View> view) {
         this.view = view;
     }

@@ -87,4 +87,19 @@
     <string name="idioma_coreano_btn_text">El idioma coreano</string>
     <string name="expresiones_btn_text">Expresiones útiles para viajar</string>
     <string name="alfabeto_btn_text">Alfabeto</string>
+    <string name="el_idioma_coreano_title">El Idioma Coreano</string>
+<string name="el_idioma_coreano_text1">Antiguamente el coreano se escribía en caracteres chinos
+        (Hanja), en la actualidad se escribe en "Hangul" que es el alfabeto coreano.</string>
+<string name="el_idioma_coreano_text2"> El "Hangul" tiene 24 letras, 14 de las cuales son
+        consonantes y 10 vocales. La escrituracoreana no es ideográfica como la japonesa o
+        la china.</string>
+<string name="el_idioma_coreano_text3">Las formas de las letras del "hangul" se diseñaron
+        conforme a los movimientos de la lengua, el paladar y los dientes. Hasta cinco letras
+        pueden formar una unidad silábica.</string>
+<string name="honorificos_title">Honoríficos</string>
+<string name="honorificos_text1">Los honoríficos se usan para mostrar respeto cuando se habla
+        de alguien superior en estatus: un pariente mayor, un desconocido o alguien de
+        aproximadamente la misma edad o mayor, un jefe, maestro… </string>
+<string name="honorificos_text2">Generalmente se usa sustantivos especiales o sufijos en los
+        verbos para indicar la superioridad del sujeto. </string>
 </resources>

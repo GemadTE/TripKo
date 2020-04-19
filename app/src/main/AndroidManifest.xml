@@ -24,6 +24,9 @@
         <activity android:name=".menuprincipal.Menu_PrincipalActivity" />
         <activity android:name=".sobrecorea.Sobre_CoreaActivity" />
         <activity android:name=".idioma.IdiomaActivity"/>
+        <activity android:name=".idiomacoreano.Idioma_CoreanoActivity"/>
+        <activity android:name=".idiomaalfabeto.Idioma_AlfabetoActivity"/>
+        <activity android:name=".expresionesdetaillist.Expresiones_Detail_ListActivity"/>
         <activity android:name=".entretenimiento.EntretenimientoActivity" />
         <activity android:name=".entretenimientodetaillist.Entretenimiento_Detail_ListActivity" />
         <activity android:name=".entretenimientodetail.Entretenimiento_DetailActivity" />
