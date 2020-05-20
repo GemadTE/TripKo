@@ -16,7 +16,7 @@ public class Preguntas_FrecuentesScreen {
 
         String data = context.get().getString(R.string.app_name);
 
-        AppMediator mediator = (AppMediator) context.get().getApplication();
+        AppMediator mediator = AppMediator.getInstance();
         Preguntas_FrecuentesState state = mediator.getPreguntasFrecuentesState();
 
         Preguntas_FrecuentesContract.Router router = new Preguntas_FrecuentesRouter(mediator);

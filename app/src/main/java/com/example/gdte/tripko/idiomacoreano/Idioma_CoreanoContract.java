@@ -8,6 +8,8 @@ public interface Idioma_CoreanoContract {
         void injectPresenter(Presenter presenter);
 
         void displayData(Idioma_CoreanoViewModel viewModel);
+
+        void navigateToNextScreen();
     }
 
     interface Presenter {
@@ -25,7 +27,6 @@ public interface Idioma_CoreanoContract {
     }
 
     interface Router {
-        void navigateToNextScreen();
 
         void passDataToNextScreen(Idioma_CoreanoState state);
 

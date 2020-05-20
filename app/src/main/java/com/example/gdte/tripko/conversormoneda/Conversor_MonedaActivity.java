@@ -2,6 +2,7 @@ package com.example.gdte.tripko.conversormoneda;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,6 +12,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.gdte.tripko.R;
+import com.example.gdte.tripko.app.AppMediator;
+import com.example.gdte.tripko.menuprincipal.Menu_PrincipalActivity;
+import com.example.gdte.tripko.preguntasfrecuentes.Preguntas_FrecuentesActivity;
 
 public class Conversor_MonedaActivity
         extends AppCompatActivity implements Conversor_MonedaContract.View {
@@ -64,6 +68,7 @@ public class Conversor_MonedaActivity
             }
         });
 
+        if (savedInstanceState == null) AppMediator.resetInstance();
 
         // do the setup
         Conversor_MonedaScreen.configure(this);
@@ -114,6 +119,18 @@ public class Conversor_MonedaActivity
         ((TextView) findViewById(R.id.divisaTextView)).setText(R.string.divisa_text);
         ((TextView) findViewById(R.id.pasarATextView)).setText(R.string.pasar_a_text);
         ((TextView) findViewById(R.id.tripkoTextView)).setText(R.string.tripko_text);
+    }
+
+    @Override
+    public void navigateToHomeScreen() {
+        Intent intent = new Intent(this, Menu_PrincipalActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void navigateToPreguntasFrecuentesScreen() {
+        Intent intent = new Intent(this, Preguntas_FrecuentesActivity.class);
+        startActivity(intent);
     }
 
     @Override

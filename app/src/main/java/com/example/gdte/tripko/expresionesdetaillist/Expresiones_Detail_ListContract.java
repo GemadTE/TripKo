@@ -8,6 +8,8 @@ public interface Expresiones_Detail_ListContract {
         void injectPresenter(Presenter presenter);
 
         void displayData(Expresiones_Detail_ListViewModel viewModel);
+
+        void navigateToNextScreen();
     }
 
     interface Presenter {
@@ -25,7 +27,6 @@ public interface Expresiones_Detail_ListContract {
     }
 
     interface Router {
-        void navigateToNextScreen();
 
         void passDataToNextScreen(Expresiones_Detail_ListState state);
 

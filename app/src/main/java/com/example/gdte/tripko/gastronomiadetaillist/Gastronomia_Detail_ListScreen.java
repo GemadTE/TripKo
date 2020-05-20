@@ -18,7 +18,7 @@ public class Gastronomia_Detail_ListScreen {
 
         String data = context.get().getString(R.string.app_name);
 
-        AppMediator mediator = (AppMediator) context.get().getApplication();
+        AppMediator mediator = AppMediator.getInstance();
         Gastronomia_Detail_ListState state = mediator.getComidarestaurantedetailState();
         RepositoryContract repository = AppRepository.getInstance(context.get());
 

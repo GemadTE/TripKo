@@ -13,7 +13,7 @@ public class Idioma_AlfabetoScreen {
         WeakReference<FragmentActivity> context =
                 new WeakReference<>((FragmentActivity) view);
 
-        AppMediator mediator = (AppMediator) context.get().getApplication();
+        AppMediator mediator = AppMediator.getInstance();
         Idioma_AlfabetoState state = mediator.getIdiomaAlfabetoState();
 
         Idioma_AlfabetoContract.Router router = new Idioma_AlfabetoRouter(mediator);

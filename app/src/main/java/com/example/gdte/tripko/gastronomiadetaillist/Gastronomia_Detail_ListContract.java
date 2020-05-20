@@ -8,6 +8,12 @@ public interface Gastronomia_Detail_ListContract {
         void injectPresenter(Presenter presenter);
 
         void onDataUpdated(Gastronomia_Detail_ListViewModel viewModel);
+
+        void navigateToNextScreen();
+
+        void navigateToHomeScreen();
+
+        void navigateToPreguntasFrecuentesScreen();
     }
 
     interface Presenter {
@@ -45,11 +51,6 @@ public interface Gastronomia_Detail_ListContract {
     }
 
     interface Router {
-        void navigateToNextScreen();
-
-        void navigateToHomeScreen();
-
-        void navigateToPreguntasFrecuentesScreen();
 
         void passStateToNextScreen(Gastronomia_Detail_ListState state);
 

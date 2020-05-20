@@ -20,30 +20,6 @@ public class Region_ListRouter implements Region_ListContract.Router {
     }
 
     @Override
-    public void navigateToGastronomiaListScreen() {
-        Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, GastronomiaListActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(intent);
-    }
-
-    @Override
-    public void navigateToHomeScreen() {
-        Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, Menu_PrincipalActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(intent);
-    }
-
-    @Override
-    public void navigateToPreguntasFrecuentesScreen() {
-        Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, Preguntas_FrecuentesActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(intent);
-    }
-
-    @Override
     public void passDataToGastronomiaListScreen(RegionItem item) {
         mediator.setRegionItem(item);
     }

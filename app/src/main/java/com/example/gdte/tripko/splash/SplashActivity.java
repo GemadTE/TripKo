@@ -10,6 +10,7 @@ import android.view.WindowManager;
 
 
 import com.example.gdte.tripko.R;
+import com.example.gdte.tripko.app.AppMediator;
 import com.example.gdte.tripko.elegiridioma.Elegir_IdiomaActivity;
 
 public class SplashActivity
@@ -37,8 +38,11 @@ public class SplashActivity
 
             ;
         }, DURACION_SPLASH);
+
+        if (savedInstanceState == null) AppMediator.resetInstance();
         // do the setup
         SplashScreen.configure(this);
+
     }
 
     @Override

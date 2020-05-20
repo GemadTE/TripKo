@@ -17,22 +17,6 @@ public class Preguntas_FrecuentesRouter implements Preguntas_FrecuentesContract.
     }
 
     @Override
-    public void navigateToNextScreen() {
-        Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, Preguntas_FrecuentesActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(intent);
-    }
-
-    @Override
-    public void navigateToHomeScreen() {
-        Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, Menu_PrincipalActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(intent);
-    }
-
-    @Override
     public void passStateToNextScreen(Preguntas_FrecuentesState state) {
         mediator.setPreguntasFrecuentesState(state);
     }

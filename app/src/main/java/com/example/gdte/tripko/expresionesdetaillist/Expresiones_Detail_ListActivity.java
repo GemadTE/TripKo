@@ -2,11 +2,13 @@ package com.example.gdte.tripko.expresionesdetaillist;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
 import com.example.gdte.tripko.R;
+import com.example.gdte.tripko.app.AppMediator;
 
 public class Expresiones_Detail_ListActivity
         extends AppCompatActivity implements Expresiones_Detail_ListContract.View {
@@ -19,6 +21,8 @@ public class Expresiones_Detail_ListActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_expresiones__detail__list);
+
+        if (savedInstanceState == null) AppMediator.resetInstance();
 
         // do the setup
         Expresiones_Detail_ListScreen.configure(this);
@@ -38,6 +42,12 @@ public class Expresiones_Detail_ListActivity
 
         // deal with the data
         //((TextView) findViewById(R.id.data)).setText(viewModel.data);
+    }
+
+    @Override
+    public void navigateToNextScreen() {
+        Intent intent = new Intent(this, Expresiones_Detail_ListActivity.class);
+        startActivity(intent);
     }
 
     @Override

@@ -80,7 +80,7 @@ public class Preguntas_FrecuentesPresenter implements Preguntas_FrecuentesContra
 
     @Override
     public void goHomeButtonClicked() {
-        router.navigateToHomeScreen();
+        view.get().navigateToHomeScreen();
     }
 
     @Override

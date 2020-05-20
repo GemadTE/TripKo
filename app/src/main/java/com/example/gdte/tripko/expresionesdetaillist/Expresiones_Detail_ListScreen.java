@@ -13,7 +13,7 @@ public class Expresiones_Detail_ListScreen {
         WeakReference<FragmentActivity> context =
                 new WeakReference<>((FragmentActivity) view);
 
-        AppMediator mediator = (AppMediator) context.get().getApplication();
+        AppMediator mediator = AppMediator.getInstance();
         Expresiones_Detail_ListState state = mediator.getExpresionesDetailListState();
 
         Expresiones_Detail_ListContract.Router router = new Expresiones_Detail_ListRouter(mediator);

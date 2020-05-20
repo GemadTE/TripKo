@@ -17,7 +17,7 @@ public class Elegir_IdiomaPresenter implements Elegir_IdiomaContract.Presenter {
 
     @Override
     public void goMenuButtonClicked() {
-        router.navigateToMenuScreen();
+        view.get().navigateToMenuScreen();
     }
 
     @Override

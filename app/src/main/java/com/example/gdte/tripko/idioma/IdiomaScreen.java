@@ -13,7 +13,7 @@ public class IdiomaScreen {
         WeakReference<FragmentActivity> context =
                 new WeakReference<>((FragmentActivity) view);
 
-        AppMediator mediator = (AppMediator) context.get().getApplication();
+        AppMediator mediator = AppMediator.getInstance();
         IdiomaState state = mediator.getIdiomaState();
 
         IdiomaContract.Router router = new IdiomaRouter(mediator);

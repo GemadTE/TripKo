@@ -40,17 +40,17 @@ public class Region_ListPresenter implements Region_ListContract.Presenter {
     @Override
     public void selectRegionListData(RegionItem item) {
         router.passDataToGastronomiaListScreen(item);
-        router.navigateToGastronomiaListScreen();
+        view.get().navigateToGastronomiaListScreen();
     }
 
     @Override
     public void goHomeButtonClicked() {
-        router.navigateToHomeScreen();
+        view.get().navigateToHomeScreen();
     }
 
     @Override
     public void goPreguntasFrecuentesButtonClicked() {
-        router.navigateToPreguntasFrecuentesScreen();
+        view.get().navigateToPreguntasFrecuentesScreen();
     }
 
     @Override

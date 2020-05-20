@@ -16,7 +16,7 @@ public class Conversor_MonedaScreen {
 
         String data = context.get().getString(R.string.app_name);
 
-        AppMediator mediator = (AppMediator) context.get().getApplication();
+        AppMediator mediator = AppMediator.getInstance();
         Conversor_MonedaState state = mediator.getConversorMonedaState();
 
         Conversor_MonedaContract.Router router = new Conversor_MonedaRouter(mediator);

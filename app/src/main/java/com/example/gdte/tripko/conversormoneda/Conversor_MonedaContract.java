@@ -8,6 +8,11 @@ public interface Conversor_MonedaContract {
         void injectPresenter(Presenter presenter);
 
         void onDataUpdated(Conversor_MonedaViewModel viewModel);
+
+        void navigateToHomeScreen();
+
+        void navigateToPreguntasFrecuentesScreen();
+
     }
 
     interface Presenter {
@@ -45,9 +50,6 @@ public interface Conversor_MonedaContract {
     }
 
     interface Router {
-        void navigateToHomeScreen();
-
-        void navigateToPreguntasFrecuentesScreen();
 
         void passStateToNextScreen(Conversor_MonedaState state);
 

@@ -17,13 +17,6 @@ public class Idioma_AlfabetoRouter implements Idioma_AlfabetoContract.Router {
     }
 
     @Override
-    public void navigateToNextScreen() {
-        Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, Idioma_AlfabetoActivity.class);
-        context.startActivity(intent);
-    }
-
-    @Override
     public void passDataToNextScreen(Idioma_AlfabetoState state) {
         mediator.setIdiomaAlfabetoState(state);
     }

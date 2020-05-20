@@ -16,13 +16,6 @@ public class Transporte_CategoryRouter implements Transporte_CategoryContract.Ro
         this.mediator = mediator;
     }
 
-    @Override
-    public void navigateToNextScreen() {
-        Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, Transporte_CategoryActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(intent);
-    }
 
     @Override
     public void passStateToNextScreen(Transporte_CategoryState state) {

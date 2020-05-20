@@ -54,13 +54,13 @@ public class IdiomaPresenter implements IdiomaContract.Presenter {
     public void onIdiomaOptionClicked(int idiomaOption) {
         switch (idiomaOption){
             case 0:
-                router.navigateToIdiomaCoreanoScreen();
+                view.get().navigateToIdiomaCoreanoScreen();
                 break;
             case 1:
-                router.navigateToIdiomaAlfabetoScreen();
+                view.get().navigateToIdiomaAlfabetoScreen();
                 break;
             case 2:
-                router.navigateToExpresionesDetailListScreen();
+                view.get().navigateToExpresionesDetailListScreen();
                 break;
             default:
                 break;
@@ -69,12 +69,12 @@ public class IdiomaPresenter implements IdiomaContract.Presenter {
 
     @Override
     public void onPreguntasFrecuentesClicked() {
-        router.navigateToPreguntasFrecuentesScreen();
+        view.get().navigateToPreguntasFrecuentesScreen();
     }
 
     @Override
     public void goHomeButtonClicked() {
-        router.navigateToHomeScreen();
+        view.get().navigateToHomeScreen();
     }
 
     @Override

@@ -2,6 +2,8 @@ package com.example.gdte.tripko.idioma;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -10,6 +12,12 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.gdte.tripko.R;
+import com.example.gdte.tripko.app.AppMediator;
+import com.example.gdte.tripko.expresionesdetaillist.Expresiones_Detail_ListActivity;
+import com.example.gdte.tripko.idiomaalfabeto.Idioma_AlfabetoActivity;
+import com.example.gdte.tripko.idiomacoreano.Idioma_CoreanoActivity;
+import com.example.gdte.tripko.menuprincipal.Menu_PrincipalActivity;
+import com.example.gdte.tripko.preguntasfrecuentes.Preguntas_FrecuentesActivity;
 
 public class IdiomaActivity
         extends AppCompatActivity implements IdiomaContract.View {
@@ -66,6 +74,8 @@ public class IdiomaActivity
             }
         });
 
+        if (savedInstanceState == null) AppMediator.resetInstance();
+
         // do the setup
         IdiomaScreen.configure(this);
     }
@@ -84,6 +94,43 @@ public class IdiomaActivity
 
         // deal with the data
         // ((TextView) findViewById(R.id.data)).setText(viewModel.data);
+    }
+
+    @Override
+    public void navigateToNextScreen() {
+        Intent intent = new Intent(this, IdiomaActivity.class);
+        startActivity(intent);
+    }
+
+
+    @Override
+    public void navigateToIdiomaCoreanoScreen() {
+        Intent intent = new Intent(this, Idioma_CoreanoActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void navigateToIdiomaAlfabetoScreen() {
+        Intent intent = new Intent(this, Idioma_AlfabetoActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void navigateToExpresionesDetailListScreen() {
+        Intent intent = new Intent(this, Expresiones_Detail_ListActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void navigateToPreguntasFrecuentesScreen() {
+        Intent intent = new Intent(this, Preguntas_FrecuentesActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void navigateToHomeScreen() {
+        Intent intent = new Intent(this, Menu_PrincipalActivity.class);
+        startActivity(intent);
     }
 
     @Override

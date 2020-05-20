@@ -8,6 +8,8 @@ public interface Contactos_De_InteresContract {
         void injectPresenter(Presenter presenter);
 
         void onDataUpdated(Contactos_De_InteresViewModel viewModel);
+
+        void navigateToNextScreen();
     }
 
     interface Presenter {
@@ -41,7 +43,6 @@ public interface Contactos_De_InteresContract {
     }
 
     interface Router {
-        void navigateToNextScreen();
 
         void passStateToNextScreen(Contactos_De_InteresState state);
 

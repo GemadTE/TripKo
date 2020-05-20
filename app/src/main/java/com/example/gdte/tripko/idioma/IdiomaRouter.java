@@ -21,12 +21,7 @@ public class IdiomaRouter implements IdiomaContract.Router {
         this.mediator = mediator;
     }
 
-    @Override
-    public void navigateToNextScreen() {
-        Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, IdiomaActivity.class);
-        context.startActivity(intent);
-    }
+
 
     @Override
     public void passDataToNextScreen(IdiomaState state) {
@@ -37,40 +32,5 @@ public class IdiomaRouter implements IdiomaContract.Router {
     public IdiomaState getDataFromPreviousScreen() {
         IdiomaState state = mediator.getIdiomaState();
         return state;
-    }
-
-    @Override
-    public void navigateToIdiomaCoreanoScreen() {
-        Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, Idioma_CoreanoActivity.class);
-        context.startActivity(intent);
-    }
-
-    @Override
-    public void navigateToIdiomaAlfabetoScreen() {
-        Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, Idioma_AlfabetoActivity.class);
-        context.startActivity(intent);
-    }
-
-    @Override
-    public void navigateToExpresionesDetailListScreen() {
-        Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, Expresiones_Detail_ListActivity.class);
-        context.startActivity(intent);
-    }
-
-    @Override
-    public void navigateToPreguntasFrecuentesScreen() {
-        Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, Preguntas_FrecuentesActivity.class);
-        context.startActivity(intent);
-    }
-
-    @Override
-    public void navigateToHomeScreen() {
-        Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, Menu_PrincipalActivity.class);
-        context.startActivity(intent);
     }
 }

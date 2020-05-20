@@ -33,6 +33,5 @@ public interface Ciudades_PrincipalesContract {
     }
 
     interface Router {
-        void navigateToPreguntasFrecuentesScreen();
     }
 }

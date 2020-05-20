@@ -2,11 +2,14 @@ package com.example.gdte.tripko.transportecategory;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
 import com.example.gdte.tripko.R;
+import com.example.gdte.tripko.app.AppMediator;
 
 public class Transporte_CategoryActivity
         extends AppCompatActivity implements Transporte_CategoryContract.View {
@@ -29,6 +32,8 @@ public class Transporte_CategoryActivity
         } else {
             presenter.onRestart();
         }
+
+        if (savedInstanceState == null) AppMediator.resetInstance();
     }
 
     @Override
@@ -67,6 +72,13 @@ public class Transporte_CategoryActivity
         // deal with the data
 
     }
+
+    @Override
+    public void navigateToNextScreen() {
+        Intent intent = new Intent(this, Transporte_CategoryActivity.class);
+        startActivity(intent);
+    }
+
 
     @Override
     public void injectPresenter(Transporte_CategoryContract.Presenter presenter) {

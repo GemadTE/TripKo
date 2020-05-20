@@ -17,13 +17,6 @@ public class Expresiones_Detail_ListRouter implements Expresiones_Detail_ListCon
     }
 
     @Override
-    public void navigateToNextScreen() {
-        Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, Expresiones_Detail_ListActivity.class);
-        context.startActivity(intent);
-    }
-
-    @Override
     public void passDataToNextScreen(Expresiones_Detail_ListState state) {
         mediator.setExpresionesDetailListState(state);
     }

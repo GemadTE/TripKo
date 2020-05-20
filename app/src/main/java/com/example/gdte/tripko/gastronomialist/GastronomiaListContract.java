@@ -13,6 +13,12 @@ public interface GastronomiaListContract {
         void injectPresenter(Presenter presenter);
 
         void displayProductListData(GastronomiaListViewModel viewModel);
+
+        void navigateToGastronomiaDetailListScreen();
+
+        void navigateToHomeScreen();
+
+        void navigateToPreguntasFrecuentesScreen();
     }
 
     interface Presenter {
@@ -38,11 +44,6 @@ public interface GastronomiaListContract {
     }
 
     interface Router {
-        void navigateToGastronomiaDetailListScreen();
-
-        void navigateToHomeScreen();
-
-        void navigateToPreguntasFrecuentesScreen();
 
         void passDataToGastronomiaDetailListScreen(GastronomiaItem item);
 

@@ -2,11 +2,13 @@ package com.example.gdte.tripko.contactosdeinteres;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
 import com.example.gdte.tripko.R;
+import com.example.gdte.tripko.app.AppMediator;
 
 public class Contactos_De_InteresActivity
         extends AppCompatActivity implements Contactos_De_InteresContract.View {
@@ -19,6 +21,8 @@ public class Contactos_De_InteresActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contactos__de__interes);
+
+        if (savedInstanceState == null) AppMediator.resetInstance();
 
         // do the setup
         Contactos_De_InteresScreen.configure(this);
@@ -66,6 +70,12 @@ public class Contactos_De_InteresActivity
 
         // deal with the data
        // ((TextView) findViewById(R.id.data)).setText(viewModel.data);
+    }
+
+    @Override
+    public void navigateToNextScreen() {
+        Intent intent = new Intent(this, Contactos_De_InteresActivity.class);
+        startActivity(intent);
     }
 
     @Override

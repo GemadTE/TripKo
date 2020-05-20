@@ -8,6 +8,8 @@ public interface Transporte_CategoryContract {
         void injectPresenter(Presenter presenter);
 
         void onDataUpdated(Transporte_CategoryViewModel viewModel);
+
+        void navigateToNextScreen();
     }
 
     interface Presenter {
@@ -41,7 +43,6 @@ public interface Transporte_CategoryContract {
     }
 
     interface Router {
-        void navigateToNextScreen();
 
         void passStateToNextScreen(Transporte_CategoryState state);
 

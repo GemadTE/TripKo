@@ -47,18 +47,18 @@ public class GastronomiaListPresenter implements GastronomiaListContract.Present
 
     @Override
     public void goHomeButtonClicked() {
-        router.navigateToHomeScreen();
+        view.get().navigateToHomeScreen();
     }
 
     @Override
     public void goPreguntasFrecuentesButtonClicked() {
-        router.navigateToPreguntasFrecuentesScreen();
+        view.get().navigateToPreguntasFrecuentesScreen();
     }
 
     @Override
     public void selectGastronomiaListData(GastronomiaItem item) {
         router.passDataToGastronomiaDetailListScreen(item);
-        router.navigateToGastronomiaDetailListScreen();
+        view.get().navigateToGastronomiaDetailListScreen();
     }
 
     @Override

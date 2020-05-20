@@ -16,7 +16,7 @@ public class Contactos_De_InteresScreen {
 
         String data = context.get().getString(R.string.app_name);
 
-        AppMediator mediator = (AppMediator) context.get().getApplication();
+        AppMediator mediator = AppMediator.getInstance();
         Contactos_De_InteresState state = mediator.getContactosDeInteresState();
 
         Contactos_De_InteresContract.Router router = new Contactos_De_InteresRouter(mediator);

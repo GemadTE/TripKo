@@ -7,6 +7,8 @@ public interface Elegir_IdiomaContract {
     interface View {
         void injectPresenter(Presenter presenter);
 
+        void navigateToMenuScreen();
+
     }
 
     interface Presenter {
@@ -24,7 +26,6 @@ public interface Elegir_IdiomaContract {
     }
 
     interface Router {
-        void navigateToMenuScreen();
 
         void passDataToMenuScreen(Elegir_IdiomaState state);
 

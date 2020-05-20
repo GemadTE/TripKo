@@ -20,29 +20,6 @@ public class GastronomiaListRouter implements GastronomiaListContract.Router {
         this.mediator = mediator;
     }
 
-    @Override
-    public void navigateToGastronomiaDetailListScreen() {
-        Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, Gastronomia_Detail_ListActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(intent);
-    }
-
-    @Override
-    public void navigateToHomeScreen() {
-        Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, Menu_PrincipalActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(intent);
-    }
-
-    @Override
-    public void navigateToPreguntasFrecuentesScreen() {
-        Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, Preguntas_FrecuentesActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(intent);
-    }
 
     @Override
     public void passDataToGastronomiaDetailListScreen(GastronomiaItem item) {

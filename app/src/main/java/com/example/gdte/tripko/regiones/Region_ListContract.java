@@ -13,6 +13,11 @@ public interface Region_ListContract {
 
         void injectPresenter(Presenter presenter);
 
+        void navigateToGastronomiaListScreen();
+
+        void navigateToHomeScreen();
+
+        void navigateToPreguntasFrecuentesScreen();
     }
 
     interface Presenter {
@@ -40,11 +45,6 @@ public interface Region_ListContract {
     }
 
     interface Router {
-        void navigateToGastronomiaListScreen();
-
-        void navigateToHomeScreen();
-
-        void navigateToPreguntasFrecuentesScreen();
 
         void passDataToGastronomiaListScreen(RegionItem item);
 

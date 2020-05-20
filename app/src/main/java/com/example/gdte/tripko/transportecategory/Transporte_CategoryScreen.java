@@ -16,7 +16,7 @@ public class Transporte_CategoryScreen {
 
         String data = context.get().getString(R.string.app_name);
 
-        AppMediator mediator = (AppMediator) context.get().getApplication();
+        AppMediator mediator = AppMediator.getInstance();
         Transporte_CategoryState state = mediator.getTransporteCategoryState();
 
         Transporte_CategoryContract.Router router = new Transporte_CategoryRouter(mediator);

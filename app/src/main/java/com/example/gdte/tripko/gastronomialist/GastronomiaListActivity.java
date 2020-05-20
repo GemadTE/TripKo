@@ -3,6 +3,8 @@ package com.example.gdte.tripko.gastronomialist;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,8 +12,12 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.gdte.tripko.R;
+import com.example.gdte.tripko.app.AppMediator;
 import com.example.gdte.tripko.data.GastronomiaItem;
 import com.example.gdte.tripko.data.RegionItem;
+import com.example.gdte.tripko.gastronomiadetaillist.Gastronomia_Detail_ListActivity;
+import com.example.gdte.tripko.menuprincipal.Menu_PrincipalActivity;
+import com.example.gdte.tripko.preguntasfrecuentes.Preguntas_FrecuentesActivity;
 
 public class GastronomiaListActivity
         extends AppCompatActivity implements GastronomiaListContract.View {
@@ -66,6 +72,8 @@ public class GastronomiaListActivity
         RecyclerView recyclerView = findViewById(R.id.gastronomiaList);
         recyclerView.setAdapter(gastronomiaListAdapter);
 
+        if (savedInstanceState == null) AppMediator.resetInstance();
+
         // do the setup
         GastronomiaListScreen.configure(this);
 
@@ -81,6 +89,24 @@ public class GastronomiaListActivity
                 gastronomiaListAdapter.setItems(viewModel.gastronomiaItems);
             }
         });
+    }
+
+    @Override
+    public void navigateToGastronomiaDetailListScreen() {
+        Intent intent = new Intent(this, Gastronomia_Detail_ListActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void navigateToHomeScreen() {
+        Intent intent = new Intent(this, Menu_PrincipalActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void navigateToPreguntasFrecuentesScreen() {
+        Intent intent = new Intent(this, Preguntas_FrecuentesActivity.class);
+        startActivity(intent);
     }
 
     @Override

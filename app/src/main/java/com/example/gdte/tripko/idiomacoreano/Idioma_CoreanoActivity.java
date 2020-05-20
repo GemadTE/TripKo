@@ -2,11 +2,13 @@ package com.example.gdte.tripko.idiomacoreano;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
 import com.example.gdte.tripko.R;
+import com.example.gdte.tripko.app.AppMediator;
 
 public class Idioma_CoreanoActivity
         extends AppCompatActivity implements Idioma_CoreanoContract.View {
@@ -19,6 +21,8 @@ public class Idioma_CoreanoActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_idioma__coreano);
+
+        if (savedInstanceState == null) AppMediator.resetInstance();
 
         // do the setup
         Idioma_CoreanoScreen.configure(this);
@@ -38,6 +42,12 @@ public class Idioma_CoreanoActivity
 
         // deal with the data
         // ((TextView) findViewById(R.id.data)).setText(viewModel.data);
+    }
+
+    @Override
+    public void navigateToNextScreen() {
+        Intent intent = new Intent(this, Idioma_CoreanoActivity.class);
+        startActivity(intent);
     }
 
     @Override

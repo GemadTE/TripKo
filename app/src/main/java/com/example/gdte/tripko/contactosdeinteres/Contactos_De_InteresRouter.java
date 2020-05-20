@@ -17,14 +17,6 @@ public class Contactos_De_InteresRouter implements Contactos_De_InteresContract.
     }
 
     @Override
-    public void navigateToNextScreen() {
-        Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, Contactos_De_InteresActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(intent);
-    }
-
-    @Override
     public void passStateToNextScreen(Contactos_De_InteresState state) {
         mediator.setContactosDeInteresState(state);
     }

@@ -17,13 +17,6 @@ public class Elegir_IdiomaRouter implements Elegir_IdiomaContract.Router {
     }
 
     @Override
-    public void navigateToMenuScreen() {
-        Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, Menu_PrincipalActivity.class);
-        context.startActivity(intent);
-    }
-
-    @Override
     public void passDataToMenuScreen(Elegir_IdiomaState state) {
         mediator.setElegirIdiomaState(state);
     }

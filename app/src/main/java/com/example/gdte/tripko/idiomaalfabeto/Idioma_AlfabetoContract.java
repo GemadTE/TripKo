@@ -8,6 +8,8 @@ public interface Idioma_AlfabetoContract {
         void injectPresenter(Presenter presenter);
 
         void displayData(Idioma_AlfabetoViewModel viewModel);
+
+        void navigateToNextScreen();
     }
 
     interface Presenter {
@@ -25,7 +27,6 @@ public interface Idioma_AlfabetoContract {
     }
 
     interface Router {
-        void navigateToNextScreen();
 
         void passDataToNextScreen(Idioma_AlfabetoState state);
 

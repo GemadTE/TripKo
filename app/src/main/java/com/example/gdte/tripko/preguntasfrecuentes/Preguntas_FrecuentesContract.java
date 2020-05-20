@@ -8,6 +8,10 @@ public interface Preguntas_FrecuentesContract {
         void injectPresenter(Presenter presenter);
 
         void onDataUpdated(Preguntas_FrecuentesViewModel viewModel);
+
+        void navigateToNextScreen();
+
+        void navigateToHomeScreen();
     }
 
     interface Presenter {
@@ -43,9 +47,6 @@ public interface Preguntas_FrecuentesContract {
     }
 
     interface Router {
-        void navigateToNextScreen();
-
-        void navigateToHomeScreen();
 
         void passStateToNextScreen(Preguntas_FrecuentesState state);
 

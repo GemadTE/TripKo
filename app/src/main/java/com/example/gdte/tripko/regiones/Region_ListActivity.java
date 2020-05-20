@@ -3,12 +3,17 @@ package com.example.gdte.tripko.regiones;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
 import com.example.gdte.tripko.R;
+import com.example.gdte.tripko.app.AppMediator;
 import com.example.gdte.tripko.data.RegionItem;
+import com.example.gdte.tripko.gastronomialist.GastronomiaListActivity;
+import com.example.gdte.tripko.menuprincipal.Menu_PrincipalActivity;
+import com.example.gdte.tripko.preguntasfrecuentes.Preguntas_FrecuentesActivity;
 
 public class Region_ListActivity
         extends AppCompatActivity implements Region_ListContract.View {
@@ -56,6 +61,8 @@ public class Region_ListActivity
             }
         });
 
+        if (savedInstanceState == null) AppMediator.resetInstance();
+
         // do the setup
         Region_ListScreen.configure(this);
 
@@ -79,6 +86,25 @@ public class Region_ListActivity
             }
         });
     }
+
+    @Override
+    public void navigateToGastronomiaListScreen() {
+        Intent intent = new Intent(this, GastronomiaListActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void navigateToHomeScreen() {
+        Intent intent = new Intent(this, Menu_PrincipalActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void navigateToPreguntasFrecuentesScreen() {
+        Intent intent = new Intent(this, Preguntas_FrecuentesActivity.class);
+        startActivity(intent);
+    }
+
 
     @Override
     public void injectPresenter(Region_ListContract.Presenter presenter) {

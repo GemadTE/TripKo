@@ -2,6 +2,7 @@ package com.example.gdte.tripko.preguntasfrecuentes;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -9,6 +10,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.gdte.tripko.R;
+import com.example.gdte.tripko.app.AppMediator;
+import com.example.gdte.tripko.menuprincipal.Menu_PrincipalActivity;
 
 public class Preguntas_FrecuentesActivity
         extends AppCompatActivity implements Preguntas_FrecuentesContract.View {
@@ -37,6 +40,8 @@ public class Preguntas_FrecuentesActivity
                 presenter.goHomeButtonClicked();
             }
         });
+
+        if (savedInstanceState == null) AppMediator.resetInstance();
 
         // do the setup
         Preguntas_FrecuentesScreen.configure(this);
@@ -84,6 +89,18 @@ public class Preguntas_FrecuentesActivity
 
         // deal with the data
       //  ((TextView) findViewById(R.id.data)).setText(viewModel.data);
+    }
+
+    @Override
+    public void navigateToNextScreen() {
+        Intent intent = new Intent(this, Preguntas_FrecuentesActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void navigateToHomeScreen() {
+        Intent intent = new Intent(this, Menu_PrincipalActivity.class);
+        startActivity(intent);
     }
 
     @Override

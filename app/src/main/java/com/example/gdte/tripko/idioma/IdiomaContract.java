@@ -8,6 +8,18 @@ public interface IdiomaContract {
         void injectPresenter(Presenter presenter);
 
         void displayData(IdiomaViewModel viewModel);
+
+        void navigateToNextScreen();
+
+        void navigateToIdiomaCoreanoScreen();
+
+        void navigateToIdiomaAlfabetoScreen();
+
+        void navigateToExpresionesDetailListScreen();
+
+        void navigateToPreguntasFrecuentesScreen();
+
+        void navigateToHomeScreen();
     }
 
     interface Presenter {
@@ -31,20 +43,11 @@ public interface IdiomaContract {
     }
 
     interface Router {
-        void navigateToNextScreen();
 
         void passDataToNextScreen(IdiomaState state);
 
         IdiomaState getDataFromPreviousScreen();
 
-        void navigateToIdiomaCoreanoScreen();
 
-        void navigateToIdiomaAlfabetoScreen();
-
-        void navigateToExpresionesDetailListScreen();
-
-        void navigateToPreguntasFrecuentesScreen();
-
-        void navigateToHomeScreen();
     }
 }

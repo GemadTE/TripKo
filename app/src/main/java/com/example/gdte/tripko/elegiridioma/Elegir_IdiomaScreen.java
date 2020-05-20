@@ -13,7 +13,7 @@ public class Elegir_IdiomaScreen {
         WeakReference<FragmentActivity> context =
                 new WeakReference<>((FragmentActivity) view);
 
-        AppMediator mediator = (AppMediator) context.get().getApplication();
+        AppMediator mediator = AppMediator.getInstance();
         Elegir_IdiomaState state = mediator.getElegirIdiomaState();
 
         Elegir_IdiomaContract.Router router = new Elegir_IdiomaRouter(mediator);

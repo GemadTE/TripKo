@@ -2,11 +2,13 @@ package com.example.gdte.tripko.idiomaalfabeto;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
 import com.example.gdte.tripko.R;
+import com.example.gdte.tripko.app.AppMediator;
 
 public class Idioma_AlfabetoActivity
         extends AppCompatActivity implements Idioma_AlfabetoContract.View {
@@ -19,6 +21,8 @@ public class Idioma_AlfabetoActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_idioma__alfabeto);
+
+        if (savedInstanceState == null) AppMediator.resetInstance();
 
         // do the setup
         Idioma_AlfabetoScreen.configure(this);
@@ -38,6 +42,12 @@ public class Idioma_AlfabetoActivity
 
         // deal with the data
         //((TextView) findViewById(R.id.data)).setText(viewModel.data);
+    }
+
+    @Override
+    public void navigateToNextScreen() {
+        Intent intent = new Intent(this, Idioma_AlfabetoActivity.class);
+        startActivity(intent);
     }
 
     @Override

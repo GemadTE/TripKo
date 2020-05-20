@@ -16,9 +16,7 @@ public class Region_ListScreen {
         WeakReference<FragmentActivity> context =
                 new WeakReference<>((FragmentActivity) view);
 
-        String data = context.get().getString(R.string.app_name);
-
-        AppMediator mediator = (AppMediator) context.get().getApplication();
+        AppMediator mediator = AppMediator.getInstance();
         Region_ListState state = mediator.getRegionListState();
 
         RepositoryContract repository = AppRepository.getInstance(context.get());

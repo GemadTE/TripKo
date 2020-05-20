@@ -17,13 +17,6 @@ public class Idioma_CoreanoRouter implements Idioma_CoreanoContract.Router {
     }
 
     @Override
-    public void navigateToNextScreen() {
-        Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, Idioma_CoreanoActivity.class);
-        context.startActivity(intent);
-    }
-
-    @Override
     public void passDataToNextScreen(Idioma_CoreanoState state) {
         mediator.setIdiomaCoreanoState(state);
     }

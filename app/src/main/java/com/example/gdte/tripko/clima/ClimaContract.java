@@ -33,6 +33,5 @@ public interface ClimaContract {
     }
 
     interface Router {
-        void navigateToPreguntasFrecuentesScreen();
     }
 }
