@@ -16,10 +16,5 @@ public class SplashRouter implements SplashContract.Router {
         this.mediator = mediator;
     }
 
-    @Override
-    public void navigateToChooseLanguageScreen() {
-        Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, Elegir_IdiomaActivity.class);
-        context.startActivity(intent);
-    }
+
 }

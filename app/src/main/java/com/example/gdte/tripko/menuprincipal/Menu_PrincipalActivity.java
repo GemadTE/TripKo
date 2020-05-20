@@ -2,6 +2,8 @@ package com.example.gdte.tripko.menuprincipal;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -10,6 +12,16 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.gdte.tripko.R;
+import com.example.gdte.tripko.app.AppMediator;
+import com.example.gdte.tripko.contactosdeinteres.Contactos_De_InteresActivity;
+import com.example.gdte.tripko.conversormoneda.Conversor_MonedaActivity;
+import com.example.gdte.tripko.entretenimiento.EntretenimientoActivity;
+import com.example.gdte.tripko.idioma.IdiomaActivity;
+import com.example.gdte.tripko.preguntasfrecuentes.Preguntas_FrecuentesActivity;
+import com.example.gdte.tripko.regiones.Region_ListActivity;
+import com.example.gdte.tripko.sitiosturisticos.Sitios_TuristicosActivity;
+import com.example.gdte.tripko.sobrecorea.Sobre_CoreaActivity;
+import com.example.gdte.tripko.transportecategory.Transporte_CategoryActivity;
 
 public class Menu_PrincipalActivity
         extends AppCompatActivity implements Menu_PrincipalContract.View {
@@ -38,6 +50,8 @@ public class Menu_PrincipalActivity
         contactosDeInteresBtn = findViewById(R.id.contactos_de_interes_btn);
 
         preguntasFrecuentesImageButton = findViewById(R.id.preguntasFrecuentesImageButton);
+
+        if (savedInstanceState == null) AppMediator.resetInstance();
 
         sobreCoreaBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -113,7 +127,62 @@ public class Menu_PrincipalActivity
         //Log.e(TAG, "displayData()");
 
         // deal with the data
-    //    ((TextView) findViewById(R.id.data)).setText(viewModel.data);
+        //    ((TextView) findViewById(R.id.data)).setText(viewModel.data);
+    }
+
+
+    @Override
+    public void navigateToSobreCoreaScreen() {
+        Intent intent = new Intent(this, Sobre_CoreaActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void navigateToIdiomaScreen() {
+        Intent intent = new Intent(this, IdiomaActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void navigateToConversionDeMonedaScreen() {
+        Intent intent = new Intent(this, Conversor_MonedaActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void navigateToTransporteScreen() {
+        Intent intent = new Intent(this, Transporte_CategoryActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void navigateToEntretenimientoScreen() {
+        Intent intent = new Intent(this, EntretenimientoActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void navigateToGastronomiaScreen() {
+        Intent intent = new Intent(this, Region_ListActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void navigateToSitiosTuristicosScreen() {
+        Intent intent = new Intent(this, Sitios_TuristicosActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void navigateToContactosDeInteresScreen() {
+        Intent intent = new Intent(this, Contactos_De_InteresActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void navigateToPreguntasFrecuentesScreen() {
+        Intent intent = new Intent(this, Preguntas_FrecuentesActivity.class);
+        startActivity(intent);
     }
 
     @Override

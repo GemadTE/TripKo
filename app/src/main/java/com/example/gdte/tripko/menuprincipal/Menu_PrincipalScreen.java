@@ -10,10 +10,7 @@ public class Menu_PrincipalScreen {
 
     public static void configure(Menu_PrincipalContract.View view) {
 
-        WeakReference<FragmentActivity> context =
-                new WeakReference<>((FragmentActivity) view);
-
-        AppMediator mediator = (AppMediator) context.get().getApplication();
+        AppMediator mediator = AppMediator.getInstance();
         Menu_PrincipalState state = mediator.getMenu_PrincipalState();
 
         Menu_PrincipalContract.Router router = new Menu_PrincipalRouter(mediator);

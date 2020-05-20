@@ -2,14 +2,15 @@ package com.example.gdte.tripko.splash;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.Log;
 import android.view.WindowManager;
-import android.widget.TextView;
+
 
 import com.example.gdte.tripko.R;
+import com.example.gdte.tripko.elegiridioma.Elegir_IdiomaActivity;
 
 public class SplashActivity
         extends AppCompatActivity implements SplashContract.View {
@@ -38,6 +39,12 @@ public class SplashActivity
         }, DURACION_SPLASH);
         // do the setup
         SplashScreen.configure(this);
+    }
+
+    @Override
+    public void navigateToChooseLanguageScreen() {
+        Intent intent = new Intent(this, Elegir_IdiomaActivity.class);
+        startActivity(intent);
     }
 
     @Override

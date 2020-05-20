@@ -10,10 +10,7 @@ public class SplashScreen {
 
     public static void configure(SplashContract.View view) {
 
-        WeakReference<FragmentActivity> context =
-                new WeakReference<>((FragmentActivity) view);
-
-        AppMediator mediator = (AppMediator) context.get().getApplication();
+        AppMediator mediator = AppMediator.getInstance();
         SplashState state = mediator.getSplashState();
 
         SplashContract.Router router = new SplashRouter(mediator);

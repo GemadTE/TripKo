@@ -6,6 +6,8 @@ public interface SplashContract {
 
     interface View {
         void injectPresenter(Presenter presenter);
+
+        void navigateToChooseLanguageScreen();
     }
 
     interface Presenter {
@@ -22,6 +24,6 @@ public interface SplashContract {
     }
 
     interface Router {
-        void navigateToChooseLanguageScreen();
+
     }
 }

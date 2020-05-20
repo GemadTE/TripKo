@@ -1,7 +1,5 @@
 package com.example.gdte.tripko.app;
 
-import android.app.Application;
-
 import com.example.gdte.tripko.ciudadesprincipales.Ciudades_PrincipalesState;
 import com.example.gdte.tripko.clima.ClimaState;
 import com.example.gdte.tripko.contactosdeinteres.Contactos_De_InteresState;
@@ -34,33 +32,34 @@ import com.example.gdte.tripko.splash.SplashState;
 import com.example.gdte.tripko.sitiosturisticosdetaillist.Sitios_Turisticos_DetailListState;
 import com.example.gdte.tripko.transportecategory.Transporte_CategoryState;
 
-public class AppMediator extends Application {
+public class AppMediator {
 
-    private SplashState splashState = new SplashState();
-    private Elegir_IdiomaState elegirIdiomaState = new Elegir_IdiomaState();
-    private Menu_PrincipalState menu_principalState = new Menu_PrincipalState();
-    private Sobre_CoreaState sobreCoreaState = new Sobre_CoreaState();
+    private static AppMediator instance;
+    private SplashState splashState;
+    private Elegir_IdiomaState elegirIdiomaState;
+    private Menu_PrincipalState menu_principalState;
+    private Sobre_CoreaState sobreCoreaState;
     private CulturaState culturaState = new CulturaState();
-    private Cultura_DetailState culturaDetailState = new Cultura_DetailState();
-    private Entretenimiento_Detail_ListState entretenimientoDetailListState = new Entretenimiento_Detail_ListState();
-    private Entretenimiento_DetailState entretenimientoDetailState = new Entretenimiento_DetailState();
-    private ClimaState climaState = new ClimaState();
-    private Ciudades_PrincipalesState ciudadesPrincipalesSate = new Ciudades_PrincipalesState();
-    private EntretenimientoState entretenimientoState = new EntretenimientoState();
-    private Sitios_TuristicosState sitiosTuristicosState = new Sitios_TuristicosState();
-    private Sitios_Turisticos_DetailListState tiposDeSitiosTuristicosState = new Sitios_Turisticos_DetailListState();
-    private Sitios_Turisticos_DetailState sitiosTuristicosDetailState = new Sitios_Turisticos_DetailState();
-    private Region_ListState RegionListState = new Region_ListState();
-    private GastronomiaListState comidaRestauranteListState = new GastronomiaListState();
-    private Gastronomia_Detail_ListState comidaRestauranteDetailState = new Gastronomia_Detail_ListState();
-    private Conversor_MonedaState conversorMonedaState = new Conversor_MonedaState();
-    private Preguntas_FrecuentesState preguntasFrecuentesState = new Preguntas_FrecuentesState();
-    private Contactos_De_InteresState contactosDeInteresState = new Contactos_De_InteresState();
-    private Transporte_CategoryState transporteCategoryState = new Transporte_CategoryState();
-    private IdiomaState idiomaState = new IdiomaState();
-    private Idioma_CoreanoState idiomaCoreanoState = new Idioma_CoreanoState();
-    private Idioma_AlfabetoState idiomaAlfabetoState = new Idioma_AlfabetoState();
-    private Expresiones_Detail_ListState expresionesDetailListState = new Expresiones_Detail_ListState();
+    private Cultura_DetailState culturaDetailState;
+    private Entretenimiento_Detail_ListState entretenimientoDetailListState;
+    private Entretenimiento_DetailState entretenimientoDetailState;
+    private ClimaState climaState;
+    private Ciudades_PrincipalesState ciudadesPrincipalesState;
+    private EntretenimientoState entretenimientoState;
+    private Sitios_TuristicosState sitiosTuristicosState;
+    private Sitios_Turisticos_DetailListState tiposDeSitiosTuristicosState;
+    private Sitios_Turisticos_DetailState sitiosTuristicosDetailState;
+    private Region_ListState regionListState;
+    private GastronomiaListState comidaRestauranteListState;
+    private Gastronomia_Detail_ListState comidaRestauranteDetailState;
+    private Conversor_MonedaState conversorMonedaState;
+    private Preguntas_FrecuentesState preguntasFrecuentesState;
+    private Contactos_De_InteresState contactosDeInteresState;
+    private Transporte_CategoryState transporteCategoryState;
+    private IdiomaState idiomaState;
+    private Idioma_CoreanoState idiomaCoreanoState;
+    private Idioma_AlfabetoState idiomaAlfabetoState;
+    private Expresiones_Detail_ListState expresionesDetailListState;
 
     private RegionItem regionItem;
     private GastronomiaItem gastronomiaItem;
@@ -69,6 +68,43 @@ public class AppMediator extends Application {
     private Sitios_TuristicosDetailItem sitiosTuristicosDetailItem;
     private EntretenimientoItem entretenimientoItem;
 
+
+    private AppMediator() {
+        splashState = new SplashState();
+        elegirIdiomaState = new Elegir_IdiomaState();
+        menu_principalState = new Menu_PrincipalState();
+        sobreCoreaState = new Sobre_CoreaState();
+        culturaDetailState = new Cultura_DetailState();
+        entretenimientoDetailListState = new Entretenimiento_Detail_ListState();
+        entretenimientoDetailState = new Entretenimiento_DetailState();
+        climaState = new ClimaState();
+        ciudadesPrincipalesState = new Ciudades_PrincipalesState();
+        entretenimientoState = new EntretenimientoState();
+        sitiosTuristicosState = new Sitios_TuristicosState();
+        tiposDeSitiosTuristicosState = new Sitios_Turisticos_DetailListState();
+        sitiosTuristicosDetailState = new Sitios_Turisticos_DetailState();
+        regionListState = new Region_ListState();
+        comidaRestauranteListState  = new GastronomiaListState();
+        comidaRestauranteDetailState = new Gastronomia_Detail_ListState();
+        conversorMonedaState = new Conversor_MonedaState();
+        preguntasFrecuentesState = new Preguntas_FrecuentesState();
+        contactosDeInteresState = new Contactos_De_InteresState();
+        transporteCategoryState = new Transporte_CategoryState();
+        idiomaCoreanoState = new Idioma_CoreanoState();
+        idiomaAlfabetoState = new Idioma_AlfabetoState();
+        expresionesDetailListState = new Expresiones_Detail_ListState();
+    }
+
+    public static AppMediator getInstance() {
+        if (instance == null) {
+            instance = new AppMediator();
+        }
+        return instance;
+    }
+
+    public static void resetInstance(){
+        instance = null;
+    }
 
     public SplashState getSplashState() {
         return splashState;
@@ -119,11 +155,11 @@ public class AppMediator extends Application {
     }
 
     public Ciudades_PrincipalesState getCiudadesPrincipalesState() {
-        return ciudadesPrincipalesSate;
+        return ciudadesPrincipalesState;
     }
 
     public void setCiudadesPrincipalesState(Ciudades_PrincipalesState ciudadesPrincipalesSate) {
-        this.ciudadesPrincipalesSate = ciudadesPrincipalesSate;
+        this.ciudadesPrincipalesState = ciudadesPrincipalesSate;
     }
 
     public EntretenimientoState getEntretenimientoState() {
@@ -151,11 +187,11 @@ public class AppMediator extends Application {
     }
 
     public Region_ListState getRegionListState() {
-        return RegionListState;
+        return regionListState;
     }
 
     public void setRegionListState(Region_ListState regionState) {
-        RegionListState = regionState;
+        regionListState = regionState;
     }
 
     public GastronomiaListState getComidaRestauranteListState() {
@@ -190,11 +226,11 @@ public class AppMediator extends Application {
         preguntasFrecuentesState = preguntasFrecuentesState;
     }
 
-    public Contactos_De_InteresState getContactosDeInteresState(){
+    public Contactos_De_InteresState getContactosDeInteresState() {
         return contactosDeInteresState;
     }
 
-    public void setContactosDeInteresState(Contactos_De_InteresState contactosDeInteresState){
+    public void setContactosDeInteresState(Contactos_De_InteresState contactosDeInteresState) {
         this.contactosDeInteresState = contactosDeInteresState;
     }
 
@@ -289,7 +325,7 @@ public class AppMediator extends Application {
         this.entretenimientoItem = entretenimientoItem;
     }
 
-    public IdiomaState getIdiomaState(){
+    public IdiomaState getIdiomaState() {
         return idiomaState;
     }
 

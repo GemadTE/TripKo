@@ -8,6 +8,24 @@ public interface Menu_PrincipalContract {
         void injectPresenter(Presenter presenter);
 
         void displayData(Menu_PrincipalViewModel viewModel);
+
+        void navigateToSobreCoreaScreen();
+
+        void navigateToIdiomaScreen();
+
+        void navigateToConversionDeMonedaScreen();
+
+        void navigateToTransporteScreen();
+
+        void navigateToEntretenimientoScreen();
+
+        void navigateToGastronomiaScreen();
+
+        void navigateToSitiosTuristicosScreen();
+
+        void navigateToContactosDeInteresScreen();
+
+        void navigateToPreguntasFrecuentesScreen();
     }
 
     interface Presenter {
@@ -35,22 +53,5 @@ public interface Menu_PrincipalContract {
 
         Menu_PrincipalState getDataFromPreviousScreen();
 
-        void navigateToSobreCoreaScreen();
-
-        void navigateToIdiomaScreen();
-
-        void navigateToConversionDeMonedaScreen();
-
-        void navigateToTransporteScreen();
-
-        void navigateToEntretenimientoScreen();
-
-        void navigateToGastronomiaScreen();
-
-        void navigateToSitiosTuristicosScreen();
-
-        void navigateToContactosDeInteresScreen();
-
-        void navigateToPreguntasFrecuentesScreen();
     }
 }

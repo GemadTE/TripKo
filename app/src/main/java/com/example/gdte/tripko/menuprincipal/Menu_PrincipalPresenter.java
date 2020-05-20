@@ -54,28 +54,28 @@ public class Menu_PrincipalPresenter implements Menu_PrincipalContract.Presenter
     public void onMenuOptionClicked(int option) {
         switch (option){
             case 0:
-                router.navigateToSobreCoreaScreen();
+                view.get().navigateToSobreCoreaScreen();
                 break;
             case 1:
-                router.navigateToIdiomaScreen();
+                view.get().navigateToIdiomaScreen();
                 break;
             case 2:
-                router.navigateToConversionDeMonedaScreen();
+                view.get().navigateToConversionDeMonedaScreen();
                 break;
             case 3:
-                router.navigateToTransporteScreen();
+                view.get().navigateToTransporteScreen();
                 break;
             case 4:
-                router.navigateToEntretenimientoScreen();
+                view.get().navigateToEntretenimientoScreen();
                 break;
             case 5:
-                router.navigateToGastronomiaScreen();
+                view.get().navigateToGastronomiaScreen();
                 break;
             case 6:
-                router.navigateToSitiosTuristicosScreen();
+                view.get().navigateToSitiosTuristicosScreen();
                 break;
             case 7:
-                router.navigateToContactosDeInteresScreen();
+                view.get().navigateToContactosDeInteresScreen();
                 break;
             default:
                 break;
@@ -84,7 +84,7 @@ public class Menu_PrincipalPresenter implements Menu_PrincipalContract.Presenter
 
     @Override
     public void onPreguntasFrecuentesClicked() {
-        router.navigateToPreguntasFrecuentesScreen();
+        view.get().navigateToPreguntasFrecuentesScreen();
     }
 
     @Override
