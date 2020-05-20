@@ -8,6 +8,8 @@ public interface Cultura_DetailContract {
         void injectPresenter(Presenter presenter);
 
         void onDataUpdated(Cultura_DetailViewModel viewModel);
+
+        void navigateToNextScreen();
     }
 
     interface Presenter {
@@ -41,7 +43,6 @@ public interface Cultura_DetailContract {
     }
 
     interface Router {
-        void navigateToNextScreen();
 
         void passStateToNextScreen(Cultura_DetailState state);
 

@@ -8,6 +8,10 @@ public interface Ciudades_PrincipalesContract {
         void injectPresenter(Presenter presenter);
 
         void displayData(Ciudades_PrincipalesViewModel viewModel);
+
+        void navigateToHomeScreen();
+
+        void navigateToPreguntasFrecuentesScreen();
     }
 
     interface Presenter {
@@ -29,9 +33,6 @@ public interface Ciudades_PrincipalesContract {
     }
 
     interface Router {
-
-        void navigateToHomeScreen();
-
         void navigateToPreguntasFrecuentesScreen();
     }
 }

@@ -18,13 +18,6 @@ public class Entretenimiento_DetailRouter implements Entretenimiento_DetailContr
         this.mediator = mediator;
     }
 
-    @Override
-    public void navigateToNextScreen() {
-        Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, Entretenimiento_DetailActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(intent);
-    }
 
     @Override
     public void passStateToNextScreen(Entretenimiento_DetailState state) {
@@ -34,22 +27,6 @@ public class Entretenimiento_DetailRouter implements Entretenimiento_DetailContr
     @Override
     public void passStateToPreviousScreen(Entretenimiento_DetailState state) {
         mediator.setEntretenimientoDetailState(state);
-    }
-
-    @Override
-    public void navigateToHomeScreen() {
-        Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, Menu_PrincipalActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(intent);
-    }
-
-    @Override
-    public void navigateToPreguntasFrecuentesScreen() {
-        Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, Preguntas_FrecuentesActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(intent);
     }
 
     @Override

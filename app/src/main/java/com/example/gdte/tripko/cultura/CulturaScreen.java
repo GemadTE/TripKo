@@ -13,7 +13,7 @@ public class CulturaScreen {
         WeakReference<FragmentActivity> context =
                 new WeakReference<>((FragmentActivity) view);
 
-        AppMediator mediator = (AppMediator) context.get().getApplication();
+        AppMediator mediator = AppMediator.getInstance();
         CulturaState state = mediator.getCulturaState();
 
         CulturaContract.Router router = new CulturaRouter(mediator);

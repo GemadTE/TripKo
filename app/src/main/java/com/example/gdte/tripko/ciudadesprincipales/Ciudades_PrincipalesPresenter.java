@@ -35,12 +35,12 @@ public class Ciudades_PrincipalesPresenter implements Ciudades_PrincipalesContra
 
     @Override
     public void goHomeButtonClicked() {
-        router.navigateToHomeScreen();
+        view.get().navigateToHomeScreen();
     }
 
     @Override
     public void goPreguntasFrecuentesButtonClicked() {
-        router.navigateToPreguntasFrecuentesScreen();
+        view.get().navigateToPreguntasFrecuentesScreen();
     }
 
 

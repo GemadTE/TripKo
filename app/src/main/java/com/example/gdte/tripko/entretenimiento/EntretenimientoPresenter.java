@@ -41,18 +41,18 @@ public class EntretenimientoPresenter implements EntretenimientoContract.Present
     @Override
     public void selectEntretenimientoListData(EntretenimientoItem item) {
         router.passDataToEntretenimientoDetailListScreen(item);
-        router.navigateToEntretenimientoDetailListScreen();
+        view.get().navigateToEntretenimientoDetailListScreen();
     }
 
     @Override
     public void goHomeButtonClicked() {
-        router.navigateToHomeScreen();
+        view.get().navigateToHomeScreen();
     }
 
 
     @Override
     public void goPreguntasFrecuentesButtonClicked() {
-        router.navigateToPreguntasFrecuentesScreen();
+        view.get().navigateToPreguntasFrecuentesScreen();
     }
 
     @Override

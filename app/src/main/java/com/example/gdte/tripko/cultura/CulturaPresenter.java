@@ -52,13 +52,12 @@ public class CulturaPresenter implements CulturaContract.Presenter {
 
     @Override
     public void goHomeButtonClicked() {
-        router.navigateToHomeScreen();
+        view.get().navigateToHomeScreen();
     }
-
 
     @Override
     public void goPreguntasFrecuentesButtonClicked() {
-        router.navigateToPreguntasFrecuentesScreen();
+        view.get().navigateToPreguntasFrecuentesScreen();
     }
 
 

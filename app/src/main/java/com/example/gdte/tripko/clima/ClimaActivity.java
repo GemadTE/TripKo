@@ -2,12 +2,16 @@ package com.example.gdte.tripko.clima;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.gdte.tripko.R;
+import com.example.gdte.tripko.menuprincipal.Menu_PrincipalActivity;
+import com.example.gdte.tripko.preguntasfrecuentes.Preguntas_FrecuentesActivity;
 
 public class ClimaActivity
         extends AppCompatActivity implements ClimaContract.View {
@@ -47,6 +51,19 @@ public class ClimaActivity
         });
 
     }
+
+    @Override
+    public void navigateToHomeScreen() {
+        Intent intent = new Intent(this, Menu_PrincipalActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void navigateToPreguntasFrecuentesScreen() {
+        Intent intent = new Intent(this, Preguntas_FrecuentesActivity.class);
+        startActivity(intent);
+    }
+
 
     @Override
     protected void onResume() {

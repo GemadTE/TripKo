@@ -12,8 +12,7 @@ public class Ciudades_PrincipalesScreen {
 
         WeakReference<FragmentActivity> context =
                 new WeakReference<>((FragmentActivity) view);
-
-        AppMediator mediator = (AppMediator) context.get().getApplication();
+        AppMediator mediator = AppMediator.getInstance();
         Ciudades_PrincipalesState state = mediator.getCiudadesPrincipalesState();
 
         Ciudades_PrincipalesContract.Router router = new Ciudades_PrincipalesRouter(mediator);

@@ -2,6 +2,8 @@ package com.example.gdte.tripko.entretenimientodetaillist;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -9,6 +11,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.gdte.tripko.R;
+import com.example.gdte.tripko.menuprincipal.Menu_PrincipalActivity;
+import com.example.gdte.tripko.preguntasfrecuentes.Preguntas_FrecuentesActivity;
 
 public class Entretenimiento_Detail_ListActivity
         extends AppCompatActivity implements Entretenimiento_Detail_ListContract.View {
@@ -53,6 +57,26 @@ public class Entretenimiento_Detail_ListActivity
             presenter.onRestart();
         }
     }
+
+
+    @Override
+    public void navigateToNextScreen() {
+        Intent intent = new Intent(this, Entretenimiento_Detail_ListActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void navigateToHomeScreen() {
+        Intent intent = new Intent(this, Menu_PrincipalActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void navigateToPreguntasFrecuentesScreen() {
+        Intent intent = new Intent(this, Preguntas_FrecuentesActivity.class);
+        startActivity(intent);
+    }
+
 
     @Override
     protected void onResume() {

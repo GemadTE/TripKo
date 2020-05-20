@@ -8,6 +8,10 @@ public interface ClimaContract {
         void injectPresenter(Presenter presenter);
 
         void displayData(ClimaViewModel viewModel);
+
+        void navigateToHomeScreen();
+
+        void navigateToPreguntasFrecuentesScreen();
     }
 
     interface Presenter {
@@ -29,9 +33,6 @@ public interface ClimaContract {
     }
 
     interface Router {
-
-        void navigateToHomeScreen();
-
         void navigateToPreguntasFrecuentesScreen();
     }
 }

@@ -2,6 +2,8 @@ package com.example.gdte.tripko.culturadetail;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
@@ -31,6 +33,12 @@ public class Cultura_DetailActivity
             presenter.onRestart();
         }
     }
+    @Override
+    public void navigateToNextScreen() {
+        Intent intent = new Intent(this, Cultura_DetailActivity.class);
+        startActivity(intent);
+    }
+
 
     @Override
     protected void onResume() {

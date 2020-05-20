@@ -11,6 +11,13 @@ public interface EntretenimientoContract {
         void injectPresenter(Presenter presenter);
 
         void displayEntretenimientoListData(EntretenimientoViewModel viewModel);
+
+        void navigateToHomeScreen();
+
+        void navigateToPreguntasFrecuentesScreen();
+
+        void navigateToEntretenimientoDetailListScreen();
+
     }
 
     interface Presenter {
@@ -38,13 +45,7 @@ public interface EntretenimientoContract {
 
     interface Router {
 
-        void navigateToEntretenimientoDetailListScreen();
-
         void passDataToNextScreen(EntretenimientoState state);
-
-        void navigateToHomeScreen();
-
-        void navigateToPreguntasFrecuentesScreen();
 
         void passDataToEntretenimientoDetailListScreen(EntretenimientoItem item);
 

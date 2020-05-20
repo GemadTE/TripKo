@@ -2,6 +2,8 @@ package com.example.gdte.tripko.sitiosturisticosdetail;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
@@ -30,6 +32,12 @@ public class Sitios_Turisticos_DetailActivity
         } else {
             presenter.onRestart();
         }
+    }
+
+    @Override
+    public void navigateToNextScreen() {
+        Intent intent = new Intent(this, Sitios_Turisticos_DetailActivity.class);
+        startActivity(intent);
     }
 
     @Override

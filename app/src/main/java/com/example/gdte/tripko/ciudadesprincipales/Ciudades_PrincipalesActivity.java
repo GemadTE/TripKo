@@ -2,6 +2,8 @@ package com.example.gdte.tripko.ciudadesprincipales;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -9,6 +11,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.gdte.tripko.R;
+import com.example.gdte.tripko.menuprincipal.Menu_PrincipalActivity;
+import com.example.gdte.tripko.preguntasfrecuentes.Preguntas_FrecuentesActivity;
 
 public class Ciudades_PrincipalesActivity
         extends AppCompatActivity implements Ciudades_PrincipalesContract.View {
@@ -55,6 +59,18 @@ public class Ciudades_PrincipalesActivity
             }
         });
 
+    }
+
+    @Override
+    public void navigateToHomeScreen() {
+        Intent intent = new Intent(this, Menu_PrincipalActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void navigateToPreguntasFrecuentesScreen() {
+        Intent intent = new Intent(this, Preguntas_FrecuentesActivity.class);
+        startActivity(intent);
     }
 
     @Override

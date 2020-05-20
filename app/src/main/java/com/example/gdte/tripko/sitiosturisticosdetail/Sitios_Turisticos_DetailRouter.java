@@ -17,14 +17,6 @@ public class Sitios_Turisticos_DetailRouter implements Sitios_Turisticos_DetailC
     }
 
     @Override
-    public void navigateToNextScreen() {
-        Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, Sitios_Turisticos_DetailActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(intent);
-    }
-
-    @Override
     public void passStateToNextScreen(Sitios_Turisticos_DetailState state) {
         mediator.setSitiosTuristicosDetailState(state);
     }

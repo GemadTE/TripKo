@@ -8,6 +8,12 @@ public interface Entretenimiento_DetailContract {
         void injectPresenter(Presenter presenter);
 
         void onDataUpdated(Entretenimiento_DetailViewModel viewModel);
+
+        void navigateToNextScreen();
+
+        void navigateToHomeScreen();
+
+        void navigateToPreguntasFrecuentesScreen();
     }
 
     interface Presenter {
@@ -45,13 +51,8 @@ public interface Entretenimiento_DetailContract {
     }
 
     interface Router {
-        void navigateToNextScreen();
 
         void passStateToNextScreen(Entretenimiento_DetailState state);
-
-        void navigateToHomeScreen();
-
-        void navigateToPreguntasFrecuentesScreen();
 
         Entretenimiento_DetailState getStateFromPreviousScreen();
 

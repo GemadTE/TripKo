@@ -8,6 +8,18 @@ public interface Sobre_CoreaContract {
         void injectPresenter(Presenter presenter);
 
         void displayData(Sobre_CoreaViewModel viewModel);
+
+        void navigateToNextScreen();
+
+        void navigateToHomeScreen();
+
+        void navigateToPreguntasFrecuentesScreen();
+
+        void navigateToClimaScreen();
+
+        void navigateToCiudadesPrincipalesScreen();
+
+        void navigateToCulturaScreen();
     }
 
     interface Presenter {
@@ -35,17 +47,6 @@ public interface Sobre_CoreaContract {
     }
 
     interface Router {
-        void navigateToNextScreen();
-
-        void navigateToHomeScreen();
-
-        void navigateToPreguntasFrecuentesScreen();
-
-        void navigateToClimaScreen();
-
-        void navigateToCiudadesPrincipalesScreen();
-
-        void navigateToCulturaScreen();
 
         void passDataToNextScreen(Sobre_CoreaState state);
 

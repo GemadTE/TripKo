@@ -48,17 +48,17 @@ public class Sitios_Turisticos_DetailListPresenter implements Sitios_Turisticos_
     @Override
     public void selectSitioTuristicoDetailListData(Sitios_TuristicosDetailItem item) {
         router.passDataToSitioTuristicoDetailScreen(item);
-        router.navigateToSitioTuristicoDetailScreen();
+        view.get().navigateToSitioTuristicoDetailScreen();
     }
 
     @Override
     public void goHomeButtonClicked() {
-        router.navigateToHomeScreen();
+        view.get().navigateToHomeScreen();
     }
 
     @Override
     public void goPreguntasFrecuentesButtonClicked() {
-        router.navigateToPreguntasFrecuentesScreen();
+        view.get().navigateToPreguntasFrecuentesScreen();
     }
 
     @Override

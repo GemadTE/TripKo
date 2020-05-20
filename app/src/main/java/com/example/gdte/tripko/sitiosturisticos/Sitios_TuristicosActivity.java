@@ -3,6 +3,8 @@ package com.example.gdte.tripko.sitiosturisticos;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -11,6 +13,9 @@ import android.widget.TextView;
 
 import com.example.gdte.tripko.R;
 import com.example.gdte.tripko.data.Sitios_TuristicosItem;
+import com.example.gdte.tripko.menuprincipal.Menu_PrincipalActivity;
+import com.example.gdte.tripko.preguntasfrecuentes.Preguntas_FrecuentesActivity;
+import com.example.gdte.tripko.sitiosturisticosdetaillist.Sitios_Turisticos_DetailListActivity;
 
 public class Sitios_TuristicosActivity
         extends AppCompatActivity implements Sitios_TuristicosContract.View {
@@ -62,6 +67,25 @@ public class Sitios_TuristicosActivity
         Sitios_TuristicosScreen.configure(this);
 
         presenter.fetchSitioTuristicoListData();
+    }
+
+
+    @Override
+    public void navigateToSitioTuristicoDetailListScreen() {
+        Intent intent = new Intent(this, Sitios_Turisticos_DetailListActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void navigateToHomeScreen() {
+        Intent intent = new Intent(this, Menu_PrincipalActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void navigateToPreguntasFrecuentesScreen() {
+        Intent intent = new Intent(this, Preguntas_FrecuentesActivity.class);
+        startActivity(intent);
     }
 
 

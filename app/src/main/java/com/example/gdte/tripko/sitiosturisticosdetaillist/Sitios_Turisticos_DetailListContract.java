@@ -12,6 +12,12 @@ public interface Sitios_Turisticos_DetailListContract {
         void injectPresenter(Presenter presenter);
 
         void displayProductListData(Sitios_Turisticos_DetailListViewModel viewModel);
+
+        void navigateToSitioTuristicoDetailScreen();
+
+        void navigateToHomeScreen();
+
+        void navigateToPreguntasFrecuentesScreen();
     }
 
     interface Presenter {
@@ -38,11 +44,6 @@ public interface Sitios_Turisticos_DetailListContract {
     }
 
     interface Router {
-        void navigateToSitioTuristicoDetailScreen();
-
-        void navigateToHomeScreen();
-
-        void navigateToPreguntasFrecuentesScreen();
 
         void passDataToSitioTuristicoDetailScreen(Sitios_TuristicosDetailItem item);
 

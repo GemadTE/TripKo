@@ -13,7 +13,7 @@ public class Sobre_CoreaScreen {
         WeakReference<FragmentActivity> context =
                 new WeakReference<>((FragmentActivity) view);
 
-        AppMediator mediator = (AppMediator) context.get().getApplication();
+        AppMediator mediator = AppMediator.getInstance();
         Sobre_CoreaState state = mediator.getSobre_CoreaState();
 
         Sobre_CoreaContract.Router router = new Sobre_CoreaRouter(mediator);

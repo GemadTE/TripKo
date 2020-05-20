@@ -15,7 +15,7 @@ public class EntretenimientoScreen {
         WeakReference<FragmentActivity> context =
                 new WeakReference<>((FragmentActivity) view);
 
-        AppMediator mediator = (AppMediator) context.get().getApplication();
+        AppMediator mediator = AppMediator.getInstance();
         EntretenimientoState state = mediator.getEntretenimientoState();
         RepositoryContract repository = AppRepository.getInstance(context.get());
 

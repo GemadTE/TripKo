@@ -2,6 +2,8 @@ package com.example.gdte.tripko.sobrecorea;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,6 +12,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.gdte.tripko.R;
+import com.example.gdte.tripko.ciudadesprincipales.Ciudades_PrincipalesActivity;
+import com.example.gdte.tripko.clima.ClimaActivity;
+import com.example.gdte.tripko.cultura.CulturaActivity;
+import com.example.gdte.tripko.menuprincipal.Menu_PrincipalActivity;
+import com.example.gdte.tripko.preguntasfrecuentes.Preguntas_FrecuentesActivity;
 import com.example.gdte.tripko.sitiosturisticos.Sitios_TuristicosScreen;
 
 public class Sobre_CoreaActivity
@@ -83,6 +90,42 @@ public class Sobre_CoreaActivity
         // do the setup
         Sobre_CoreaScreen.configure(this);
 
+    }
+
+    @Override
+    public void navigateToNextScreen() {
+        Intent intent = new Intent(this, Sobre_CoreaActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void navigateToHomeScreen() {
+        Intent intent = new Intent(this, Menu_PrincipalActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void navigateToPreguntasFrecuentesScreen() {
+        Intent intent = new Intent(this, Preguntas_FrecuentesActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void navigateToClimaScreen() {
+        Intent intent = new Intent(this, ClimaActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void navigateToCiudadesPrincipalesScreen() {
+        Intent intent = new Intent(this, Ciudades_PrincipalesActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void navigateToCulturaScreen() {
+        Intent intent = new Intent(this, CulturaActivity.class);
+        startActivity(intent);
     }
 
     @Override

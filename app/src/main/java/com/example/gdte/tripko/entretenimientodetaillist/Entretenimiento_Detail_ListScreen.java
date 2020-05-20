@@ -16,7 +16,7 @@ public class Entretenimiento_Detail_ListScreen {
 
         String data = context.get().getString(R.string.app_name);
 
-        AppMediator mediator = (AppMediator) context.get().getApplication();
+        AppMediator mediator = AppMediator.getInstance();
         Entretenimiento_Detail_ListState state = mediator.getEntretenimientoDetailListState();
 
         Entretenimiento_Detail_ListContract.Router router = new Entretenimiento_Detail_ListRouter(mediator);

@@ -15,7 +15,7 @@ public class Sitios_Turisticos_DetailListScreen {
         WeakReference<FragmentActivity> context =
                 new WeakReference<>((FragmentActivity) view);
 
-        AppMediator mediator = (AppMediator) context.get().getApplication();
+        AppMediator mediator = AppMediator.getInstance();
         Sitios_Turisticos_DetailListState state = mediator.getTiposDeSitiosTuristicosState();
         RepositoryContract repository = AppRepository.getInstance(context.get());
 

@@ -80,7 +80,7 @@
             android:id="@+id/climaDescriptionText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:text="@string/aeropuertos_btn_text" />
+            tools:text="@string/clima_text" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

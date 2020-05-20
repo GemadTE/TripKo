@@ -16,7 +16,7 @@ public class Cultura_DetailScreen {
 
         String data = context.get().getString(R.string.app_name);
 
-        AppMediator mediator = (AppMediator) context.get().getApplication();
+        AppMediator mediator = AppMediator.getInstance();
         Cultura_DetailState state = mediator.getCulturaDetailState();
 
         Cultura_DetailContract.Router router = new Cultura_DetailRouter(mediator);

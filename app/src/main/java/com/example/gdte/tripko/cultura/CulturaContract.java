@@ -8,6 +8,12 @@ public interface CulturaContract {
         void injectPresenter(Presenter presenter);
 
         void displayData(CulturaViewModel viewModel);
+
+        void navigateToNextScreen();
+
+        void navigateToHomeScreen();
+
+        void navigateToPreguntasFrecuentesScreen();
     }
 
     interface Presenter {
@@ -29,11 +35,7 @@ public interface CulturaContract {
     }
 
     interface Router {
-        void navigateToNextScreen();
 
-        void navigateToHomeScreen();
-
-        void navigateToPreguntasFrecuentesScreen();
 
         void passDataToNextScreen(CulturaState state);
 

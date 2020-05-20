@@ -8,6 +8,8 @@ public interface Sitios_Turisticos_DetailContract {
         void injectPresenter(Presenter presenter);
 
         void onDataUpdated(Sitios_Turisticos_DetailViewModel viewModel);
+
+        void navigateToNextScreen();
     }
 
     interface Presenter {
@@ -41,7 +43,6 @@ public interface Sitios_Turisticos_DetailContract {
     }
 
     interface Router {
-        void navigateToNextScreen();
 
         void passStateToNextScreen(Sitios_Turisticos_DetailState state);
 

@@ -17,7 +17,7 @@ public class Sitios_Turisticos_DetailScreen {
 
         String data = context.get().getString(R.string.app_name);
 
-        AppMediator mediator = (AppMediator) context.get().getApplication();
+        AppMediator mediator = AppMediator.getInstance();
         Sitios_Turisticos_DetailState state = mediator.getSitiosTuristicosDetailState();
 
         Sitios_Turisticos_DetailContract.Router router = new Sitios_Turisticos_DetailRouter(mediator);

@@ -17,14 +17,6 @@ public class Cultura_DetailRouter implements Cultura_DetailContract.Router {
     }
 
     @Override
-    public void navigateToNextScreen() {
-        Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, Cultura_DetailActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(intent);
-    }
-
-    @Override
     public void passStateToNextScreen(Cultura_DetailState state) {
         mediator.setCulturaDetailState(state);
     }

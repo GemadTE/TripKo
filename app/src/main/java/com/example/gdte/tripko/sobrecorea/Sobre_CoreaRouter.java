@@ -21,54 +21,6 @@ public class Sobre_CoreaRouter implements Sobre_CoreaContract.Router {
     }
 
     @Override
-    public void navigateToNextScreen() {
-        Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, Sobre_CoreaActivity.class);
-        context.startActivity(intent);
-    }
-
-    @Override
-    public void navigateToHomeScreen() {
-        Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, Menu_PrincipalActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(intent);
-    }
-
-    @Override
-    public void navigateToPreguntasFrecuentesScreen() {
-        Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, Preguntas_FrecuentesActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(intent);
-    }
-
-
-    @Override
-    public void navigateToClimaScreen() {
-        Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, ClimaActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(intent);
-    }
-
-    @Override
-    public void navigateToCiudadesPrincipalesScreen() {
-        Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, Ciudades_PrincipalesActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(intent);
-    }
-
-    @Override
-    public void navigateToCulturaScreen() {
-        Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, CulturaActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(intent);
-    }
-
-    @Override
     public void passDataToNextScreen(Sobre_CoreaState state) {
         mediator.setSobre_CoreaState(state);
     }

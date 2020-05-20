@@ -13,7 +13,7 @@ public class ClimaScreen {
         WeakReference<FragmentActivity> context =
                 new WeakReference<>((FragmentActivity) view);
 
-        AppMediator mediator = (AppMediator) context.get().getApplication();
+        AppMediator mediator = AppMediator.getInstance();
         ClimaState state = mediator.getClimaState();
 
         ClimaContract.Router router = new ClimaRouter(mediator);
